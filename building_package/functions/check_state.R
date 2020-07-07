@@ -1,33 +1,48 @@
 
-
 check_state<-function(states){
+  # Check if given a character vector
   if (typeof(states)=="character"){
     num_states<-length(states)
-    if(num_states > 0){
-      state_list<-c("alabama", "alaska", "arizona", "arkansas", "california", "colorado", "connecticut",
-                    "delaware", "florida", "georgia", "hawaii", "idaho", "illinois", "indiana", "iowa",
-                    "kansas", "kentucky", "louisiana", "maine", "maryland", "massachusetts", "michigan",
-                    "minnesota", "mississippi","missouri","montana","nebraska","nevada","new hampshire",
-                    "newhampshire", "new jersey", "newjersey", "new mexico", "newmexico", "new york", 
-                    "newyork", "north carolina","northcarolina", "north dakota", "northdakota","ohio",
-                    "pennsylvania", "rhode island", "rhodeisland", "south carolina", "southcarolina",
-                    "south dakota", "southdakota", "tennessee", "texas", "utah", "vermont", "virginia",
-                    "washington", "west virginia", "westvirginia", "wisconsin", "wyoming", "al", "ak",
-                    "az", "ar", "ca", "co", "ct", "de", "fl", "ga", "hi", "id", "il", "in", "ia","ks",
-                    "ky","la","me","md","ma","mi","mn","ms","mo","mt","ne","nv","nh","nj","nm","ny",
-                    "nc","nd", "oh", "ok","or","pa","ri","sc","sd","tn","tx","ut","vt","va","wa","wv",
-                    "wi","wy")
-      for(i in states){
-        if(i %in% state_list){
-          print("Good test!")
-        } else {
-          stop("Your list of states contains at least one state that we do not have in our YAML directory")
-        }
+    
+    if(num_states == 1){
+      #Check if given a state that is in the list of available state YAMLs
+      if(states %in% state_list){
+        #If so, yay!
+        
+        
+      } else { 
+        stop("Your state input is either not a state in our library or is not in a recognized format.")
       }
+      
+    } else if(num_states > 1){
+      #Looping through states if presented character vector.
+      for(i in states){
+        #Checking if each state is in the list of available state YAMLs
+        if(i %in% state_list){
+          #Checking if each state is on the list of county compilation-states.
+          #Unfortunately, I can't think of a way to make multiple states work simultaneously with county compilation
+          #without making this stupidly unweildly. I advise just asking the user to run the command multiple times in this case.
+          if(i %in% county_comp_list){
+            stop("One of your states must be aggregated from county-level data. vrrr_read can only read-in multiple states simultaneously if none of them require aggregation.")
+          } 
+          
+        } else {
+          
+          stop("Your list of states contains at least one state that we do not have in our YAML directory or is not in a recognized format.")
+        }
+        
+      }
+      
     } else {
+      
       stop("Please enter at least one state or state postal abbreviation.")
     }
-  }else{
+    
+    
+  } else{
+    
     stop("Please insert a character list of at least one state or state postal abbreviation.")
   }
 }
+
+
