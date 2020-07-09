@@ -1,4 +1,3 @@
-
 check_state<-function(states){
   # Check if given a character vector
   if (typeof(states)=="character"){
@@ -6,32 +5,17 @@ check_state<-function(states){
     
     if(num_states == 1){
       #Check if given a state that is in the list of available state YAMLs
-      if(states %in% state_list){
+      if(tolower(states) %in% state_list){
         #If so, yay!
         
         
       } else { 
+        #too many states
         stop("Your state input is either not a state in our library or is not in a recognized format.")
       }
       
     } else if(num_states > 1){
-      #Looping through states if presented character vector.
-      for(i in states){
-        #Checking if each state is in the list of available state YAMLs
-        if(i %in% state_list){
-          #Checking if each state is on the list of county compilation-states.
-          #Unfortunately, I can't think of a way to make multiple states work simultaneously with county compilation
-          #without making this stupidly unweildly. I advise just asking the user to run the command multiple times in this case.
-          if(i %in% county_comp_list){
-            stop("One of your states must be aggregated from county-level data. vrrr_read can only read-in multiple states simultaneously if none of them require aggregation.")
-          } 
-          
-        } else {
-          
-          stop("Your list of states contains at least one state that we do not have in our YAML directory or is not in a recognized format.")
-        }
-        
-      }
+      stop("vrr_read can only read-in one state at a time.")
       
     } else {
       
