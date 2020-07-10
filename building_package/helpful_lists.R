@@ -33,6 +33,11 @@ state_reassign = c('alabama'= 'alabama', 'alaska'= 'alaska', 'arizona'= 'arizona
   'new york'= 'newyork', 'north carolina'= 'northcarolina', 'north dakota'= 'northdakota', 
   'rhode island'= 'rhodeisland', 'south carolina'= 'southcarolina', 
   'south dakota'= 'southdakota', 'west virginia'= 'westvirginia',
+                   
+  'newhampshire'= 'newhampshire', 'newjersey'= 'newjersey', 'newmexico'= 'newmexico', 
+  'newyork'= 'newyork', 'north carolina'= 'northcarolina', 'northdakota'= 'northdakota', 
+  'rhodeisland'= 'rhodeisland', 'southcarolina'= 'southcarolina', 
+  'southdakota'= 'southdakota', 'westvirginia'= 'westvirginia',
   
   'al' = 'alabama','ak' = 'alaska','az' = 'arizona','ar' = 'arkansas','ca' = 'california',
   'co' = 'colorado','ct' = 'connecticut','de' = 'delaware','fl' = 'florida',
