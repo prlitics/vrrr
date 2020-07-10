@@ -13,4 +13,38 @@ state_list<-c("alabama", "alaska", "arizona", "arkansas", "california", "colorad
               "wi","wy")
 
 
+state_reassign = c('alabama'= 'alabama', 'alaska'= 'alaska', 'arizona'= 'arizona', 'arkansas'= 'arkansas', 
+  'california'= 'california', 'colorado'= 'colorado', 'connecticut'= 'connecticut', 
+  'delaware'= 'delaware', 'florida'= 'florida', 'georgia'= 'georgia', 'hawaii'= 'hawaii', 
+  'idaho'= 'idaho', 'illinois'= 'illinois', 'indiana'= 'indiana', 'iowa'= 'iowa', 
+  'kansas'= 'kansas', 'kentucky'= 'kentucky', 'louisiana'= 'louisiana', 'maine'= 'maine', 
+  'maryland'= 'maryland', 'massachusetts'= 'massachusetts', 'michigan'= 'michigan', 
+  'minnesota'= 'minnesota', 'mississippi'= 'mississippi', 'missouri'= 'missouri', 
+  'montana'= 'montana', 'nebraska'= 'nebraska', 'nevada'= 'nevada', 
+  'new hampshire'= 'new hampshire', 'new jersey'= 'new jersey', 'new mexico'= 'new mexico', 
+  'new york'= 'new york', 'north carolina'= 'north carolina', 'north dakota'= 'north dakota', 
+  'ohio'= 'ohio', 'oklahoma'= 'oklahoma', 'oregon'= 'oregon', 'pennsylvania'= 'pennsylvania', 
+  'rhode island'= 'rhode island', 'south carolina'= 'south carolina', 
+  'south dakota'= 'south dakota', 'tennessee'= 'tennessee', 'texas'= 'texas', 'utah'= 'utah', 
+  'vermont'= 'vermont', 'virginia'= 'virginia', 'washington'= 'washington', 
+  'west virginia'= 'west virginia', 'wisconsin'= 'wisconsin', 'wyoming'= 'wyoming',
+  
+  'new hampshire'= 'new hampshire', 'new jersey'= 'new jersey', 'new mexico'= 'new mexico', 
+  'new york'= 'new york', 'north carolina'= 'north carolina', 'north dakota'= 'north dakota', 
+  'rhode island'= 'rhode island', 'south carolina'= 'south carolina', 
+  'south dakota'= 'south dakota', 'west virginia'= 'west virginia',
+  
+  'al' = 'alabama','ak' = 'alaska','az' = 'arizona','ar' = 'arkansas','ca' = 'california',
+  'co' = 'colorado','ct' = 'connecticut','de' = 'delaware','fl' = 'florida',
+  'ga' = 'georgia','hi' = 'hawaii','id' = 'idaho','il' = 'illinois','in' = 'indiana',
+  'ia' = 'iowa','ks' = 'kansas','ky' = 'kentucky','la' = 'louisiana','me' = 'maine',
+  'md' = 'maryland','ma' = 'massachusetts','mi' = 'michigan','mn' = 'minnesota',
+  'ms' = 'mississippi','mo' = 'missouri','mt' = 'montana','ne' = 'nebraska',
+  'nv' = 'nevada','nh' = 'new hampshire','nj' = 'new jersey','nm' = 'new mexico',
+  'ny' = 'new york','nc' = 'north carolina','nd' = 'north dakota','oh' = 'ohio',
+  'ok' = 'oklahoma','or' = 'oregon','pa' = 'pennsylvania','ri' = 'rhode island',
+  'sc' = 'south carolina','sd' = 'south dakota','tn' = 'tennessee','tx' = 'texas',
+  'ut' = 'utah','vt' = 'vermont','va' = 'virginia','wa' = 'washington',
+  'wv' = 'west virginia','wi' = 'wisconsin','wy' = 'wyoming')
+
 county_comp_list<-c("florida","fl")
