@@ -13,4 +13,30 @@ state_list<-c("alabama", "alaska", "arizona", "arkansas", "california", "colorad
               "wi","wy")
 
 
-county_comp_list<-c("florida","fl")
+state_key <- c("alabama"="alabama", "alaska"="alaska", "arizona"="arizona", "arkansas"="arkansas", 
+                  "california"="california", "colorado"="colorado", "connecticut"="connecticut",
+                  "delaware"="delaware", "florida"="florida", "georgia"="georgia", "hawaii"="hawaii", 
+                  "idaho"="idaho", "illinois"="illinois", "indiana"="indiana", "iowa"="iowa",
+                  "kansas"="kansas", "kentucky"="kentucky", "louisiana"="louisiana", "maine"="maine", 
+                  "maryland"="maryland", "massachusetts"="massachusetts", "michigan"="michigan",
+                  "minnesota"="minnesota", "mississippi"="mississippi","missouri"="missouri",
+                  "montana"="montana","nebraska"="nebraska","nevada"="nevada","new hampshire"="newhampshire",
+                  "newhampshire"= "newhampshire", "new jersey"="newjersey", "newjersey"="newjersey", 
+                  "new mexico"="newmexico", "newmexico"="newmexico", "new york"="newyork", 
+                  "newyork"="newyork", "north carolina"="northcarolina","northcarolina"="northcarolina",
+                  "north dakota"="northdakota", "northdakota"="north dakota","ohio"="ohio",
+                  "pennsylvania"="pennsylvania", "rhode island"="rhode island", "rhodeisland"="rhode island",
+                  "south carolina"="southcarolina", "southcarolina"="south carolina",
+                  "south dakota"="southdakota", "southdakota"="southdakota", "tennessee"="tennessee", 
+                  "texas"="texas", "utah"="utah", "vermont"="vermont", "virginia"="virginia",
+                  "washington"="washington", "west virginia"="westvirginia", "westvirginia"="westvirginia",
+                  "wisconsin"="wisconsin", "wyoming"="wyoming", "al"="alabama", "ak"="alaska",
+                  "az"="arizona", "ar"="arkansas", "ca"="california", "co"="colorado", "ct"="connecticut", 
+                  "de"="delaware", "fl"="florida", "ga"="georgia", "hi"="hawaii", "id"="idaho", "il"="illinois",
+                  "in"="indiana", "ia"="iowa","ks"="kansas", "ky"="kentucky","la"="louisiana","me"="maine",
+                  "md"="maryland","ma"="massachusetts","mi"="michigan","mn"="minnesota","ms"="mississippi",
+                  "mo"="missouri","mt"="montana","ne"="nebraska","nv"="nevada","nh"="newhampshire","nj"="newjersey",
+                  "nm"="newmexico","ny"="newyork", "nc"="northcarolina","nd"="northdakota", "oh"="ohio",
+                  "ok"="oklahoma","or"="oregon","pa"="pennsylvania","ri"="rhodeisland","sc"="southcarolina",
+                  "sd"="southdakota","tn"="tennessee","tx"="texas","ut"="utah","vt"="vermont","va"="virginia",
+                  "wa"="washington","wv"="westvirginia", "wi"="wisconsin","wy"="wyoming")
