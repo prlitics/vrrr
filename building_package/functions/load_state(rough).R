@@ -3,7 +3,6 @@ library(rlang)
 library(readr)
 
 
-vrrr_read <- function(path=getwd(), state, vtr_file=T, standard_columns = T, recode_vals = T)
 
 
 load_state<-function(state, vtr_file, state_yaml){
@@ -22,11 +21,11 @@ for (i in cols) {
   z<- z + 1
   
   if(z==1){
-    x<-(paste0('cols(',col_names[z]," = col_",i[[1]],'(), '))
+    x<-(paste0('list(',shQuote(col_names[z])," = col_",i[[1]],'(), '))
   }else if (z < length(cols)){
-    x<-paste0(x,col_names[z]," = col_",i[[1]],'(), ')}
+    x<-paste0(x,shQuote(col_names[z])," = col_",i[[1]],'(), ')}
   else{
-    x <-paste0(x,col_names[z]," = col_",i[[1]],'() ',')')
+    x <-paste0(x,shQuote(col_names[z])," = col_",i[[1]],'() ',')')
   }
   
 
@@ -38,6 +37,8 @@ for (i in cols) {
 delim <- yaml[["delimiter"]]
 
 y<-parse_expr(x)
+
+print(names(y))
 
 
 #Load it in (need to complicate it from here, but it'll be fine for )
