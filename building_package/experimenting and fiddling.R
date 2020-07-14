@@ -3,12 +3,13 @@ library(yaml)
 
 
 
-vrrr_read <- function(path=getwd(), state, vtr_file=T, standard_columns = T, recode_vals = T) {
+vrrr_read <- function(path=getwd(), state, vtr_file, standard_columns = T, recode_vals = T) {
   source("C:/Users/prlic/Documents/GitHub/vrrr/building_package/helpful_lists.R")
   check_state(states = state)
-  check_yaml(state=state)
   
-  print(path)
+  state_yaml<-check_yaml(state=state)
+  
+  load_state(state, vtr_file = vtr_file, state_yaml = state_yaml)
 
   
 }
@@ -26,11 +27,7 @@ states6 <-c("fLoRiDa")
 
 
 
-vrrr_read(states = states2)
-
-
-
-
+ak<-vrrr_read(state = "ak", vtr_file = "C:/Users/prlic/Downloads/VOTERS List Report 9.25.19.csv")
 
 
 check_state<-function(states){
