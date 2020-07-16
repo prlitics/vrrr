@@ -26,7 +26,7 @@ states6 <-c("fLoRiDa")
 
 
 
-ak<-vrrr_read(state = , vtr_file = "C:/Users/prlic/Downloads/VOTERS List Report 9.25.19.csv")
+wv<-vrrr_read(state = "wv", vtr_file = "C:/Users/prlic/Downloads/WV 2019-03-14/WV 2019-03-14.txt")
 
 
 
