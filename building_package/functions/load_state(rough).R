@@ -3,9 +3,10 @@ library(rlang)
 library(readr)
 
 
+list.files(pattern="get the file ending from the yaml")
 
 
-load_state<-function(state, vtr_file, state_yaml){
+load_state<-function(vtr_file, state_yaml){
 
 
 yaml <- state_yaml

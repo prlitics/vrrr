@@ -34,4 +34,3 @@ check_yaml <- function(state){
 }
 
 
-state_yaml<-check_yaml(7)
