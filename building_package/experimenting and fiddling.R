@@ -9,7 +9,7 @@ vrrr_read <- function(path=getwd(), state, vtr_file, standard_columns = T, recod
   
   state_yaml<-check_yaml(state=state)
   
-  load_state(vtr_file = vtr_file, state_yaml = state_yaml)
+  load_state(path=path, vtr_file = vtr_file, state_yaml = state_yaml)
 
   
 }
@@ -26,13 +26,13 @@ states6 <-c("fLoRiDa")
 
 
 
-wv<-vrrr_read(state = "wv", vtr_file = "C:/Users/prlic/Downloads/WV 2019-03-14/WV 2019-03-14.txt")
+vrrr_read(state = "fl", vtr_file = "C:/Users/prlic/Downloads/WV 2019-03-14/WV 2019-03-14.txt")
 
 
 
 
 
-yaml<-yaml.load_file("C:/Users/prlic/Dropbox/YAML/yaml standardization/yaml files/finished yaml/alaska.yaml")
+yaml<-yaml.load_file("C:/Users/prlic/Dropbox/YAML/yaml standardization/yaml files/finished yaml/florida.yaml")
 
 
 yaml[["format"]][["separate_counties_voter_file"]]
