@@ -27,7 +27,10 @@ standardize_cols<-function(vtr_file, state_yaml){
     }
     colnames(utah.file) = standard_cols
   }
+  else if(length(col_names) == length(colnames(vtr_file))){
+    stop("The number of column names matches our documentation, but their order and/or accuracy does not.")
+  }
   else{
-    stop("Unable to standardize column names because the column names in the voter file you provided do not match the column names we have documented.")
+    stop("Unable to standardize column names because the number of column names in the voter file you provided do not match our documentation.")
   }
 }
