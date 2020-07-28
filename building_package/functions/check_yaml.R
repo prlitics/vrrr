@@ -2,7 +2,7 @@ library(yaml)
 
 # function will take in a state 
 check_yaml <- function(state){
-  source("C:/Users/prlic/Documents/GitHub/vrrr/building_package/helpful_lists.R")
+  source("C:/Users/prlic/Documents/GitHub/vrrr/building_package/functions/helpful_lists.R")
   # check if given a character vector
   if (typeof(state)=='character'){
     if (tolower(state) %in% names(state_key)){

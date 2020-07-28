@@ -4,7 +4,7 @@ library(yaml)
 
 
 vrrr_read <- function(path=getwd(), state, vtr_file, standard_columns = T, recode_vals = T) {
-  source("C:/Users/prlic/Documents/GitHub/vrrr/building_package/helpful_lists.R")
+  source("C:/Users/prlic/Documents/GitHub/vrrr/building_package/functions/helpful_lists.R")
   check_state(states = state)
   
   state_yaml<-check_yaml(state=state)
