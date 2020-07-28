@@ -10,7 +10,7 @@ vrrr_read <- function(path=getwd(), state, vtr_file, standard_columns = T, recod
   state_yaml<-check_yaml(state=state)
   
   load_state(path=path, vtr_file = vtr_file, state_yaml = state_yaml)
-
+  
   
 }
 
@@ -36,7 +36,3 @@ yaml<-yaml.load_file("C:/Users/prlic/Dropbox/YAML/yaml standardization/yaml file
 
 
 yaml[["format"]][["separate_counties_voter_file"]]
-
-
-
-

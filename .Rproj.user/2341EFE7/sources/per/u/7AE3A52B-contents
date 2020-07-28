@@ -1,5 +1,0 @@
-library(yaml)
-
-setwd("C:/Users/prlic/Dropbox/YAML/yaml standardization/yaml files/finished yaml/")
-yaml<-yaml::read_yaml("alaska.yaml")
-yaml
