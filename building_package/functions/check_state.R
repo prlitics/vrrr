@@ -28,3 +28,4 @@ check_state<-function(states){
     stop("Please insert a character list of at least one state or state postal abbreviation.")
   }
 }
+

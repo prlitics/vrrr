@@ -40,3 +40,4 @@ state_key <- c("alabama"="alabama", "alaska"="alaska", "arizona"="arizona", "ark
                "ok"="oklahoma","or"="oregon","pa"="pennsylvania","ri"="rhodeisland","sc"="southcarolina",
                "sd"="southdakota","tn"="tennessee","tx"="texas","ut"="utah","vt"="vermont","va"="virginia",
                "wa"="washington","wv"="westvirginia", "wi"="wisconsin","wy"="wyoming")
+
