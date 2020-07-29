@@ -27,41 +27,11 @@ load_state<-function(path, vtr_file, state_yaml){
   delim <- yaml[["delimiter"]]
   
   
-  simple_case<-function(){
-    x<-""
-    z<-0
-    for (i in cols) {
-      
-      z<- z + 1
-      
-      if(i == "date"){
-        
-        if(z==1){
-          x<-(paste0('list(',shQuote(col_names[z])," = col_date( format = ",shQuote(date_format),'),'))
-        }else if (z < length(cols)){
-          x<-paste0(x,shQuote(col_names[z])," = col_date( format = ",shQuote(date_format),'),')}
-        else{
-          x <-paste0(x,shQuote(col_names[z])," = col_date( format = ",shQuote(date_format),')',')')
-        }
-        
-      } else {
-        
-        if(z==1){
-          x<-(paste0('list(',shQuote(col_names[z])," = col_",i[[1]],'(), '))
-        }else if (z < length(cols)){
-          x<-paste0(x,shQuote(col_names[z])," = col_",i[[1]],'(), ')}
-        else{
-          x <-paste0(x,shQuote(col_names[z])," = col_",i[[1]],'() ',')')
-        }
-      }
-      
-      
-      
-    }
-    y<-parse_expr(x)
-    readr::read_delim(file = vtr_file, delim = delim, col_names = T, col_types = eval(y)) 
-    
-    
+  single_case<-function(){
+  y<-col_formatter(cols = cols, col_names = col_names, date_format = date_format)
+  
+  
+  readr::read_delim(file = vtr_file, delim = delim, col_names = T, col_types = eval(y)) 
   }
   
   
@@ -77,7 +47,7 @@ load_state<-function(path, vtr_file, state_yaml){
     wd<-getwd()
     setwd<-path
     menu1<-c(" List Files in Directory", " Compile State from Files Currently in the Directory", " Retry load_states()", " Quit")
-    num_counties_yaml <- yaml[["num_counties"]]
+    num_counties_yaml <- yaml[["num_files"]]
     files_to_agg <- list.files(pattern=file_type)
     num_in_dir <- length(files_to_agg)
     
@@ -126,7 +96,7 @@ load_state<-function(path, vtr_file, state_yaml){
     
   }else{
     
-    simple_case()
+    single_case()
     
   }
   
