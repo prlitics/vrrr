@@ -37,22 +37,9 @@ load_state<-function(path=path, vtr_file = vtr_file, state_yaml = state_yaml){
   
   if(isTRUE(agg_county)){
     
-    multiple_case<-function(cols = cols, column_names = column_names, date_format = date_format){
-      df<-data.frame()
-      y<-col_formatter(cols = cols, column_names = column_names, date_format = date_format)
-      for (i in files_to_agg) {
-        if(isTRUE(yaml[["has_headers"]])){
-          x <- readr::read_delim(file = i, delim = delim, col_names = T, col_types = eval(y)) 
-        } else{
-          print(column_names)
-          x <- readr::read_delim(file = i, delim = delim, col_names = column_names, col_types = eval(y)) 
-        } 
-        df<-rbind(df,x)
-      }  
-      df 
-    }  
+
    
-wrapper(path = path, vtr_file = vtr_file, state_yaml = state_yaml, file_type = file_type, yaml = yaml,
+multiple_case(path = path, vtr_file = vtr_file, state_yaml = state_yaml, file_type = file_type, yaml = yaml,
         cols = cols, column_names = column_names, date_format = date_format, delim = delim) 
     
     
