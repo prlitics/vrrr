@@ -1,6 +1,12 @@
 install.packages("yaml")
-library(yaml)
 
+##################
+#Needed Libraries#
+library(yaml)
+library(rlang)
+library(readr)
+##################
+##################
 
 
 vrrr_read <- function(path=getwd(), state, vtr_file = NULL, standard_columns = T, recode_vals = T) {
@@ -14,6 +20,11 @@ vrrr_read <- function(path=getwd(), state, vtr_file = NULL, standard_columns = T
   
 }
 
+ct<-vrrr_read(state = "ct", path = "D:/Data/VoterFile/CT/Data/", menu=FALSE)
+
+wv<-vrrr_read(state = "wv", vtr_file = "C:/Users/prlic/Downloads/WV 2019-03-14/WV 2019-03-14.txt")
+
+
 
 
 states1<-c("hI")
@@ -23,13 +34,6 @@ states4<-c(1,2,3)
 states5<-c(1,"pie",3)
 states6 <-c("fLoRiDa")
 
-setwd("D:/Data/VoterFile/CT/Data/")
-list.files(pattern = yaml[["file_type"]])
-
-
-vrrr_read(state = "ct", path = "D:/Data/VoterFile/CT/Data/")
-
-ct<-vrrr_read(state = "ct", path = "D:/Data/VoterFile/CT/Data/")
 
 
 
