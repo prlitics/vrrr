@@ -3,4 +3,5 @@ state_yaml<-function(state){
   check_state(states = state)
   
   state_yaml<-check_yaml(state=state)
+  state_yaml
 }

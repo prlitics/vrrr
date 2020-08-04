@@ -20,9 +20,9 @@ vrrr_read <- function(path=getwd(), state, vtr_file = NULL, standard_columns = T
   
 }
 
-ct<-vrrr_read(state = "ct", path = "D:/Data/VoterFile/CT/Data/", menu=FALSE)
+ct<-read_vf(state = "ct", path = "D:/Data/VoterFile/CT/Data/")
 
-wv<-vrrr_read(state = "wv", vtr_file = "C:/Users/prlic/Downloads/WV 2019-03-14/WV 2019-03-14.txt")
+wv<-read_vf(state = "wv", vtr_file = "C:/Users/prlic/Downloads/WV 2019-03-14/WV 2019-03-14.txt")
 
 
 

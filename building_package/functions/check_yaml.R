@@ -1,5 +1,5 @@
 # function will take in a state 
-check_yaml <- function(state){
+check_yaml <- function(state, history = FALSE){
   source("C:/Users/prlic/Documents/GitHub/vrrr/building_package/functions/helpful_lists.R")
   # check if given a character vector
   if (typeof(state)=='character'){
@@ -7,8 +7,12 @@ check_yaml <- function(state){
       # continue 
       current_dir <- getwd()
       setwd('C:/Users/prlic/Dropbox/YAML/yaml standardization/yaml files/finished yaml')
-      # paste .yaml on the backend of it 
-      state_yaml <- paste0(state_key[tolower(state)],".yaml")
+      
+      if(isFALSE(history)){ 
+        state_yaml <- paste0(state_key[tolower(state)],".yaml")}
+      else if(isTRUE(history)){
+        state_yaml <- paste0(state_key[tolower(state)],"_history.yaml")}
+      
       
       # this corrects "fl" or "FlOrIdA" to "florida" and makes it "florida.yaml" 
       
