@@ -1,5 +1,3 @@
-library(yaml)
-
 # function will take in a state 
 check_yaml <- function(state){
   source("C:/Users/prlic/Documents/GitHub/vrrr/building_package/functions/helpful_lists.R")
