@@ -16,10 +16,11 @@ check_yaml <- function(state){
       # check if this state is in it/exists
       if(file.exists(state_yaml)){
         called_yaml<- yaml:: yaml.load_file(state_yaml)
-        
+        return(called_yaml)
         setwd(current_dir)
-        
-      }
+      }else{
+        stop("Documentation on this state does not exist in your current instance of vrr")
+      } 
       
     }else{
       stop("Documentation on this state does not exist in your current instance of vrr")
