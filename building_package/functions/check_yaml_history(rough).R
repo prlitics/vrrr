@@ -12,7 +12,7 @@ check_yaml_history<-function(yaml){
   }  
 
   print("yay! it passed") 
-assign(A,"test", inherits = TRUE)
+
 }
 
 
