@@ -38,7 +38,7 @@ states6 <-c("fLoRiDa")
 
 
 
-yaml<-yaml.load_file("C:/Users/prlic/Dropbox/YAML/yaml standardization/yaml files/finished yaml/connecticut.yaml")
+yaml<-yaml.load_file("C:/Users/prlic/Dropbox/YAML/yaml standardization/yaml files/finished yaml/colorado.yaml")
 yaml[["file_type"]]
 
 yaml[["format"]][["separate_counties_voter_file"]]
