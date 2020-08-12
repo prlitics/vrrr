@@ -1,0 +1,313 @@
+# Missouri's file comes in a .zip file that includes a .txt file with combined voter file/history and a readme.txt file 
+
+file_type: txt
+delimiter: '\t'
+state: missouri
+source: boe
+file_class: voter_file
+voter_id: Voter.ID
+county_identifier: County
+birthday_identifier: Birthdate
+voter_status:  null
+party_identifier: null
+date_format: '%m/%d/%Y'
+numeric_county: FALSE
+has_headers: TRUE
+fixed_width: FALSE
+separate_hispanic_orign: FALSE
+
+format:
+  separate_hist: FALSE
+  separate_counties_voter_file: FALSE
+  separate_counties_hist_file: FALSE
+  hist_election_rows: FALSE
+  columnar_elections: TRUE
+  separate_district_lookup_file: FALSE
+  vote_history_type: 'Sporadic'
+
+name_fields:
+  - First Name
+  - Middle Name
+  - Last Name
+  - Suffix
+  
+address_fields:
+  - House Number
+  - House Suffix
+  - Pre Direction
+  - Street Name
+  - Street Type
+  - Post Direction
+  - Unit Type
+  - Unit Number
+  - Non Standard Address
+  - Residential City
+  - Residential State
+  - Residential ZipCode
+  - Mailing Address
+  - Mailing City
+  - Mailing State
+  - Mailing ZipCode 
+
+column_names:
+  - County
+  - Voter ID
+  - First Name
+  - Middle Name
+  - Last Name
+  - Suffix
+  - House Number
+  - House Suffix
+  - Pre Direction
+  - Street Name
+  - Street Type
+  - Post Direction
+  - Unit Type
+  - Unit Number
+  - Non Standard Address
+  - Residential City
+  - Residential State
+  - Residential ZipCode
+  - Mailing Address
+  - Mailing City
+  - Mailing State
+  - Mailing ZipCode
+  - Birthdate
+  - Registration Date
+  - Precinct
+  - Precinct Name
+  - Split
+  - Township
+  - Ward
+  - Congressional - New
+  - Legislative - New
+  - State Senate - New
+  - Voter History 1
+  - Voter History 2
+  - Voter History 3
+  - Voter History 4
+  - Voter History 5
+  - Voter History 6
+  - Voter History 7
+  - Voter History 8
+  - Voter History 9
+  - Voter History 10
+  - Voter History 11
+  - Voter History 12
+  - Voter History 13
+  - Voter History 14
+  - Voter History 15
+  - Voter History 16
+  - Voter History 17
+  - Voter History 18
+  - Voter History 19
+  - Voter History 20 
+
+
+column_classes:
+  County: character
+  Voter ID: character
+  First Name: character
+  Middle Name: character
+  Last Name: character
+  Suffix: character
+  House Number: character
+  House Suffix: character
+  Pre Direction: character
+  Street Name: character
+  Street Type: character
+  Post Direction: character
+  Unit Type: character
+  Unit Number: character
+  Non Standard Address: character
+  Residential City: character
+  Residential State: character
+  Residential ZipCode: character
+  Mailing Address: character
+  Mailing City: character
+  Mailing State: character
+  Mailing ZipCode: character
+  Birthdate: date
+  Registration Date: date
+  Precinct: character
+  Precinct Name: character
+  Split: character
+  Township: character
+  Ward: character
+  Congressional - New: character
+  Legislative - New: character
+  State Senate - New: character
+  Voter History 1: character
+  Voter History 2: character
+  Voter History 3: character
+  Voter History 4: character
+  Voter History 5: character
+  Voter History 6: character
+  Voter History 7: character
+  Voter History 8: character
+  Voter History 9: character
+  Voter History 10: character
+  Voter History 11: character
+  Voter History 12: character
+  Voter History 13: character
+  Voter History 14: character
+  Voter History 15: character
+  Voter History 16: character
+  Voter History 17: character
+  Voter History 18: character
+  Voter History 19: character
+  Voter History 20: character
+
+standard_colnames:
+  - County_Name
+  - Voter_ID
+  - Name_First
+  - Name_Middle
+  - Name_Last
+  - Name_Suffix
+  - House_Number
+  - House_Suffix 
+  - Pre_Direction
+  - Street_Name
+  - Street_Type
+  - Post_Direction
+  - Unit_Type
+  - Unit_Number
+  - Non_Standard_Address
+  - Residential_City
+  - Residential_State
+  - Residential_ZipCode
+  - Mailing_Address
+  - Mailing_City
+  - Mailing_State 
+  - Mailing_ZipCode  
+  - Birth_Date
+  - Registration_Date
+  - Precinct_Code
+  - Precinct_Name
+  - Split_ID
+  - Township_Code
+  - Ward_Code
+  - Congressional_District
+  - Legislative_District
+  - Senate_District
+  - Voter_History_1
+  - Voter_History_2
+  - Voter_History_3
+  - Voter_History_4
+  - Voter_History_5
+  - Voter_History_6
+  - Voter_History_7
+  - Voter_History_8 
+  - Voter_History_9
+  - Voter_History_10
+  - Voter_History_11
+  - Voter_History_12
+  - Voter_History_13
+  - Voter_History_14
+  - Voter_History_15
+  - Voter_History_16
+  - Voter_History_17
+  - Voter_History_18
+  - Voter_History_19
+  - Voter_History_20
+
+standard_colpairs:
+  County: County_Name
+  Voter ID: Voter_ID
+  First Name: Name_First
+  Middle Name: Name_Middle
+  Last Name: Name_Last
+  Suffix: Name_Suffix
+  House Number: House_Number
+  House Suffix: House_Suffix 
+  Pre Direction: Pre_Direction
+  Street Name: Street_Name
+  Street Type: Street_Type
+  Post Direction: Post_Direction
+  Unit Type: Unit_Type
+  Unit Number: Unit_Number
+  Non Standard Address: Non_Standard_Address
+  Residential City: Residential_City
+  Residential State: Residential_State
+  Residential ZipCode: Residential_ZipCode
+  Mailing Address: Mailing_Address
+  Mailing City: Mailing_City
+  Mailing State: Mailing_State 
+  Mailing ZipCode: Mailing_ZipCode  
+  Birthdate: Birth_Date
+  Registration Date: Registration_Date
+  Precinct: Precinct_Code
+  Precinct Name: Precinct_Name
+  Split: Split_ID
+  Township: Township_Code
+  Ward: Ward_Code
+  Congressional - New: Congressional_District
+  Legislative - New: Legislative_District
+  State Senate - New: Senate_District
+  Voter History 1: Voter_History_1
+  Voter History 2: Voter_History_2
+  Voter History 3: Voter_History_3
+  Voter History 4: Voter_History_4
+  Voter History 5: Voter_History_5
+  Voter History 6: Voter_History_6
+  Voter History 7: Voter_History_7
+  Voter History 8: Voter_History_8 
+  Voter History 9: Voter_History_9
+  Voter History 10: Voter_History_10
+  Voter History 11: Voter_History_11
+  Voter History 12: Voter_History_12
+  Voter History 13: Voter_History_13
+  Voter History 14: Voter_History_14
+  Voter History 15: Voter_History_15
+  Voter History 16: Voter_History_16
+  Voter History 17: Voter_History_17
+  Voter History 18: Voter_History_18
+  Voter History 19: Voter_History_19
+  Voter History 20: Voter_History_20
+
+
+election_column_map:
+  VOTER_ID: Voter ID
+  ELECTION_DATE: null
+  ELECTION_DESCRIPTION: 
+    - Voter History 1
+    - Voter History 2
+    - Voter History 3
+    - Voter History 4
+    - Voter History 5
+    - Voter History 6
+    - Voter History 7
+    - Voter History 8
+    - Voter History 9
+    - Voter History 10
+    - Voter History 11
+    - Voter History 12
+    - Voter History 13
+    - Voter History 14
+    - Voter History 15
+    - Voter History 16
+    - Voter History 17
+    - Voter History 18
+    - Voter History 19
+  ELECTION_TYPE: null 
+  # technically date and type are wrapped up in description
+  VOTING_METHOD: null 
+
+county_codes:
+  Not_Provided: NP
+
+status_codes:
+  Not_Provided: NP
+
+gender_codes:
+  Not_Provided: NP
+
+race_codes:
+  Not_Provided: NP
+
+party_codes:
+  Not_Provided: NP
+
+num_party_codes: null
+

@@ -1,0 +1,368 @@
+# Colorado has 8 zip files that are roughly equally divided .zip files for the Voter Files 
+# Their history files are divided by each election. 
+
+file_type: txt
+delimiter: ','
+state: colorado
+source: boe
+file_class: voter_file
+voter_id: VOTER_ID
+county_identifier: COUNTY_CODE
+birthday_identifier: BIRTH_YEAR
+voter_status: STATUS_CODE
+party_identifier: PARTY
+date_format: '%m/%d/%Y'
+numeric_county: TRUE
+has_headers: TRUE
+fixed_width: FALSE
+separate_hispanic_origIn: FALSE
+
+format:
+  separate_hist: TRUE
+  separate_counties_voter_file: TRUE
+  separate_counties_hist_file: FALSE
+  hist_election_rows: TRUE
+  columnar_elections: FALSE
+  separate_district_lookup_file: FALSE
+  vote_history_type: null
+
+name_fields:
+  - LAST_NAME
+  - FIRST_NAME
+  - MIDDLE_NAME
+  - NAME_SUFFIX
+  - VOTER_NAME
+
+address_fields:
+  - HOUSE_NUM
+  - HOUSE_SUFFIX
+  - PRE_DIR
+  - STREET_NAME
+  - STREET_TYPE
+  - POST_DIR
+  - UNIT_TYPE
+  - UNIT_NUM
+  - RESIDENTIAL_ADDRESS
+  - RESIDENTIAL_CITY
+  - RESIDENTIAL_STATE
+  - RESIDENTIAL_ZIP_CODE
+  - RESIDENTIAL_ZIP_PLUS
+  - MAIL_ADDR1
+  - MAIL_ADDR2
+  - MAIL_ADDR3
+  - MAILING_CITY
+  - MAILING_STATE
+  - MAILING_ZIP_CODE
+  - MAILING_ZIP_PLUS
+  - MAILING_COUNTRY
+  
+column_names:
+  - VOTER_ID
+  - COUNTY_CODE
+  - COUNTY
+  - LAST_NAME
+  - FIRST_NAME
+  - MIDDLE_NAME
+  - NAME_SUFFIX
+  - VOTER_NAME
+  - STATUS_CODE
+  - PRECINCT_NAME
+  - ADDRESS_LIBRARY_ID
+  - HOUSE_NUM
+  - HOUSE_SUFFIX
+  - PRE_DIR
+  - STREET_NAME
+  - STREET_TYPE
+  - POST_DIR
+  - UNIT_TYPE
+  - UNIT_NUM
+  - RESIDENTIAL_ADDRESS
+  - RESIDENTIAL_CITY
+  - RESIDENTIAL_STATE
+  - RESIDENTIAL_ZIP_CODE
+  - RESIDENTIAL_ZIP_PLUS
+  - EFFECTIVE_DATE
+  - REGISTRATION_DATE
+  - STATUS
+  - STATUS_REASON
+  - BIRTH_YEAR
+  - GENDER
+  - PRECINCT
+  - SPLIT
+  - VOTER_STATUS_ID
+  - PARTY
+  - PREFERENCE
+  - PARTY_AFFILIATION_DATE
+  - PHONE_NUM
+  - MAIL_ADDR1
+  - MAIL_ADDR2
+  - MAIL_ADDR3
+  - MAILING_CITY
+  - MAILING_STATE
+  - MAILING_ZIP_CODE
+  - MAILING_ZIP_PLUS
+  - MAILING_COUNTRY
+  - SPL_ID
+  - PERMANENT_MAIL_IN_VOTER
+  - CONGRESSIONAL
+  - STATE_SENATE
+  - STATE_HOUSE
+  - ID_REQUIRED
+
+column_classes:
+  VOTER_ID: character
+  COUNTY_CODE: character
+  COUNTY: character
+  LAST_NAME: character
+  FIRST_NAME: character
+  MIDDLE_NAME: character
+  NAME_SUFFIX: character
+  VOTER_NAME: character
+  STATUS_CODE: character
+  PRECINCT_NAME: character
+  ADDRESS_LIBRARY_ID: character
+  HOUSE_NUM: character
+  HOUSE_SUFFIX: character
+  PRE_DIR: character
+  STREET_NAME: character
+  STREET_TYPE: character
+  POST_DIR: character
+  UNIT_TYPE: character
+  UNIT_NUM: character
+  RESIDENTIAL_ADDRESS: character
+  RESIDENTIAL_CITY: character
+  RESIDENTIAL_STATE: character
+  RESIDENTIAL_ZIP_CODE: character
+  RESIDENTIAL_ZIP_PLUS: character
+  EFFECTIVE_DATE: character
+  REGISTRATION_DATE: character
+  STATUS: character
+  STATUS_REASON: character
+  BIRTH_YEAR: character
+  GENDER: character
+  PRECINCT: character
+  SPLIT: character
+  VOTER_STATUS_ID: character
+  PARTY: character
+  PREFERENCE: character
+  PARTY_AFFILIATION_DATE: date
+  PHONE_NUM: character
+  MAIL_ADDR1: character
+  MAIL_ADDR2: character
+  MAIL_ADDR3: character
+  MAILING_CITY: character
+  MAILING_STATE: character
+  MAILING_ZIP_CODE: character
+  MAILING_ZIP_PLUS: character
+  MAILING_COUNTRY: character
+  SPL_ID: character
+  PERMANENT_MAIL_IN_VOTER: character
+  CONGRESSIONAL: character
+  STATE_SENATE: character
+  STATE_HOUSE: character
+  ID_REQUIRED: character
+
+standard_colnames:
+  - Voter_ID
+  - County_Code
+  - County
+  - Name_Last
+  - Name_First
+  - Name_Middle
+  - Name_Suffix
+  - Voter_Name
+  - Voter_Status
+  - Precint_Name
+  - Address_Library_ID
+  - House_Number
+  - House_Suffix
+  - Pre_Direction
+  - Street_Name
+  - Street_Type
+  - Post_Direction
+  - Unit_Type
+  - Unit_Number
+  - Residence_Address_Line_1
+  - Residence_City
+  - Residence_State
+  - Residence_Zipcode
+  - Residence_Zipcode_Plus
+  - Effective_Date
+  - Registration_Date
+  - Voter_Status
+  - Voter_Status_Desc
+  - Birth_Year
+  - Gender
+  - Precinct_Code
+  - Precinct_Split
+  - Voter_Status_ID
+  - Party_Affiliation
+  - Party_Preference
+  - Party_Affiliation_Date
+  - Phone_Number
+  - Mailing_Address_Line_1
+  - Mailing_Address_Line_2
+  - Mailing_Address_Line_3
+  - Mailing_City
+  - Mailing_State
+  - Mailing_Zipcode 
+  - Mailing_Zipcode_Plus
+  - Mailing_Country
+  - Spl_ID
+  - Permanent_Mail_in_Voter
+  - Congressional_District
+  - Senate_District
+  - House_District
+  - ID_Required
+
+standard_colpairs:
+  VOTER_ID: Voter_ID
+  COUNTY_CODE: County_Code
+  COUNTY: County
+  LAST_NAME: Name_Last
+  FIRST_NAME: Name_First
+  MIDDLE_NAME: Name_Middle
+  NAME_SUFFIX: Name_Suffix
+  VOTER_NAME: Voter_Name
+  STATUS_CODE: Voter_Status
+  PRECINCT_NAME: Precint_Name
+  ADDRESS_LIBRARY_ID: Address_Library_ID
+  HOUSE_NUM: House_Number
+  HOUSE_SUFFIX: House_Suffix
+  PRE_DIR: Pre_Direction
+  STREET_NAME: Street_Name
+  STREET_TYPE: Street_Type
+  POST_DIR: Post_Direction
+  UNIT_TYPE: Unit_Type
+  UNIT_NUM: Unit_Number
+  RESIDENTIAL_ADDRESS: Residence_Address_Line_1
+  RESIDENTIAL_CITY: Residence_City
+  RESIDENTIAL_STATE: Residence_State
+  RESIDENTIAL_ZIP_CODE: Residence_Zipcode
+  RESIDENTIAL_ZIP_PLUS: Residence_Zipcode_Plus
+  EFFECTIVE_DATE: Effective_Date
+  REGISTRATION_DATE: Registration_Date
+  STATUS: Voter_Status
+  STATUS_REASON: Voter_Status_Desc
+  BIRTH_YEAR: Birth_Year
+  GENDER: Gender
+  PRECINCT: Precinct_Code
+  SPLIT: Precinct_Split
+  VOTER_STATUS_ID: Voter_Status_ID
+  PARTY: Party_Affiliation
+  PREFERENCE: Party_Preference
+  PARTY_AFFILIATION_DATE: Party_Affiliation_Date
+  PHONE_NUM: Phone_Number
+  MAIL_ADDR1: Mailing_Address_Line_1
+  MAIL_ADDR2: Mailing_Address_Line_2
+  MAIL_ADDR3: Mailing_Address_Line_3
+  MAILING_CITY: Mailing_City
+  MAILING_STATE: Mailing_State
+  MAILING_ZIP_CODE: Mailing_Zipcode 
+  MAILING_ZIP_PLUS: Mailing_Zipcode_Plus
+  MAILING_COUNTRY: Mailing_Country
+  SPL_ID: Spl_ID
+  PERMANENT_MAIL_IN_VOTER: Permanent_Mail_in_Voter
+  CONGRESSIONAL: Congressional_District
+  STATE_SENATE: Senate_District
+  STATE_HOUSE: House_District
+  ID_REQUIRED: ID_Required
+
+voter_status_codes:
+  active: A
+  inactive: I
+
+party_codes:
+  democratic_party: DEM
+  republican_party: REP
+  no_party_affiliation: UAF
+  constitution_party: CPF
+  ecology_party: ECO
+  green_party: GRE
+  libertarian_party: LPF
+  socialism_and_liberation_party: PSL
+  reform_party: REF
+  independent_party: INT
+  independence_party: IDP
+  americas_independent_party: AIP
+
+num_party_codes: 12
+
+race_codes: 
+  Not_Provided: NP
+
+gender_codes: 
+  Female: 'Female'
+  Male: 'Male'
+  Unknown: 'Unknown'
+
+county_codes:
+  CONEJOS: 11
+  COSTILLA: 12
+  CROWLEY: 13
+  CUSTER: 14
+  DELTA: 15
+  DENVER: 16
+  DOLORES: 17
+  DOUGLAS: 18
+  EAGLE: 19
+  ELBERT: 20
+  EL PASO: 21
+  FREMONT: 22
+  GARFIELD: 23
+  GILPIN: 24
+  GRAND: 25
+  GUNNISON: 26
+  HINSDALE: 27
+  HUERFANO: 28
+  JACKSON: 29
+  JEFFERSON: 30
+  KIOWA: 31
+  KIT CARSON: 32
+  LAKE: 33
+  LA PLATA: 34
+  LARIMER: 35
+  LAS ANIMAS: 36
+  LINCOLN: 37
+  LOGAN: 38
+  MESA: 39
+  MINERAL: 40
+  MOFFAT: 41
+  MONTEZUMA: 42
+  MONTROSE: 43
+  MORGAN: 44
+  OTERO: 45
+  OURAY: 46
+  PARK: 47
+  PHILLIPS: 48
+  PITKIN: 49
+  PROWERS: 50
+  PUEBLO: 51
+  RIO BLANCO: 52
+  RIO GRANDE: 53
+  ROUTT: 54
+  SAGUACHE: 55
+  SAN JUAN: 56
+  SAN MIGUEL: 57
+  SEDGWICK: 58
+  SUMMIT: 59
+  TELLER: 60
+  WASHINGTON: 61
+  WELD: 62
+  YUMA: 63
+  BROOMFIELD: 64
+  COLORADO BOCS: 90
+  NONE: 98
+  OUT OF STATE: 99
+
+file_names:
+  - Registered_Voters_List_Part1.zip
+  - Registered_Voters_List_Part2.zip
+  - Registered_Voters_List_Part3.zip 
+  - Registered_Voters_List_Part4.zip
+  - Registered_Voters_List_Part5.zip
+  - Registered_Voters_List_Part6.zip
+  - Registered_Voters_List_Part7.zip
+  - Registered_Voters_List_Part8.zip
+
+num_files: 8

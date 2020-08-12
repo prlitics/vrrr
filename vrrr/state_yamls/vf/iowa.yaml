@@ -1,0 +1,639 @@
+# Iowa's voter file is split into 12 .xlsx files. Each of the four congressional districts are divided into three parts 
+# Note: there are a few repeated column names and I'm unsure how that will affect reading in
+
+file_type: xlsx
+delimiter: null
+state: iowa
+source: boe
+file_class: voter_file
+voter_id: REGN_NUM
+county_identifier: COUNTY
+birthday_identifier: BIRTHDATE
+voter_status: VOTERSTATUS
+party_identifier: PARTY
+date_format: '%m/%d/%Y'
+numeric_county: FALSE
+has_headers: TRUE
+fixed_width: FALSE
+separate_hispanic_orign: FALSE
+
+format:
+  separate_hist: FALSE
+  separate_counties_voter_file: TRUE
+  separate_counties_hist_file: FALSE
+  hist_election_rows: FALSE
+  columnar_elections: TRUE
+  separate_district_lookup_file: FALSE
+  vote_history_type: 'Sporadic'
+
+name_fields:
+  - FIRST_NAME
+  - MIDDLE_NAME
+  - LAST_NAME
+  - NAME_SUFFIX
+  
+address_fields:
+  - HOUSE_NUM
+  - HOUSE_SUFFIX
+  - PRE_DIR
+  - STREET_NAME
+  - STREET_TYPE
+  - POST_DIR
+  - UNIT_TYPE
+  - UNIT_NUM
+  - ADDRESS_NON_STD
+  - CITY
+  - STATE
+  - ZIP_CODE
+  - ZIP_PLUS
+  - MAILING_ADDRESS
+  - CITY
+  - STATE
+  - ZIP_CODE
+  - ZIP_PLUS
+
+column_names:
+  - REGN_NUM
+  - FIRST_NAME
+  - MIDDLE_NAME
+  - LAST_NAME
+  - NAME_SUFFIX
+  - EFF_REGN_DATE
+  - LAST_UPDATED_DATE
+  - PHONENO
+  - HOUSE_NUM
+  - HOUSE_SUFFIX
+  - PRE_DIR
+  - STREET_NAME
+  - STREET_TYPE
+  - POST_DIR
+  - UNIT_TYPE
+  - UNIT_NUM
+  - ADDRESS_NON_STD
+  - CITY
+  - STATE
+  - ZIP_CODE
+  - ZIP_PLUS
+  - MAILING_ADDRESS
+  - CITY
+  - STATE
+  - ZIP_CODE
+  - ZIP_PLUS
+  - VOTERSTATUS
+  - PARTY
+  - POLITICAL_ORGANIZATION
+  - GENDER
+  - BIRTHDATE
+  - COUNTY
+  - FEDERAL
+  - CONGRESSIONAL
+  - STATEWIDE
+  - STATE SENATE
+  - STATE HOUSE
+  - JUDICIAL
+  - PRECINCT
+  - COUNTY SUPERVISOR
+  - COUNTYWIDE
+  - TOWNSHIP
+  - CITY COUNCIL WARD
+  - CITY
+  - COMMUNITY COLLEGE DIRECTOR
+  - COMMUNITY COLLEGE
+  - SCHOOL DIRECTOR
+  - SCHOOL
+  - SANITARY
+  - AGRICULTURAL EXTENSION
+  - SOIL AND WATER
+  - WATER
+  - FIRE
+  - LAND
+  - LAKE
+  - LOSST - CONTIGUOUS CITIES
+  - RECREATIONAL
+  - RURAL IMPROVEMENT ZONE
+  - SEWER
+  - LIGHT
+  - MISCELLANEOUS
+  - GENERAL_ELECTION_DATE
+  - GENERAL_VOTERVOTEMETHOD
+  - GENERAL_ELECTION_DATE
+  - GENERAL_VOTERVOTEMETHOD
+  - GENERAL_ELECTION_DATE
+  - GENERAL_VOTERVOTEMETHOD
+  - GENERAL_ELECTION_DATE
+  - GENERAL_VOTERVOTEMETHOD
+  - GENERAL_ELECTION_DATE
+  - GENERAL_VOTERVOTEMETHOD
+  - PRIMARY_ELECTION_DATE
+  - PRIMARY_VOTERVOTEMETHOD
+  - POLITICAL_PARTY
+  - POLITICAL_ORGANIZATION
+  - PRIMARY_ELECTION_DATE
+  - PRIMARY_VOTERVOTEMETHOD
+  - POLITICAL_PARTY
+  - POLITICAL_ORGANIZATION
+  - PRIMARY_ELECTION_DATE
+  - PRIMARY_VOTERVOTEMETHOD
+  - POLITICAL_PARTY
+  - POLITICAL_ORGANIZATION
+  - PRIMARY_ELECTION_DATE
+  - PRIMARY_VOTERVOTEMETHOD
+  - POLITICAL_PARTY
+  - POLITICAL_ORGANIZATION
+  - PRIMARY_ELECTION_DATE
+  - PRIMARY_VOTERVOTEMETHOD
+  - POLITICAL_PARTY
+  - POLITICAL_ORGANIZATION
+  - SCHOOL_ELECTION_DATE
+  - SCHOOL_VOTERVOTEMETHOD
+  - SCHOOL_ELECTION_DATE
+  - SCHOOL_VOTERVOTEMETHOD
+  - SCHOOL_ELECTION_DATE
+  - SCHOOL_VOTERVOTEMETHOD
+  - SCHOOL_ELECTION_DATE
+  - SCHOOL_VOTERVOTEMETHOD
+  - SCHOOL_ELECTION_DATE
+  - SCHOOL_VOTERVOTEMETHOD
+  - CITY_ELECTION_DATE
+  - CITY_VOTERVOTEMETHOD
+  - CITY_ELECTION_DATE
+  - CITY_VOTERVOTEMETHOD
+  - CITY_ELECTION_DATE
+  - CITY_VOTERVOTEMETHOD
+  - CITY_ELECTION_DATE
+  - CITY_VOTERVOTEMETHOD
+  - CITY_ELECTION_DATE
+  - CITY_VOTERVOTEMETHOD
+  - SPECIAL_ELECTION_DATE
+  - SPECIAL_VOTERVOTEMETHOD
+  - SPECIAL_ELECTION_DATE
+  - SPECIAL_VOTERVOTEMETHOD
+  - SPECIAL_ELECTION_DATE
+  - SPECIAL_VOTERVOTEMETHOD
+  - SPECIAL_ELECTION_DATE
+  - SPECIAL_VOTERVOTEMETHOD
+  - SPECIAL_ELECTION_DATE
+  - SPECIAL_VOTERVOTEMETHOD
+
+column_classes:
+  REGN_NUM: character
+  FIRST_NAME: character
+  MIDDLE_NAME: character
+  LAST_NAME: character
+  NAME_SUFFIX: character
+  EFF_REGN_DATE: date
+  LAST_UPDATED_DATE: date
+  PHONENO: character
+  HOUSE_NUM: character
+  HOUSE_SUFFIX: character
+  PRE_DIR: character
+  STREET_NAME: character
+  STREET_TYPE: character
+  POST_DIR: character
+  UNIT_TYPE: character
+  UNIT_NUM: character
+  ADDRESS_NON_STD: character
+  CITY: character
+  STATE: character
+  ZIP_CODE: character
+  ZIP_PLUS: character
+  MAILING_ADDRESS: character
+  CITY: character
+  STATE: character
+  ZIP_CODE: character
+  ZIP_PLUS: character
+  VOTERSTATUS: character
+  PARTY: character
+  POLITICAL_ORGANIZATION: character
+  GENDER: character
+  BIRTHDATE: date
+  COUNTY: character
+  FEDERAL: character
+  CONGRESSIONAL: character
+  STATEWIDE: character
+  STATE SENATE: character
+  STATE HOUSE: character
+  JUDICIAL: character
+  PRECINCT: character
+  COUNTY SUPERVISOR: character
+  COUNTYWIDE: character
+  TOWNSHIP: character
+  CITY COUNCIL WARD: character
+  CITY: character
+  COMMUNITY COLLEGE DIRECTOR: character
+  COMMUNITY COLLEGE: character
+  SCHOOL DIRECTOR: character
+  SCHOOL: character
+  SANITARY: character
+  AGRICULTURAL EXTENSION: character
+  SOIL AND WATER: character
+  WATER: character
+  FIRE: character
+  LAND: character
+  LAKE: character
+  LOSST - CONTIGUOUS CITIES: character
+  RECREATIONAL: character
+  RURAL IMPROVEMENT ZONE: character
+  SEWER: character
+  LIGHT: character
+  MISCELLANEOUS: character
+  GENERAL_ELECTION_DATE: date
+  GENERAL_VOTERVOTEMETHOD: character
+  GENERAL_ELECTION_DATE: date
+  GENERAL_VOTERVOTEMETHOD: character
+  GENERAL_ELECTION_DATE: date
+  GENERAL_VOTERVOTEMETHOD: character
+  GENERAL_ELECTION_DATE: date
+  GENERAL_VOTERVOTEMETHOD: character
+  GENERAL_ELECTION_DATE: date
+  GENERAL_VOTERVOTEMETHOD: character
+  PRIMARY_ELECTION_DATE: date
+  PRIMARY_VOTERVOTEMETHOD: character
+  POLITICAL_PARTY: character
+  POLITICAL_ORGANIZATION: character
+  PRIMARY_ELECTION_DATE: date
+  PRIMARY_VOTERVOTEMETHOD: character
+  POLITICAL_PARTY: character
+  POLITICAL_ORGANIZATION: character
+  PRIMARY_ELECTION_DATE: date
+  PRIMARY_VOTERVOTEMETHOD: character
+  POLITICAL_PARTY: character
+  POLITICAL_ORGANIZATION: character
+  PRIMARY_ELECTION_DATE: date
+  PRIMARY_VOTERVOTEMETHOD: character
+  POLITICAL_PARTY: character
+  POLITICAL_ORGANIZATION: character
+  PRIMARY_ELECTION_DATE: date
+  PRIMARY_VOTERVOTEMETHOD: character
+  POLITICAL_PARTY: character
+  POLITICAL_ORGANIZATION: character
+  SCHOOL_ELECTION_DATE: date
+  SCHOOL_VOTERVOTEMETHOD: character
+  SCHOOL_ELECTION_DATE: date
+  SCHOOL_VOTERVOTEMETHOD: character
+  SCHOOL_ELECTION_DATE: date
+  SCHOOL_VOTERVOTEMETHOD: character
+  SCHOOL_ELECTION_DATE: date
+  SCHOOL_VOTERVOTEMETHOD: character
+  SCHOOL_ELECTION_DATE: date
+  SCHOOL_VOTERVOTEMETHOD: character
+  CITY_ELECTION_DATE: date
+  CITY_VOTERVOTEMETHOD: character
+  CITY_ELECTION_DATE: date
+  CITY_VOTERVOTEMETHOD: character
+  CITY_ELECTION_DATE: date
+  CITY_VOTERVOTEMETHOD: character
+  CITY_ELECTION_DATE: date
+  CITY_VOTERVOTEMETHOD: character
+  CITY_ELECTION_DATE: date
+  CITY_VOTERVOTEMETHOD: character
+  SPECIAL_ELECTION_DATE: date
+  SPECIAL_VOTERVOTEMETHOD: character
+  SPECIAL_ELECTION_DATE: date
+  SPECIAL_VOTERVOTEMETHOD: character
+  SPECIAL_ELECTION_DATE: date
+  SPECIAL_VOTERVOTEMETHOD: character
+  SPECIAL_ELECTION_DATE: date
+  SPECIAL_VOTERVOTEMETHOD: character
+  SPECIAL_ELECTION_DATE: date
+  SPECIAL_VOTERVOTEMETHOD: character
+
+standard_colnames:
+  - Voter_ID
+  - Name_First
+  - Name_Middle
+  - Name_Last
+  - Name_Suffix
+  - Registration_Date
+  - Last_Updated_Date
+  - Phone_Number
+  - House_Number
+  - House_Suffix
+  - Pre_Direction
+  - Street_Name
+  - Street_Type
+  - Post_Direction
+  - Unit_Type
+  - Unit_Number
+  - Address_Non_Standard
+  - Residence_City
+  - Residence_State
+  - Residence_Zipcode
+  - Residence_Zipcode_Plus
+  - Mailing_Address
+  - Mailing_City
+  - Mailing_State
+  - Mailing_Zipcode
+  - Mailing_Zipcode_Plus
+  - Voter_Status
+  - Party_Affiliation
+  - Party_Affiliation_Unqual
+  - Gender
+  - Birth_Date
+  - County_Name
+  - Federal_District
+  - Congressional_District
+  - State_District
+  - Senate_District
+  - House_District
+  - Judicial_District
+  - Precinct_Code
+  - County_Supervisor
+  - Countywide_Code
+  - Township_Code
+  - City_Council
+  - City_Code
+  - Community_College_Director
+  - Community_College
+  - School_Director
+  - School_Code
+  - Sanitation_District_Code
+  - Agricultural_Extension
+  - Soil_Water_District
+  - Water_District
+  - Fire_District_Code
+  - Land_District
+  - Lake_District
+  - LOSST_Contiguous_Cities
+  - Recreational_District
+  - Rural_Improvement_Zone
+  - Sewer_District_Code
+  - Light_District
+  - Miscellaneous
+  - Election_Date
+  - Ballot_Type
+  - Election_Date_2
+  - Ballot_Type_2
+  - Election_Date_3
+  - Ballot_Type_3
+  - Election_Date_4
+  - Ballot_Type_4
+  - Election_Date_5
+  - Ballot_Type_5
+  - Election_Date_6
+  - Ballot_Type_6
+  - Vote_Decision_Party
+  - Vote_Decision_PoliticalOrg
+  - Election_Date_7
+  - Ballot_Type_7
+  - Vote_Decision_Party_2
+  - Vote_Decision_PoliticalOrg_2
+  - Election_Date_8
+  - Ballot_Type_8
+  - Vote_Decision_Party_3
+  - Vote_Decision_PoliticalOrg_3
+  - Election_Date_9
+  - Ballot_Type_9
+  - Vote_Decision_Party_4
+  - Vote_Decision_PoliticalOrg_4
+  - Election_Date_10
+  - Ballot_Type_10
+  - Vote_Decision_Party_5
+  - Vote_Decision_PoliticalOrg_5
+  - Election_Date_11
+  - Ballot_Type_11
+  - Election_Date_12
+  - Ballot_Type_12
+  - Election_Date_13
+  - Ballot_Type_13
+  - Election_Date_14
+  - Ballot_Type_14
+  - Election_Date_15
+  - Ballot_Type_15
+  - Election_Date_16
+  - Ballot_Type_16
+  - Election_Date_17
+  - Ballot_Type_17
+  - Election_Date_18 
+  - Ballot_Type_18
+  - Election_Date_19
+  - Ballot_Type_19
+  - Election_Date_20
+  - Ballot_Type_20
+  - Election_Date_21
+  - Ballot_Type_21
+  - Election_Date_22
+  - Ballot_Type_22
+  - Election_Date_23
+  - Ballot_Type_23
+  - Election_Date_24
+  - Ballot_Type_24
+  - Election_Date_25
+  - Ballot_Type_25
+  
+standard_colpairs:
+  REGN_NUM: Voter_ID
+  FIRST_NAME: Name_First
+  MIDDLE_NAME: Name_Middle
+  LAST_NAME: Name_Last
+  NAME_SUFFIX: Name_Suffix
+  EFF_REGN_DATE: Registration_Date
+  LAST_UPDATED_DATE: Last_Updated_Date
+  PHONENO: Phone_Number
+  HOUSE_NUM: House_Number
+  HOUSE_SUFFIX: House_Suffix
+  PRE_DIR: Pre_Direction
+  STREET_NAME: Street_Name
+  STREET_TYPE: Street_Type
+  POST_DIR: Post_Direction
+  UNIT_TYPE: Unit_Type
+  UNIT_NUM: Unit_Number
+  ADDRESS_NON_STD: Address_Non_Standard
+  CITY: Residence_City
+  STATE: Residence_State
+  ZIP_CODE: Residence_Zipcode
+  ZIP_PLUS: Residence_Zipcode_Plus
+  MAILING_ADDRESS: Mailing_Address
+  CITY: Mailing_City
+  STATE: Mailing_State
+  ZIP_CODE: Mailing_Zipcode
+  ZIP_PLUS: Mailing_Zipcode_Plus
+  VOTERSTATUS: Voter_Status
+  PARTY: Party_Affiliation
+  POLITICAL_ORGANIZATION: Party_Affiliation_Unqual
+  GENDER: Gender
+  BIRTHDATE: Birth_Date
+  COUNTY: County_Name
+  FEDERAL: Federal_District
+  CONGRESSIONAL: Congressional_District
+  STATEWIDE: State_District
+  STATE SENATE: Senate_District
+  STATE HOUSE: House_District
+  JUDICIAL: Judicial_District
+  PRECINCT: Precinct_Code
+  COUNTY SUPERVISOR: County_Supervisor
+  COUNTYWIDE: Countywide_Code
+  TOWNSHIP: Township_Code
+  CITY COUNCIL WARD: City_Council
+  CITY: City_Code
+  COMMUNITY COLLEGE DIRECTOR: Community_College_Director
+  COMMUNITY COLLEGE: Community_College
+  SCHOOL DIRECTOR: School_Director
+  SCHOOL: School_Code
+  SANITARY: Sanitation_District_Code
+  AGRICULTURAL EXTENSION: Agricultural_Extension
+  SOIL AND WATER: Soil_Water_District
+  WATER: Water_District
+  FIRE: Fire_District_Code
+  LAND: Land_District
+  LAKE: Lake_District
+  LOSST - CONTIGUOUS CITIES: LOSST_Contiguous_Cities
+  RECREATIONAL: Recreational_District
+  RURAL IMPROVEMENT ZONE: Rural_Improvement_Zone
+  SEWER: Sewer_District_Code
+  LIGHT: Light_District
+  MISCELLANEOUS: Miscellaneous
+  GENERAL_ELECTION_DATE: Election_Date
+  GENERAL_VOTERVOTEMETHOD: Ballot_Type
+  GENERAL_ELECTION_DATE: Election_Date_2
+  GENERAL_VOTERVOTEMETHOD: Ballot_Type_2
+  GENERAL_ELECTION_DATE: Election_Date_3
+  GENERAL_VOTERVOTEMETHOD: Ballot_Type_3
+  GENERAL_ELECTION_DATE: Election_Date_4
+  GENERAL_VOTERVOTEMETHOD: Ballot_Type_4
+  GENERAL_ELECTION_DATE: Election_Date_5
+  GENERAL_VOTERVOTEMETHOD: Ballot_Type_5
+  PRIMARY_ELECTION_DATE: Election_Date_6
+  PRIMARY_VOTERVOTEMETHOD: : Ballot_Type_6
+  POLITICAL_PARTY: Vote_Decision_Party
+  POLITICAL_ORGANIZATION: Vote_Decision_PoliticalOrg
+  PRIMARY_ELECTION_DATE: Election_Date_7
+  PRIMARY_VOTERVOTEMETHOD: Ballot_Type_7
+  POLITICAL_PARTY: Vote_Decision_Party_2
+  POLITICAL_ORGANIZATION: Vote_Decision_PoliticalOrg_2
+  PRIMARY_ELECTION_DATE: Election_Date_8
+  PRIMARY_VOTERVOTEMETHOD: Ballot_Type_8
+  POLITICAL_PARTY: Vote_Decision_Party_3
+  POLITICAL_ORGANIZATION: Vote_Decision_PoliticalOrg_3
+  PRIMARY_ELECTION_DATE: Election_Date_9
+  PRIMARY_VOTERVOTEMETHOD: Ballot_Type_9
+  POLITICAL_PARTY: Vote_Decision_Party_4
+  POLITICAL_ORGANIZATION: Vote_Decision_PoliticalOrg_4
+  PRIMARY_ELECTION_DATE: Election_Date_10
+  PRIMARY_VOTERVOTEMETHOD: Ballot_Type_10
+  POLITICAL_PARTY: Vote_Decision_Party_5
+  POLITICAL_ORGANIZATION: Vote_Decision_PoliticalOrg_5
+  SCHOOL_ELECTION_DATE: Election_Date_11
+  SCHOOL_VOTERVOTEMETHOD: Ballot_Type_11
+  SCHOOL_ELECTION_DATE: Election_Date_12
+  SCHOOL_VOTERVOTEMETHOD: Ballot_Type_12
+  SCHOOL_ELECTION_DATE: Election_Date_13
+  SCHOOL_VOTERVOTEMETHOD: Ballot_Type_13
+  SCHOOL_ELECTION_DATE: Election_Date_14
+  SCHOOL_VOTERVOTEMETHOD: Ballot_Type_14
+  SCHOOL_ELECTION_DATE: Election_Date_15
+  SCHOOL_VOTERVOTEMETHOD: Ballot_Type_15
+  CITY_ELECTION_DATE: Election_Date_16
+  CITY_VOTERVOTEMETHOD: Ballot_Type_16
+  CITY_ELECTION_DATE: Election_Date_17
+  CITY_VOTERVOTEMETHOD: Ballot_Type_17
+  CITY_ELECTION_DATE: Election_Date_18 
+  CITY_VOTERVOTEMETHOD: Ballot_Type_18
+  CITY_ELECTION_DATE: Election_Date_19
+  CITY_VOTERVOTEMETHOD: Ballot_Type_19
+  CITY_ELECTION_DATE: Election_Date_20
+  CITY_VOTERVOTEMETHOD: Ballot_Type_20
+  SPECIAL_ELECTION_DATE: Election_Date_21
+  SPECIAL_VOTERVOTEMETHOD: Ballot_Type_21
+  SPECIAL_ELECTION_DATE: Election_Date_22
+  SPECIAL_VOTERVOTEMETHOD: Ballot_Type_22
+  SPECIAL_ELECTION_DATE: Election_Date_23
+  SPECIAL_VOTERVOTEMETHOD: Ballot_Type_23
+  SPECIAL_ELECTION_DATE: Election_Date_24
+  SPECIAL_VOTERVOTEMETHOD: Ballot_Type_24
+  SPECIAL_ELECTION_DATE: Election_Date_25
+  SPECIAL_VOTERVOTEMETHOD: Ballot_Type_25
+
+election_column_map:
+  VOTER_ID: REGN_NUM
+  ELECTION_DATE: 
+    - GENERAL_ELECTION_DATE
+    - GENERAL_ELECTION_DATE
+    - GENERAL_ELECTION_DATE
+    - GENERAL_ELECTION_DATE
+    - GENERAL_ELECTION_DATE
+    - PRIMARY_ELECTION_DATE
+    - PRIMARY_ELECTION_DATE
+    - PRIMARY_ELECTION_DATE
+    - PRIMARY_ELECTION_DATE
+    - PRIMARY_ELECTION_DATE
+    - SCHOOL_ELECTION_DATE
+    - SCHOOL_ELECTION_DATE
+    - SCHOOL_ELECTION_DATE
+    - SCHOOL_ELECTION_DATE
+    - SCHOOL_ELECTION_DATE
+    - CITY_ELECTION_DATE
+    - CITY_ELECTION_DATE
+    - CITY_ELECTION_DATE
+    - CITY_ELECTION_DATE
+    - CITY_ELECTION_DATE
+    - SPECIAL_ELECTION_DATE
+    - SPECIAL_ELECTION_DATE
+    - SPECIAL_ELECTION_DATE
+    - SPECIAL_ELECTION_DATE
+    - SPECIAL_ELECTION_DATE
+  ELECTION_DESCRIPTION: null
+  ELECTION_TYPE: null
+  VOTING_METHOD: 
+    - GENERAL_VOTERVOTEMETHOD 
+    - GENERAL_VOTERVOTEMETHOD  
+    - GENERAL_VOTERVOTEMETHOD  
+    - GENERAL_VOTERVOTEMETHOD  
+    - GENERAL_VOTERVOTEMETHOD  
+    - PRIMARY_VOTERVOTEMETHOD
+    - PRIMARY_VOTERVOTEMETHOD
+    - PRIMARY_VOTERVOTEMETHOD
+    - PRIMARY_VOTERVOTEMETHOD
+    - PRIMARY_VOTERVOTEMETHOD
+    - SCHOOL_VOTERVOTEMETHOD
+    - SCHOOL_VOTERVOTEMETHOD
+    - SCHOOL_VOTERVOTEMETHOD
+    - SCHOOL_VOTERVOTEMETHOD
+    - SCHOOL_VOTERVOTEMETHOD
+    - CITY_VOTERVOTEMETHOD
+    - CITY_VOTERVOTEMETHOD
+    - CITY_VOTERVOTEMETHOD
+    - CITY_VOTERVOTEMETHOD
+    - CITY_VOTERVOTEMETHOD
+    - SPECIAL_VOTERVOTEMETHOD
+    - SPECIAL_VOTERVOTEMETHOD
+    - SPECIAL_VOTERVOTEMETHOD
+    - SPECIAL_VOTERVOTEMETHOD
+    - SPECIAL_VOTERVOTEMETHOD  
+
+county_codes:
+  Not_Provided: NP
+
+status_codes:
+  Not_Provided: NP
+
+gender_codes:
+  Not_Provided: NP
+
+race_codes:
+  Not_Provided: NP
+
+party_codes:
+  democratic_party: DEM
+  republican_party: REP
+  libertarian_party: LIB
+  no_party_affiliated: NP
+  other_party: OTH
+
+num_party_codes: 5
+
+file_names:
+  - Congressional District 1 (Part 1) 4-9-2019.xlsx
+  - Congressional District 1 (Part 2) 4-9-2019.xlsx
+  - Congressional District 1 (Part 3) 4-9-2019.xlsx
+  - Congressional District 2 (Part 1) 4-9-2019.xlsx
+  - Congressional District 2 (Part 2) 4-9-2019.xlsx
+  - Congressional District 2 (Part 3) 4-9-2019.xlsx
+  - Congressional District 3 (Part 1) 4-9-2019.xlsx
+  - Congressional District 3 (Part 2) 4-9-2019.xlsx
+  - Congressional District 3 (Part 3) 4-9-2019.xlsx
+  - Congressional District 4 (Part 1) 4-9-2019.xlsx
+  - Congressional District 4 (Part 2) 4-9-2019.xlsx
+  - Congressional District 4 (Part 3) 4-9-2019.xlsx
+
+ num_files: 12 

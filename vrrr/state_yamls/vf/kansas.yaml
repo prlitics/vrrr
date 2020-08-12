@@ -1,0 +1,399 @@
+# Kansas has one .txt file with voter registration and voter history 
+# entitled StatewideMMDDYYYY.txt
+
+file_type: txt
+delimiter: '\t'
+state: kansas
+source: boe
+file_class: voter_file
+voter_id: text_registrant_id
+county_identifier: db_logid
+birthday_identifier: date_of_birth
+voter_status: cde_registrant_status
+party_identifier: desc_party
+date_format: '%f/%e/%Y'
+numeric_county: FALSE
+has_headers: TRUE
+fixed_width: FALSE
+separate_hispanic_orign: FALSE
+
+format:
+  separate_hist: FALSE
+  separate_counties_voter_file: FALSE
+  separate_counties_hist_file: FALSE
+  hist_election_rows: FALSE
+  columnar_elections: TRUE
+  separate_district_lookup_file: FALSE
+  vote_history_type: 'Sporadic'
+
+name_fields:
+  - text_name_first
+  - text_name_middle
+  - text_name_last
+  - cde_name_suffix
+
+address_fields:
+  - text_res_address_nbr
+  - text_res_address_nbr_suffix
+  - cde_street_dir_prefix
+  - text_street_name
+  - cde_street_type
+  - cde_street_dir_suffix
+  - cde_res_unit_type
+  - text_res_unit_nbr
+  - text_res_city
+  - cde_res_state
+  - text_res_zip5
+  - text_res_zip4
+  - text_mail_address1
+  - text_mail_address2
+  - text_mail_address3
+  - text_mail_address4
+  - text_mail_city
+  - cde_mail_state
+  - text_mail_zip5
+  - text_mail_zip4
+
+column_names:
+  - db_logid  
+  - cde_registrant_status
+  - cde_name_title
+  - text_name_first
+  - text_name_middle
+  - text_name_last
+  - cde_name_suffix
+  - cde_gender
+  - text_registrant_id
+  - text_res_address_nbr
+  - text_res_address_nbr_suffix
+  - cde_street_dir_prefix
+  - text_street_name
+  - cde_street_type
+  - cde_street_dir_suffix
+  - cde_res_unit_type
+  - text_res_unit_nbr
+  - text_res_city
+  - cde_res_state
+  - text_res_zip5
+  - text_res_zip4
+  - text_res_carrier_rte
+  - ind_res_military
+  - text_mail_address1
+  - text_mail_address2
+  - text_mail_address3
+  - text_mail_address4
+  - text_mail_city
+  - cde_mail_state
+  - text_mail_zip5
+  - text_mail_zip4
+  - text_mail_carrier_rte
+  - ind_mail_military
+  - ind_mail_foreign
+  - desc_party
+  - precinct_text_name
+  - precinct_text_designation
+  - date_of_birth
+  - date_of_registration
+  - text_phone_area_code
+  - text_phone_exchange
+  - text_phone_last_four
+  - text_election_code_1
+  - text_election_code_2
+  - text_election_code_3
+  - text_election_code_4
+  - text_election_code_5
+  - text_election_code_6
+  - text_election_code_7
+  - text_election_code_8
+  - text_election_code_9
+  - text_election_code_10
+  - text_res_physical_address
+  - polling_place_text_name
+  - polling_place_text_address1
+  - polling_place_text_address2
+  - polling_place_text_address3
+  - polling_place_text_address4
+  - polling_place_text_city
+  - polling_place_cde_state
+  - polling_place_text_zip5
+  - polling_place_text_zip4
+  - district_cc
+  - district_cg
+  - district_jd
+  - district_kr
+  - district_ks
+  - district_sb
+  - district_pt
+  - district_sd
+
+column_classes:
+  db_logid: character
+  cde_registrant_status: character
+  cde_name_title: character
+  text_name_first: character
+  text_name_middle: character
+  text_name_last: character
+  cde_name_suffix: character
+  cde_gender: character
+  text_registrant_id: character
+  text_res_address_nbr: character
+  text_res_address_nbr_suffix: character
+  cde_street_dir_prefix: character
+  text_street_name: character
+  cde_street_type: character
+  cde_street_dir_suffix: character
+  cde_res_unit_type: character
+  text_res_unit_nbr: character
+  text_res_city: character
+  cde_res_state: character
+  text_res_zip5: character
+  text_res_zip4: character
+  text_res_carrier_rte: character
+  ind_res_military: character
+  text_mail_address1: character
+  text_mail_address2: character
+  text_mail_address3: character
+  text_mail_address4: character
+  text_mail_city: character
+  cde_mail_state: character
+  text_mail_zip5: character
+  text_mail_zip4: character
+  text_mail_carrier_rte: character
+  ind_mail_military: character
+  ind_mail_foreign: character
+  desc_party: character
+  precinct_text_name: character
+  precinct_text_designation: character
+  date_of_birth: date
+  date_of_registration: date
+  text_phone_area_code: character
+  text_phone_exchange: character
+  text_phone_last_four: character
+  text_election_code_1: character
+  text_election_code_2: character
+  text_election_code_3: character
+  text_election_code_4: character
+  text_election_code_5: character
+  text_election_code_6: character
+  text_election_code_7: character
+  text_election_code_8: character
+  text_election_code_9: character
+  text_election_code_10: character
+  text_res_physical_address: character
+  polling_place_text_name: character
+  polling_place_text_address1: character
+  polling_place_text_address2: character
+  polling_place_text_address3: character
+  polling_place_text_address4: character
+  polling_place_text_city: character
+  polling_place_cde_state: character
+  polling_place_text_zip5: character
+  polling_place_text_zip4: character
+  district_cc: character
+  district_cg: character
+  district_jd: character
+  district_kr: character
+  district_ks: character
+  district_sb: character
+  district_pt: character
+  district_sd: character
+
+standard_colnames:
+  - County_Name  
+  - Voter_Status
+  - Name_Title
+  - Name_First
+  - Name_Middle
+  - Name_Last
+  - Name_Suffix
+  - Gender
+  - Voter_ID
+  - House_Number
+  - House_Suffix
+  - Pre_Direction
+  - Street_Name
+  - Street_Type
+  - Post_Direction
+  - Unit_Type
+  - Unit_Number
+  - Residence_City
+  - Residence_State
+  - Residence_Zipcode
+  - Residence_Zipcode_Plus
+  - Residence_Carrier
+  - Residence_Military
+  - Mailing_Address
+  - Mailing_Address_Line_2
+  - Mailing_Address_Line_3
+  - Mailing_Address_Line_4
+  - Mailing_City
+  - Mailing_State
+  - Mailing_Zipcode
+  - Mailing_Zipcode_Plus
+  - Mailing_Carrier
+  - Mailing_Military
+  - Mailing_Foreign
+  - Party_Affiliation
+  - Precinct_Name
+  - Precinct_Code
+  - Birth_Date
+  - Registration_Date
+  - Area_Code
+  - Phone_Exchange
+  - Phone_Last_Four
+  - Vote_History_1
+  - Vote_History_2
+  - Vote_History_3
+  - Vote_History_4
+  - Vote_History_5
+  - Vote_History_6
+  - Vote_History_7
+  - Vote_History_8
+  - Vote_History_9
+  - Vote_History_10
+  - Residence_Line1
+  - Polling_Name
+  - Polling_Address_Line_1
+  - Polling_Address_Line_2
+  - Polling_Address_Line_3
+  - Polling_Address_Line_4
+  - Polling_City
+  - Polling_State
+  - Polling_Zipcode
+  - Polling_Zipcode_Plus
+  - County_Commission_District 
+  - Congressional_District 
+  - Judicial_District 
+  - Kansas_Representative_District 
+  - Kansas_Senate_District
+  - Board_of_Education_District 
+  - Precinct_Part_District 
+  - Senate_District
+
+standard_colpairs: 
+  db_logid: County_Name  
+  cde_registrant_status: Voter_Status
+  cde_name_title: Name_Title
+  text_name_first: Name_First
+  text_name_middle: Name_Middle
+  text_name_last: Name_Last
+  cde_name_suffix: Name_Suffix
+  cde_gender: Gender
+  text_registrant_id: Voter_ID
+  text_res_address_nbr: House_Number
+  text_res_address_nbr_suffix: House_Suffix
+  cde_street_dir_prefix: Pre_Direction
+  text_street_name: Street_Name
+  cde_street_type: Street_Type
+  cde_street_dir_suffix: Post_Direction
+  cde_res_unit_type: Unit_Type
+  text_res_unit_nbr: Unit_Number
+  text_res_city: Residence_City
+  cde_res_state: Residence_State
+  text_res_zip5: Residence_Zipcode
+  text_res_zip4: Residence_Zipcode_Plus
+  text_res_carrier_rte: Residence_Carrier
+  ind_res_military: Residence_Military
+  text_mail_address1: Mailing_Address
+  text_mail_address2: Mailing_Address_Line_2
+  text_mail_address3: Mailing_Address_Line_3
+  text_mail_address4: Mailing_Address_Line_4
+  text_mail_city: Mailing_City
+  cde_mail_state: Mailing_State
+  text_mail_zip5: Mailing_Zipcode
+  text_mail_zip4: Mailing_Zipcode_Plus
+  text_mail_carrier_rte: Mailing_Carrier
+  ind_mail_military: Mailing_Military
+  ind_mail_foreign: Mailing_Foreign
+  desc_party: Party_Affiliation
+  precinct_text_name: Precinct_Name
+  precinct_text_designation: Precinct_Code
+  date_of_birth: Birth_Date
+  date_of_registration: Registration_Date
+  text_phone_area_code: Area_Code
+  text_phone_exchange: Phone_Exchange
+  text_phone_last_four: Phone_Last_Four
+  text_election_code_1: Vote_History_1
+  text_election_code_2: Vote_History_2
+  text_election_code_3: Vote_History_3
+  text_election_code_4: Vote_History_4
+  text_election_code_5: Vote_History_5
+  text_election_code_6: Vote_History_6
+  text_election_code_7: Vote_History_7
+  text_election_code_8: Vote_History_8
+  text_election_code_9: Vote_History_9
+  text_election_code_10: Vote_History_10
+  text_res_physical_address: Residence_Line1
+  polling_place_text_name: Polling_Name
+  polling_place_text_address1: Polling_Address_Line_1
+  polling_place_text_address2: Polling_Address_Line_2
+  polling_place_text_address3: Polling_Address_Line_3
+  polling_place_text_address4: Polling_Address_Line_4
+  polling_place_text_city: Polling_City
+  polling_place_cde_state: Polling_State
+  polling_place_text_zip5: Polling_Zipcode
+  polling_place_text_zip4: Polling_Zipcode_Plus
+  district_cc: County_Commission_District 
+  district_cg: Congressional_District 
+  district_jd: Judicial_District 
+  district_kr: Kansas_Representative_District 
+  district_ks: Kansas_Senate_District
+  district_sb: Board_of_Education_District 
+  district_pt: Precinct_Part_District 
+  district_sd: Senate_District
+
+county_codes:
+  Not_Provided: NP
+
+status_codes:
+  active: A 
+  inactive: I
+
+election_column_map:
+  VOTER_ID: text_registrant_id
+  ELECTION_DATE: null
+  ELECTION_DESCRIPTION: # election code + extra details + year
+    - text_election_code_1
+    - text_election_code_2
+    - text_election_code_3
+    - text_election_code_4
+    - text_election_code_5
+    - text_election_code_6
+    - text_election_code_7
+    - text_election_code_8
+    - text_election_code_9
+    - text_election_code_10
+  ELECTION_TYPE: null
+  VOTING_METHOD: null
+
+election_codes:
+  City_Primary: CP 
+  City_General: CG 
+  November_General: GN 
+  Mail_Ballot: MB 
+  August_Primary: PR 
+  Special_Elections: SP 
+  Presidential_Primary: PP  
+
+gender_codes:
+  Female: F
+  Male: M
+  Unknown: U
+
+race_codes:
+  Not_Provided: NP
+
+party_codes:
+  democratic_party: Democratic 
+  republican_party: Republican 
+  unaffiliated_party: Unaffiliated 
+  libertarian_party: Libertarian 
+
+num_party_codes: 4
+
+
+
+
+
+
+

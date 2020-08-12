@@ -1,0 +1,206 @@
+# West Virginia has one .txt file of voter registration data
+# We don't have access to the voter history files at this time
+
+file_type: txt
+delimiter: '|'
+state: westvirginia
+source: boe
+file_class: voter_file
+voter_id: ID_VOTER
+county_identifier: County_Name
+birthday_identifier: DATE.OF.BIRTH
+voter_status: Status
+party_identifier: PartyAffiliation
+date_format: '%m/%d/%Y %H:%M:%S'
+numeric_county: FALSE
+has_headers: TRUE
+fixed_width: FALSE
+separate_hispanic_orign: FALSE
+
+format:
+  separate_hist: FALSE
+  separate_counties_voter_file: FALSE
+  separate_counties_hist_file: FALSE
+  hist_election_rows: FALSE
+  columnar_elections: FALSE
+  separate_district_lookup_file: FALSE
+  vote_history_type: null
+
+name_fields:
+  - FIRST NAME
+  - Mid
+  - LAST NAME
+  - Suffix
+
+address_fields:
+  - HOUSE NO
+  - STREET
+  - STREET2
+  - UNIT
+  - CITY
+  - STATE
+  - ZIP
+  - MAIL HOUSE NO
+  - MAIL STREET
+  - MAIL STREET2
+  - MAIL UNIT
+  - MAIL CITY
+  - MAIL STATE
+  - MAIL ZIP
+
+column_names:
+  - ID_VOTER
+  - County_Name
+  - FIRST NAME
+  - Mid
+  - LAST NAME
+  - Suffix
+  - DATE OF BIRTH
+  - SEX
+  - HOUSE NO
+  - STREET
+  - STREET2
+  - UNIT
+  - CITY
+  - STATE
+  - ZIP
+  - MAIL HOUSE NO
+  - MAIL STREET
+  - MAIL STREET2
+  - MAIL UNIT
+  - MAIL CITY
+  - MAIL STATE
+  - MAIL ZIP
+  - REGISTRATION DATE
+  - PartyAffiliation
+  - Status
+  - Congressional District
+  - Senatorial District
+  - Delegate District
+  - Magisterial District
+  - Precinct_Number
+  - POLL_NAME
+
+column_classes:
+  ID_VOTER: character
+  County_Name: character
+  FIRST NAME: character
+  Mid: character
+  LAST NAME: character
+  Suffix: character
+  DATE OF BIRTH: date
+  SEX: character
+  HOUSE NO: character
+  STREET: character
+  STREET2: character
+  UNIT: character
+  CITY: character
+  STATE: character
+  ZIP: character
+  MAIL HOUSE NO: character
+  MAIL STREET: character
+  MAIL STREET2: character
+  MAIL UNIT: character
+  MAIL CITY: character
+  MAIL STATE: character
+  MAIL ZIP: character
+  REGISTRATION DATE: date
+  PartyAffiliation: character
+  Status: character
+  Congressional District: character
+  Senatorial District: character
+  Delegate District: character
+  Magisterial District: character
+  Precinct_Number: character
+  POLL_NAME: character
+
+standard_colnames:
+  - Voter_ID
+  - County_Name
+  - Name_First
+  - Name_Middle
+  - Name_Last
+  - Name_Suffix
+  - Birth_Date
+  - Sex
+  - House_Number
+  - Street_Name
+  - PO_box
+  - PO_box
+  - Residence_City
+  - Residence_State
+  - Residence_Zipcode
+  - Mailing_House_Num
+  - Mailing_StreetName
+  - Mailing_PO_box
+  - Mailing_Unit_Num
+  - Mailing_City
+  - Mailing_State
+  - Mailing_Zipcode
+  - Registration_Date
+  - Party_Affiliation
+  - Voter_Status
+  - Congressional_District
+  - Senate_District
+  - Delegate_District
+  - Magisterial_District
+  - Precinct_Code
+  - Polling_Name
+
+standard_colpairs:
+  ID_VOTER: Voter_ID
+  County_Name: County_Name
+  FIRST NAME: Name_First
+  Mid: Name_Middle
+  LAST NAME: Name_Last
+  Suffix: Name_Suffix
+  DATE OF BIRTH: Birth_Date
+  SEX: Sex
+  HOUSE NO: House_Number
+  STREET: Street_Name
+  STREET2: PO_box
+  UNIT: PO_box
+  CITY: Residence_City
+  STATE: Residence_State
+  ZIP: Residence_Zipcode
+  MAIL HOUSE NO: Mailing_House_Num
+  MAIL STREET: Mailing_StreetName
+  MAIL STREET2: Mailing_PO_box
+  MAIL UNIT: Mailing_Unit_Num
+  MAIL CITY: Mailing_City
+  MAIL STATE: Mailing_State
+  MAIL ZIP: Mailing_Zipcode
+  REGISTRATION DATE: Registration_Date
+  PartyAffiliation: Party_Affiliation
+  Status: Voter_Status
+  Congressional District: Congressional_District
+  Senatorial District: Senate_District
+  Delegate District: Delegate_District
+  Magisterial District: Magisterial_District
+  Precinct_Number: Precinct_Code
+  POLL_NAME: Polling_Name
+
+county_codes:
+  Not_Provided: NP
+
+status_codes:
+  active: Active
+  inactive: Inactive
+
+gender_codes:
+  male:
+    - M
+    - m
+  female:
+    - F
+    - f
+  unidentified:
+    - N
+
+race_codes:
+  Not_Provided: NP
+
+party_codes:
+  Not_Provided: NP
+
+num_party_codes: 230

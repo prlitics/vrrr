@@ -1,0 +1,325 @@
+#North Carolina has one voter file (name: ncvoter#.txt from ncvoter.Statewide.zip and ncvoter#.zip)
+
+file_type: txt
+deliminter: '\t'
+state: North Carolina
+source: boe
+file_class: voter_file
+voter_id: voter_reg_num
+county_identifier: county_id
+birthday_identifier: birth_age
+voter_status: status_cd
+party_identifier: party_cd
+date_format: '%m/%d/%Y'
+numeric_county: TRUE
+has_headers: TRUE
+fixed_width: FALSE
+separate_hispanic_orign: FALSE
+
+format:
+  separate_hist: TRUE
+  separate_counties_voter_file: FALSE
+  separate_counties_hist_file: FALSE
+  hist_election_rows: FALSE
+  columnar_elections: FALSE
+  separate_district_lookup_file: FALSE
+  vote_history_type: null
+
+name_fields:
+  - last_name
+  - first_name
+  - middle_name
+  - name_suffix_lbl
+
+address_fields:
+  - res_street_address
+  - res_city_desc
+  - state_cd
+  - zip_code
+  - mail_addr1
+  - mail_addr2
+  - mail_addr3
+  - mail_addr4
+  - mail_city
+  - mail_state
+  - mail_zipcode
+
+column_names:
+  - county_id
+  - county_desc
+  - voter_reg_num
+  - status_cd
+  - voter_status_desc
+  - reason_cd
+  - voter_status_reason_desc
+  - absent_ind
+  - name_prefx_cd
+  - last_name
+  - first_name
+  - middle_name
+  - name_suffix_lbl
+  - res_street_address
+  - res_city_desc
+  - state_cd
+  - zip_code
+  - mail_addr1
+  - mail_addr2
+  - mail_addr3
+  - mail_addr4
+  - mail_city
+  - mail_state
+  - mail_zipcode
+  - full_phone_number
+  - race_code
+  - ethnic_code
+  - party_cd
+  - gender_code
+  - birth_age
+  - birth_state
+  - drivers_lic
+  - registr_dt
+  - precinct_abbrv
+  - precinct_desc
+  - municipality_abbrv
+  - municipality_desc
+  - ward_abbrv
+  - ward_desc
+  - cong_dist_abbrv
+  - super_court_abbrv
+  - judic_dist_abbrv
+  - nc_senate_abbrv
+  - nc_house_abbrv
+  - county_commiss_abbrv
+  - county_commiss_desc
+  - township_abbrv
+  - township_desc
+  - school_dist_abbrv
+  - school_dist_desc
+  - fire_dist_abbrv
+  - fire_dist_desc
+  - water_dist_abbrv
+  - water_dist_desc
+  - sewer_dist_abbrv
+  - sewer_dist_desc
+  - sanit_dist_abbrv
+  - sanit_dist_desc
+  - rescue_dist_abbrv
+  - rescue_dist_desc
+  - munic_dist_abbrv
+  - munic_dist_desc
+  - dist_1_abbrv
+  - dist_1_desc
+  - dist_2_abbrv
+  - dist_2_desc
+  - confidential_ind
+  - birth_year
+  - ncid
+  - vtd_abbrv
+  - vtd_desc
+
+column_classes:
+  county_id: character
+  county_desc: character
+  voter_reg_num: character
+  status_cd: character
+  voter_status_desc: character
+  reason_cd: character
+  voter_status_reason_desc: character
+  absent_ind: character
+  name_prefx_cd: character
+  last_name: character
+  first_name: character
+  middle_name: character
+  name_suffix_lbl: character
+  res_street_address: character
+  res_city_desc: character
+  state_cd: character
+  zip_code: character
+  mail_addr1: character
+  mail_addr2: character
+  mail_addr3: character
+  mail_addr4: character
+  mail_city: character
+  mail_state: character
+  mail_zipcode: character
+  full_phone_number: character
+  race_code: character
+  ethnic_code: character
+  party_cd: character
+  gender_code: character
+  birth_age: character
+  birth_state: character
+  drivers_lic: character
+  registr_dt: date
+  precinct_abbrv: character
+  precinct_desc: character
+  municipality_abbrv: character
+  municipality_desc: character
+  ward_abbrv: character
+  ward_desc: character
+  cong_dist_abbrv: character
+  super_court_abbrv: character
+  judic_dist_abbrv: character
+  nc_senate_abbrv: character
+  nc_house_abbrv: character
+  county_commiss_abbrv: character
+  county_commiss_desc: character
+  township_abbrv: character
+  township_desc: character
+  school_dist_abbrv: character
+  school_dist_desc: character
+  fire_dist_abbrv: character
+  fire_dist_desc: character
+  water_dist_abbrv: character
+  water_dist_desc: character
+  sewer_dist_abbrv: character
+  sewer_dist_desc: character
+  sanit_dist_abbrv: character
+  sanit_dist_desc: character
+  rescue_dist_abbrv: character
+  rescue_dist_desc: character
+  munic_dist_abbrv: character
+  munic_dist_desc: character
+  dist_1_abbrv: character
+  dist_1_desc: character
+  dist_2_abbrv: character
+  dist_2_desc: character
+  confidential_ind: character
+  birth_year: character
+  ncid: character
+  vtd_abbrv: character
+  vtd_desc: character
+
+
+county_codes:
+  Alamance: 1
+  Alexander: 2
+  Alleghany: 3
+  Anson: 4
+  Ashe: 5
+  Avery: 6
+  Beaufort: 7
+  Bertie: 8
+  Bladen: 9
+  Brunswick: 10
+  Buncombe: 11
+  Burke: 12
+  Cabarrus: 13
+  Caldwell: 14
+  Camden: 15
+  Carteret: 16
+  Caswell: 17
+  Catawba: 18
+  Chatham: 19
+  Cherokee: 20
+  Chowan: 21
+  Clay: 22
+  Cleveland: 23
+  Columbus: 24
+  Craven: 25
+  Cumberland: 26
+  Currituck: 27
+  Dare: 28
+  Davidson: 29
+  Davie: 30
+  Duplin: 31
+  Durham: 32
+  Edgecombe: 33
+  Forsyth: 34
+  Franklin: 35
+  Gaston: 36
+  Gates: 37
+  Graham: 38
+  Granville: 39
+  Greene: 40
+  Guilford: 41
+  Halifax: 42
+  Harnett: 43
+  Haywood: 44
+  Henderson: 45
+  Hertford: 46
+  Hoke: 47
+  Hyde: 48
+  Iredell: 49
+  Jackson: 50
+  Johnston: 51
+  Jones: 52
+  Lee: 53
+  Lenoir: 54
+  Lincoln: 55
+  McDowell: 56
+  Macon: 57
+  Madison: 58
+  Martin: 59
+  Mecklenburg: 60
+  Mitchell: 61
+  Montgomery: 62
+  Moore: 63
+  Nash: 64
+  New Hanover:  65
+  Northampton: 66
+  Onslow: 67
+  Orange: 68
+  Pamlico: 69
+  Pasquotank: 70
+  Pender: 71
+  Perquimans: 72
+  Person: 73
+  Pitt: 74
+  Polk: 75
+  Randolph: 76
+  Richmond: 77
+  Robeson: 78
+  Rockingham: 79
+  Rowan: 80
+  Rutherford: 81
+  Sampson: 82
+  Scotland: 83
+  Stanly: 84
+  Stokes: 85
+  Surry: 86
+  Swain: 87
+  Transylvania: 88
+  Tyrrell: 89
+  Union: 90
+  Vance: 91
+  Wake: 92
+  Warren: 93
+  Washington: 94
+  Watauga: 95
+  Wayne: 96
+  Wilkes: 97
+  Wilson: 98
+  Yadkin: 99
+  Yancey: 100
+
+gender_codes:
+  Male: M
+  Female: F
+
+race_codes:
+  black: B
+  american_indian: I
+  other: O
+  white: W
+  asian: A
+  two_or_more: M
+  native_hawaiian_pacific: U
+
+status_codes:
+  Active: A
+  Inactive: I
+  Denied: D
+  Removed: R
+  Temporary: S
+
+num_party_codes: 6
+
+party_codes:
+  constitution_party: CST
+  democratic_party: DEM
+  green_party: GRE
+  libertarian_party: LIB
+  republican_party: REP
+  unaffiliated_party: UNA
+

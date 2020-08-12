@@ -1,0 +1,205 @@
+# New Jersey has two vote history files: ElectionHistory.txt (shows voter_id vote history per county) and AlphaVoterListState.txt (vote history of person, address, active status, etc. in each county)
+
+file_type: txt
+delimiter: '|'
+state: new jersey
+source: boe
+file_class: voter_file
+voter_id: Voter_ID
+county_identifier: County_Name
+birthday_identifier: Birth_Date
+voter_status: Voter_Status
+party_identifier: Party_Affiliation
+date_format: '%m/%d/%Y'
+numeric_county: FALSE
+has_headers: FALSE
+fixed_width: FALSE
+separate_hispanic_orign: FALSE
+
+format:
+  separate_hist: TRUE
+  separate_counties_voter_file: TRUE
+  separate_counties_hist_file: TRUE
+  hist_election_rows: FALSE
+  columnar_elections: FALSE
+  separate_district_lookup_file: FALSE
+  vote_history_type: null
+
+name_fields:
+  - Name_Last
+  - Name_First
+  - Name_Middle
+  - Name_Suffix
+
+address_fields:
+  - House_Number
+  - House_Suffix
+  - House_Suffix_2
+  - Street_Name
+  - Unit_Number
+  - Residence_City
+  - Residence_Municipality
+  - Residence_Zipcode
+
+column_names:
+  - County_Name
+  - Voter_ID
+  - Legacy_ID
+  - Name_Last
+  - Name_First
+  - Name_Middle
+  - Name_Suffix
+  - House_Number
+  - House_Suffix
+  - House_Suffix_2
+  - Street_Name
+  - Unit_Number
+  - Residence_City
+  - Residence_Municipality
+  - Residence_Zipcode
+  - Birth_Date
+  - Party_Affiliation
+  - Ward_Code
+  - Voter_Status
+  - Congressional_District
+  - Legislative_District
+  - Freeholder_District
+  - School_District
+  - School_Regional_District
+  - Fire_District_Code
+
+column_classes:
+  County_Name: character
+  Voter_ID: character
+  Legacy_ID: character
+  Name_Last: character
+  Name_First: character
+  Name_Middle: character
+  Name_Suffix: character
+  House_Number: character
+  House_Suffix: character
+  House_Suffix_2: character
+  Street_Name: character
+  Unit_Number: character
+  Residence_City: character
+  Residence_Municipality: character
+  Residence_Zipcode: character
+  Birth_Date: date
+  Party_Affiliation: character
+  Ward_Code: character
+  Voter_Status: character
+  Congressional_District: character
+  Legislative_District: character
+  Freeholder_District: character
+  School_District: character
+  School_Regional_District: character
+  Fire_District_Code: character
+
+standard_colnames:
+  - County_Name
+  - Voter_ID
+  - Legacy_ID
+  - Name_Last
+  - Name_First
+  - Name_Middle
+  - Name_Suffix
+  - House_Number
+  - House_Suffix
+  - House_Suffix_2
+  - Street_Name
+  - Unit_Number
+  - Residence_City
+  - Residence_Municipality
+  - Residence_Zipcode
+  - Birth_Date
+  - Party_Affiliation
+  - Ward_Code
+  - Voter_Status
+  - Congressional_District
+  - Legislative_District
+  - Freeholder_District
+  - School_District
+  - School_Regional_District
+  - Fire_District_Code
+
+standard_colpairs:
+  County_Name: County_Name
+  Voter_ID: Voter_ID
+  Legacy_ID: Legacy_ID
+  Name_Last: Name_Last
+  Name_First: Name_First
+  Name_Middle: Name_Middle
+  Name_Suffix: Name_Suffix
+  House_Number: House_Number
+  House_Suffix: House_Suffix
+  House_Suffix_2: House_Suffix_2
+  Street_Name: Street_Name
+  Unit_Number: Unit_Number
+  Residence_City: Residence_City
+  Residence_Municipality: Residence_Municipality
+  Residence_Zipcode: Residence_Zipcode
+  Birth_Date: Birth_Date
+  Party_Affiliation: Party_Affiliation
+  Ward_Code: Ward_Code
+  Voter_Status: Voter_Status
+  Congressional_District: Congressional_District
+  Legislative_District: Legislative_District
+  Freeholder_District: Freeholder_District
+  School_District: School_District
+  School_Regional_District: School_Regional_District
+  Fire_District_Code: Fire_District_Code
+
+status_codes:
+ Pending: P
+ Active: A
+ Active_Need_ID: AD
+ Active_Federal_Election_Only: AF
+ Inactive_Confirmation: IF
+ Inactive_Confirmation_Need_ID: ID
+
+gender_codes:
+  Not_Provided: NP
+
+race_codes:
+  Not_Provided: NP
+
+party_codes:
+  democratic_party: DEM
+  green_party: GRE
+  republican_party: REP
+  unaffiliated: UNA
+  conservative_party: CNV
+  us_constitution_party: CON
+  libertarian_party: LIB
+  reform_party: RFP
+  natural_law_party: NAT
+  socialist_party: SSP
+
+num_party_codes: 10
+
+file_names:
+  - ATLANTIC.zip
+  - BERGEN.zip
+  - BURLINGTON.zip
+  - CAMDEN.zip
+  - CAPE MAY.zip
+  - CUMBERLAND.zip
+  - ESSEX.zip
+  - GLOUCESTER.zip
+  - HUDSON.zip
+  - HUNTERDON.zip
+  - MERCER.zip
+  - MIDDLESEX.zip
+  - MONMOUTH.zip
+  - MORRIS.zip
+  - OCEAN.zip
+  - PASSAIC.zip
+  - SALEM.zip
+  - SOMERSET.zip
+  - SUSSEX.zip
+  - UNION.zip
+  - WARREN.zip
+
+num_files: 21
+
+ 

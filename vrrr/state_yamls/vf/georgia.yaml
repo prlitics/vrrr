@@ -1,0 +1,504 @@
+#Georgia provides two .zip files: one is the entire Georgia Voter File and the other is the entire Vote History
+# Voter file is delimited by pipes and History has fixed width data
+
+file_type: txt
+delimiter: '|'
+state: georgia
+source: boe
+file_class: voter_file
+voter_id: REGISTRATION_NUMBER
+county_identifier: COUNTY_CODE
+birthday_identifier: BIRTHDATE
+voter_status: VOTER_STATUS
+party_identifier: PARTY_LAST_VOTED
+date_format: '%Y%m%d'
+numeric_county: TRUE
+has_headers: TRUE
+fixed_width: FALSE
+separate_hispanic_origin: FALSE
+
+format:
+  separate_hist: TRUE
+  separate_counties_voter_file: FALSE
+  separate_counties_hist_file: FALSE
+  hist_election_rows: TRUE
+  columnar_elections: FALSE
+  separate_district_lookup_file: FALSE
+  vote_history_type: null 
+
+name_fields:
+  - LAST_NAME
+  - FIRST_NAME
+  - MIDDLE_MAIDEN_NAME
+  - NAME_SUFFIX
+  - NAME_TITLE
+
+address_fields:
+  - RESIDENCE_HOUSE_NUMBER
+  - RESIDENCE_STREET_NAME
+  - RESIDENCE_STREET_SUFFIX
+  - RESIDENCE_APT_UNIT_NBR
+  - RESIDENCE_CITY
+  - RESIDENCE_ZIPCODE
+  - MAIL_HOUSE_NBR
+  - MAIL_STREET_NAME
+  - MAIL_APT_UNIT_NBR
+  - MAIL_CITY
+  - MAIL_STATE
+  - MAIL_ZIPCODE
+  - MAIL_ADDRESS_2
+  - MAIL_ADDRESS_3
+  - MAIL_COUNTRY
+
+column_names:
+  - COUNTY_CODE
+  - REGISTRATION_NUMBER
+  - VOTER_STATUS
+  - LAST_NAME
+  - FIRST_NAME
+  - MIDDLE_MAIDEN_NAME
+  - NAME_SUFFIX
+  - NAME_TITLE
+  - RESIDENCE_HOUSE_NUMBER
+  - RESIDENCE_STREET_NAME
+  - RESIDENCE_STREET_SUFFIX
+  - RESIDENCE_APT_UNIT_NBR
+  - RESIDENCE_CITY
+  - RESIDENCE_ZIPCODE
+  - BIRTHDATE
+  - REGISTRATION_DATE
+  - RACE
+  - GENDER
+  - LAND_DISTRICT
+  - LAND_LOT
+  - STATUS_REASON
+  - COUNTY_PRECINCT_ID
+  - CITY_PRECINCT_ID
+  - CONGRESSIONAL_DISTRICT
+  - SENATE_DISTRICT
+  - HOUSE_DISTRICT
+  - JUDICIAL_DISTRICT
+  - COMMISSION_DISTRICT
+  - SCHOOL_DISTRICT
+  - COUNTY_DISTRICTA_NAME
+  - COUNTY_DISTRICTA_VALUE
+  - COUNTY_DISTRICTB_NAME
+  - COUNTY_DISTRICTB_VALUE
+  - MUNICIPAL_NAME
+  - MUNICIPAL_CODE
+  - WARD_CITY_COUNCIL_NAME
+  - WARD_CITY_COUNCIL_CODE
+  - CITY_SCHOOL_DISTRICT_NAME
+  - CITY_SCHOOL_DISTRICT_VALUE
+  - CITY_DISTA_NAME
+  - CITY_DISTA_VALUE
+  - CITY_DISTB_NAME
+  - CITY_DISTB_VALUE
+  - CITY_DISTC_NAME
+  - CITY_DISTC_VALUE
+  - CITY_DISTD_NAME
+  - CITY_DISTD_VALUE
+  - DATE_LAST_VOTED
+  - PARTY_LAST_VOTED
+  - DATE_ADDED
+  - DATE_CHANGED
+  - DISTRICT_COMBO
+  - RACE_DESC
+  - LAST_CONTACT_DATE
+  - MAIL_HOUSE_NBR
+  - MAIL_STREET_NAME
+  - MAIL_APT_UNIT_NBR
+  - MAIL_CITY
+  - MAIL_STATE
+  - MAIL_ZIPCODE
+  - MAIL_ADDRESS_2
+  - MAIL_ADDRESS_3
+  - MAIL_COUNTRY
+
+column_classes:
+  COUNTY_CODE: character
+  REGISTRATION_NUMBER: character
+  VOTER_STATUS: character
+  LAST_NAME: character
+  FIRST_NAME: character
+  MIDDLE_MAIDEN_NAME: character
+  NAME_SUFFIX: character
+  NAME_TITLE: character
+  RESIDENCE_HOUSE_NUMBER: character
+  RESIDENCE_STREET_NAME: character
+  RESIDENCE_STREET_SUFFIX: character
+  RESIDENCE_APT_UNIT_NBR: character
+  RESIDENCE_CITY: character
+  RESIDENCE_ZIPCODE: character
+  BIRTHDATE: date
+  REGISTRATION_DATE: date
+  RACE: character
+  GENDER: character
+  LAND_DISTRICT: character
+  LAND_LOT: character
+  STATUS_REASON: character
+  COUNTY_PRECINCT_ID: character
+  CITY_PRECINCT_ID: character
+  CONGRESSIONAL_DISTRICT: character
+  SENATE_DISTRICT: character
+  HOUSE_DISTRICT: character
+  JUDICIAL_DISTRICT: character
+  COMMISSION_DISTRICT: character
+  SCHOOL_DISTRICT: character
+  COUNTY_DISTRICTA_NAME: character
+  COUNTY_DISTRICTA_VALUE: character
+  COUNTY_DISTRICTB_NAME: character
+  COUNTY_DISTRICTB_VALUE: character
+  MUNICIPAL_NAME: character
+  MUNICIPAL_CODE: character
+  WARD_CITY_COUNCIL_NAME: character
+  WARD_CITY_COUNCIL_CODE: character
+  CITY_SCHOOL_DISTRICT_NAME: character
+  CITY_SCHOOL_DISTRICT_VALUE: character
+  CITY_DISTA_NAME: character
+  CITY_DISTA_VALUE: character
+  CITY_DISTB_NAME: character
+  CITY_DISTB_VALUE: character
+  CITY_DISTC_NAME: character
+  CITY_DISTC_VALUE: character
+  CITY_DISTD_NAME: character
+  CITY_DISTD_VALUE: character
+  DATE_LAST_VOTED: character
+  PARTY_LAST_VOTED: character
+  DATE_ADDED: date
+  DATE_CHANGED: date
+  DISTRICT_COMBO: character
+  RACE_DESC: character
+  LAST_CONTACT_DATE: date
+  MAIL_HOUSE_NBR: character
+  MAIL_STREET_NAME: character
+  MAIL_APT_UNIT_NBR: character
+  MAIL_CITY: character
+  MAIL_STATE: character
+  MAIL_ZIPCODE: character
+  MAIL_ADDRESS_2: character
+  MAIL_ADDRESS_3: character
+  MAIL_COUNTRY: character
+
+standard_colnames:
+  - County_Code
+  - Voter_ID
+  - Voter_Status
+  - Name_Last
+  - Name_First
+  - Name_Middle
+  - Name_Suffix
+  - Name_Title
+  - House_Number
+  - Street_Name
+  - Street_Type
+  - Unit_Number
+  - Residence_City
+  - Residence_Zipcode
+  - Birth_Year
+  - Registration_Date
+  - Race
+  - Gender
+  - Land_District
+  - Land_Lot
+  - Voter_Status_Desc
+  - County_Precinct
+  - City_Precinct
+  - Congressional_District
+  - Senate_District
+  - House_District
+  - Judicial_District
+  - County_Commission_District_Code
+  - School_District_Code
+  - County_DistrictA_Name
+  - County_DistrictA_Code
+  - County_DistrictB_Name
+  - County_DistrictB_Code
+  - Municipality_City_Name
+  - Municipality_Code
+  - Ward_Name
+  - Ward_Code
+  - School_District_Name
+  - School_District_Code
+  - City_DistrictA_Name
+  - City_DistrictA_Code
+  - City_DistrictB_Name
+  - City_DistrictB_Code
+  - City_DistrictC_Name
+  - City_DistrictC_Code  
+  - City_DistrictD_Name
+  - City_DistrictD_Code
+  - Last_Vote_Date
+  - Vote_Decision_Party
+  - Registration_Date
+  - Last_Updated_Date
+  - District_Combo
+  - Race
+  - Last_Contact_Date
+  - Mailing_House_Num
+  - Mailing_StreetName
+  - Mailing_AptUnit_Num
+  - Mailing_City
+  - Mailing_State
+  - Mailing_Zipcode
+  - Mailing_Address_Line_2
+  - Mailing_Address_Line_3
+  - Mailing_Country
+
+standard_colpairs:
+  COUNTY_CODE: County_Code
+  REGISTRATION_NUMBER: Voter_ID
+  VOTER_STATUS: Voter_Status
+  LAST_NAME: Name_Last
+  FIRST_NAME: Name_First
+  MIDDLE_MAIDEN_NAME: Name_Middle
+  NAME_SUFFIX: Name_Suffix
+  NAME_TITLE: Name_Title
+  RESIDENCE_HOUSE_NUMBER: House_Number
+  RESIDENCE_STREET_NAME: Street_Name
+  RESIDENCE_STREET_SUFFIX: Street_Type
+  RESIDENCE_APT_UNIT_NBR: Unit_Number
+  RESIDENCE_CITY: Residence_City
+  RESIDENCE_ZIPCODE: Residence_Zipcode
+  BIRTHDATE: Birth_Year
+  REGISTRATION_DATE: Registration_Date
+  RACE: Race
+  GENDER: Gender
+  LAND_DISTRICT: Land_District
+  LAND_LOT: Land_Lot
+  STATUS_REASON: Voter_Status_Desc
+  COUNTY_PRECINCT_ID: County_Precinct
+  CITY_PRECINCT_ID: City_Precinct
+  CONGRESSIONAL_DISTRICT: Congressional_District
+  SENATE_DISTRICT: Senate_District
+  HOUSE_DISTRICT: House_District
+  JUDICIAL_DISTRICT: Judicial_District
+  COMMISSION_DISTRICT: County_Commission_District_Code
+  SCHOOL_DISTRICT: School_District_Code
+  COUNTY_DISTRICTA_NAME: County_DistrictA_Name
+  COUNTY_DISTRICTA_VALUE: County_DistrictA_Code
+  COUNTY_DISTRICTB_NAME: County_DistrictB_Name
+  COUNTY_DISTRICTB_VALUE: County_DistrictB_Code
+  MUNICIPAL_NAME: Municipality_City_Name
+  MUNICIPAL_CODE: Municipality_Code
+  WARD_CITY_COUNCIL_NAME: Ward_Name
+  WARD_CITY_COUNCIL_CODE: Ward_Code
+  CITY_SCHOOL_DISTRICT_NAME: School_District_Name
+  CITY_SCHOOL_DISTRICT_VALUE: School_District_Code
+  CITY_DISTA_NAME: City_DistrictA_Name
+  CITY_DISTA_VALUE: City_DistrictA_Code
+  CITY_DISTB_NAME: City_DistrictB_Name
+  CITY_DISTB_VALUE: City_DistrictB_Code
+  CITY_DISTC_NAME: City_DistrictC_Name
+  CITY_DISTC_VALUE: City_DistrictC_Code  
+  CITY_DISTD_NAME: City_DistrictD_Name
+  CITY_DISTD_VALUE: City_DistrictD_Code
+  DATE_LAST_VOTED: Last_Vote_Date
+  PARTY_LAST_VOTED: Vote_Decision_Party
+  DATE_ADDED: Registration_Date
+  DATE_CHANGED: Last_Updated_Date
+  DISTRICT_COMBO: District_Combo
+  RACE_DESC: Race
+  LAST_CONTACT_DATE: Last_Contact_Date
+  MAIL_HOUSE_NBR: Mailing_House_Num
+  MAIL_STREET_NAME: Mailing_StreetName
+  MAIL_APT_UNIT_NBR: Mailing_AptUnit_Num
+  MAIL_CITY: Mailing_City
+  MAIL_STATE: Mailing_State
+  MAIL_ZIPCODE: Mailing_Zipcode
+  MAIL_ADDRESS_2: Mailing_Address_Line_2
+  MAIL_ADDRESS_3: Mailing_Address_Line_3
+  MAIL_COUNTRY: Mailing_Country
+
+voter_status_codes:
+  active: A
+  inactive: I
+
+party_codes:
+  democratic_party: D
+  republican_party: R
+  no_party_affiliation: NP
+  green_party: G
+# NEED THESE CODES FROM GEORGIA 
+# call them and ask  
+# N
+# P
+# X
+
+num_party_codes: 7
+
+race_codes:
+  american_indian_or_alaskan_native: 'American Indian or Alaskan Native'
+  asian_or_pacific_islander: 'Asian or Pacific Islander'
+  black: 'Black not of Hispanic Origin'
+  hispanic: 'Hispanic'
+  white: 'White not of Hispanic Origin'
+  other: 'Other'
+  multi_racial: 'Other'
+  unknown: 'Unknown'
+
+gender_codes:
+  male: 'M'
+  female: 'F'
+  other: 'O'
+
+county_codes: 
+  Appling: 1
+  Atkinson:  2
+  Bacon:  3
+  Baker:  4
+  Baldwin:  5
+  Banks:  6
+  Barrow:  7
+  Bartow:  8
+  Ben Hill:  9
+  Berrien:  10
+  Bibb:  11
+  Bleckley:  12
+  Brantley:  13
+  Brooks:  14
+  Bryan:  15
+  Bulloch:  16
+  Burke:  17
+  Butts:  18
+  Calhoun:  19
+  Camden:  20
+  Candler:  21
+  Carroll:  22
+  Catoosa:  23
+  Charlton:  24
+  Chatham:  25
+  Chattahoochee:  26
+  Chattooga:  27
+  Cherokee:  28
+  Clarke:  29
+  Clay:  30
+  Clayton:  31
+  Clinch:  32
+  Cobb:  33
+  Coffee:  34
+  Colquitt:  35
+  Columbia:  36
+  Cook:  37
+  Coweta:  38
+  Crawford:  39
+  Crisp:  40
+  Dade:  41
+  Dawson:  42
+  De Kalb:  43
+  Decatur:  44
+  Dodge:  45
+  Dooly:  46
+  Dougherty:  47
+  Douglas:  48
+  Early:  49
+  Echols:  50
+  Effingham:  51
+  Elbert:  52
+  Emanuel:  53
+  Evans:  54
+  Fannin:  55
+  Fayette:  56
+  Floyd:  57
+  Forsyth:  58
+  Franklin:  59
+  Fulton:  60
+  Gilmer:  61
+  Glascock:  62
+  Glynn:  63
+  Gordon:  64
+  Grady:  65
+  Greene:  66
+  Gwinnett:  67
+  Habersham:  68
+  Hall:  69
+  Hancock:  70
+  Haralson:  71
+  Harris:  72
+  Hart:  73
+  Heard:  74
+  Henry:  75
+  Houston:  76
+  Irwin:  77
+  Jackson:  78
+  Jasper:  79
+  Jeff Davis:  80
+  Jefferson:  81
+  Jenkins:  82
+  Johnson:  83
+  Jones:  84
+  Lamar:  85
+  Lanier:  86
+  Laurens:  87
+  Lee:  88
+  Liberty:  89
+  Lincoln:  90
+  Long:  91
+  Lowndes:  92
+  Lumpkin:  93
+  Macon:  94
+  Madison:  95
+  Marion:  96
+  McDuffie:  97
+  McIntosh:  98
+  Meriwether:  99
+  Miller:  100
+  Mitchell:  101
+  Monroe:  102
+  Montgomery:  103
+  Morgan:  104
+  Murray:  105
+  Muscogee:  106
+  Newton:  107
+  Oconee:  108
+  Oglethorpe:  109
+  Paulding:  110
+  Peach:  111
+  Pickens:  112
+  Pierce:  113
+  Pike:  114
+  Polk:  115
+  Pulaski:  116
+  Putnam:  117
+  Quitman:  118
+  Rabun:  119
+  Randolph:  120
+  Richmond:  121
+  Rockdale:  122
+  Schley:  123
+  Screven:  124
+  Seminole:  125
+  Spalding:  126
+  Stephens:  127
+  Stewart:  128
+  Sumter:  129
+  Talbot:  130
+  Taliaferro:  131
+  Tattnall:  132
+  Taylor:  133
+  Telfair:  134
+  Terrell:  135
+  Thomas:  136
+  Tift:  137
+  Toombs:  138
+  Towns:  139
+  Treutlen:  140
+  Troup:  141
+  Turner:  142
+  Twiggs:  143
+  Union:  144
+  Upson:  145
+  Walker:  146
+  Walton:  147
+  Ware:  148
+  Warren:  149
+  Washington:  150
+  Wayne:  151
+  Webster:  152
+  Wheeler:  153
+  White:  154
+  Whitfield:  155
+  Wilcox:  156
+  Wilkes:  157
+  Wilkinson:  158
+  Worth:  159

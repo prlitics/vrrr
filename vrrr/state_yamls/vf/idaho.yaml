@@ -1,0 +1,403 @@
+# Idaho has one zip file that includes the Variable Names in an .html 
+# as well as a .txt file with the voter file 
+
+file_type: .txt
+delimiter: '|'
+state: idaho
+source: boe
+file_class: voter_file 
+voter_id: Voter_ID
+county_identifier: County_Name
+birthday_identifier: Age
+voter_status: null
+party_identifier: Party_Affiliation
+date_format: '%m/%d/%Y'
+numeric_county: FALSE
+has_headers: FALSE
+fixed_width: FALSE
+separate_hispanic_origin: FALSE
+
+format:
+  separate_hist: FALSE
+  separate_counties_voter_file: FALSE
+  separate_counties_hist_file: FALSE 
+  hist_election_rows: FALSE
+  columnar_elections: TRUE
+  separate_district_lookup_file: FALSE
+  vote_history_type: 'Serial'
+
+name_fields:
+  - Name_Last
+  - Name_First
+  - Name_Middle
+  - Name_Suffix
+
+address_fields:
+  - House_Number
+  - Street_Name
+  - Unit_Number
+  - Residence_Line1
+  - Residence_Line2
+  - Residence_City
+  - Residence_State
+  - Residence_Zipcode
+  - Residence_Zipcode_Plus
+  - Mailing_House_Num
+  - Mailing_StreetName
+  - Mailing_Unit_Num
+  - Mailing_Address_Line_2
+  - Mailing_Address_Line_3
+  - Mailing_City
+  - Mailing_State
+  - Mailing_Zipcode
+  - Mailing_Zipcode_Plus
+  - Mailing_Country
+
+column_names:
+  - Voter_ID
+  - Name_Last
+  - Name_First
+  - Name_Middle
+  - Name_Suffix
+  - House_Number
+  - Street_Name
+  - Unit_Number
+  - Residence_Line1
+  - Residence_Line2
+  - Residence_City
+  - Residence_State
+  - Residence_Zipcode
+  - Residence_Zipcode_Plus
+  - Mailing_House_Num
+  - Mailing_StreetName
+  - Mailing_Unit_Num
+  - Mailing_Address_Line_2
+  - Mailing_Address_Line_3
+  - Mailing_City
+  - Mailing_State
+  - Mailing_Zipcode
+  - Mailing_Zipcode_Plus
+  - Mailing_Country
+  - Gender
+  - Age
+  - Registration_Date
+  - Phone_Number
+  - County_Name
+  - Precinct_Code
+  - Legislative_District
+  - Congressional_District
+  - Party_Affiliation
+  - Election_Date
+  - Election_Name
+  - Vote_History 
+  - Vote_Decision_Party
+  - Ballot_Type
+  - Election_Date_2
+  - Election_Name_2
+  - Vote_History_2 
+  - Vote_Decision_Party_2
+  - Ballot_Type_2
+  - Election_Date_3
+  - Election_Name_3
+  - Vote_History_3
+  - Vote_Decision_Party_3
+  - Ballot_Type_3
+  - Election_Date_4
+  - Election_Name_4
+  - Vote_History _4
+  - Vote_Decision_Party_4
+  - Ballot_Type_4
+  - Election_Date_5
+  - Election_Name_5
+  - Vote_History_5
+  - Vote_Decision_Party_5
+  - Ballot_Type_5
+  - Election_Date_6
+  - Election_Name_6
+  - Vote_History_6 
+  - Vote_Decision_Party_6
+  - Ballot_Type_6
+  - Election_Date_7
+  - Election_Name_7
+  - Vote_History_7
+  - Vote_Decision_Party_7
+  - Ballot_Type_7
+  - Election_Date_8
+  - Election_Name_8
+  - Vote_History_8
+  - Vote_Decision_Party_8
+  - Ballot_Type_8
+
+column_classes: 
+  Voter_ID: character
+  Name_Last: character
+  Name_First: character
+  Name_Middle: character
+  Name_Suffix: character
+  House_Number: character
+  Street_Name: character
+  Unit_Number: character
+  Residence_Line1: character
+  Residence_Line2: character
+  Residence_City: character
+  Residence_State: character
+  Residence_Zipcode: character
+  Residence_Zipcode_Plus: character
+  Mailing_House_Num: character
+  Mailing_StreetName: character
+  Mailing_Unit_Num: character
+  Mailing_Address_Line_2: character
+  Mailing_Address_Line_3: character
+  Mailing_City: character
+  Mailing_State: character
+  Mailing_Zipcode: character
+  Mailing_Zipcode_Plus: character
+  Mailing_Country: character
+  Gender: character
+  Age: character
+  Registration_Date: date
+  Phone_Number: character
+  County_Name: character
+  Precinct_Code: character
+  Legislative_District: character
+  Congressional_District: character
+  Party_Affiliation: character
+  Election_Date: date
+  Election_Name: character
+  Vote_History : character
+  Vote_Decision_Party: character
+  Ballot_Type: character
+  Election_Date_2: date
+  Election_Name_2: character
+  Vote_History_2 : character
+  Vote_Decision_Party_2: character
+  Ballot_Type_2: character
+  Election_Date_3: date
+  Election_Name_3: character
+  Vote_History_3: character
+  Vote_Decision_Party_3: character
+  Ballot_Type_3: character
+  Election_Date_4: date
+  Election_Name_4: character
+  Vote_History_4: character
+  Vote_Decision_Party_4: character
+  Ballot_Type_4: character
+  Election_Date_5: date
+  Election_Name_5: character
+  Vote_History_5: character
+  Vote_Decision_Party_5: character
+  Ballot_Type_5: character
+  Election_Date_6: date
+  Election_Name_6: character
+  Vote_History_6 : character
+  Vote_Decision_Party_6: character
+  Ballot_Type_6: character
+  Election_Date_7: date
+  Election_Name_7: character
+  Vote_History_7: character
+  Vote_Decision_Party_7: character
+  Ballot_Type_7: character
+  Election_Date_8: date
+  Election_Name_8: character
+  Vote_History_8: character
+  Vote_Decision_Party_8: character
+  Ballot_Type_8: character
+
+standard_colnames:
+  - Voter_ID
+  - Name_Last
+  - Name_First
+  - Name_Middle
+  - Name_Suffix
+  - House_Number
+  - Street_Name
+  - Unit_Number
+  - Residence_Line1
+  - Residence_Line2
+  - Residence_City
+  - Residence_State
+  - Residence_Zipcode
+  - Residence_Zipcode_Plus
+  - Mailing_House_Num
+  - Mailing_StreetName
+  - Mailing_Unit_Num
+  - Mailing_Address_Line_2
+  - Mailing_Address_Line_3
+  - Mailing_City
+  - Mailing_State
+  - Mailing_Zipcode
+  - Mailing_Zipcode_Plus
+  - Mailing_Country
+  - Gender
+  - Age
+  - Registration_Date
+  - Phone_Number
+  - County_Name
+  - Precinct_Code
+  - Legislative_District
+  - Congressional_District
+  - Party_Affiliation
+  - Election_Date
+  - Election_Name
+  - Vote_History
+  - Vote_Decision_Party
+  - Ballot_Type
+  - Election_Date_2
+  - Election_Name_2
+  - Vote_History_2
+  - Vote_Decision_Party_2
+  - Ballot_Type_2
+  - Election_Date_3
+  - Election_Name_3
+  - Vote_History_3
+  - Vote_Decision_Party_3
+  - Ballot_Type_3
+  - Election_Date_4
+  - Election_Name_4
+  - Vote_History
+  - Vote_Decision_Party_4
+  - Ballot_Type_4
+  - Election_Date_5
+  - Election_Name_5
+  - Vote_History_5
+  - Vote_Decision_Party_5
+  - Ballot_Type_5
+  - Election_Date_6
+  - Election_Name_6
+  - Vote_History_6
+  - Vote_Decision_Party_6
+  - Ballot_Type_6
+  - Election_Date_7
+  - Election_Name_7
+  - Vote_History_7
+  - Vote_Decision_Party_7
+  - Ballot_Type_7
+  - Election_Date_8
+  - Election_Name_8
+  - Vote_History_8
+  - Vote_Decision_Party_8
+  - Ballot_Type_8
+
+
+standard_colpairs:
+  Voter_ID: Voter_ID
+  Name_Last: Name_Last
+  Name_First: Name_First
+  Name_Middle: Name_Middle
+  Name_Suffix: Name_Suffix
+  House_Number: House_Number
+  Street_Name: Street_Name
+  Unit_Number: Unit_Number
+  Residence_Line1: Residence_Line1
+  Residence_Line2: Residence_Line2
+  Residence_City: Residence_City
+  Residence_State: Residence_State
+  Residence_Zipcode: Residence_Zipcode
+  Residence_Zipcode_Plus: Residence_Zipcode_Plus
+  Mailing_House_Num: Mailing_House_Num
+  Mailing_StreetName: Mailing_StreetName
+  Mailing_Unit_Num: Mailing_Unit_Num
+  Mailing_Address_Line_2: Mailing_Address_Line_2
+  Mailing_Address_Line_3: Mailing_Address_Line_3
+  Mailing_City: Mailing_City
+  Mailing_State: Mailing_State
+  Mailing_Zipcode: Mailing_Zipcode
+  Mailing_Zipcode_Plus: Mailing_Zipcode_Plus
+  Mailing_Country: Mailing_Country
+  Gender: Gender
+  Age: Age
+  Registration_Date: Registration_Date
+  Phone_Number: Phone_Number
+  County_Name: County_Name
+  Precinct_Code: Precinct_Code
+  Legislative_District: Legislative_District
+  Congressional_District: Congressional_District
+  Party_Affiliation: Party_Affiliation
+  Election_Date: Election_Date
+  Election_Name: Election_Name
+  Vote_History: Vote_History
+  Vote_Decision_Party: Vote_Decision_Party
+  Ballot_Type: Ballot_Type
+  Election_Date_2: Election_Date_2
+  Election_Name_2: Election_Name_2
+  Vote_History_2: Vote_History_2
+  Vote_Decision_Party_2: Vote_Decision_Party_2
+  Ballot_Type_2: Ballot_Type_2
+  Election_Date_3: Election_Date_3
+  Election_Name_3: Election_Name_3
+  Vote_History_3: Vote_History_3
+  Vote_Decision_Party_3: Vote_Decision_Party_3
+  Ballot_Type_3: Ballot_Type_3
+  Election_Date_4: Election_Date_4
+  Election_Name_4: Election_Name_4
+  Vote_History: Vote_History
+  Vote_Decision_Party_4: Vote_Decision_Party_4
+  Ballot_Type_4: Ballot_Type_4
+  Election_Date_5: Election_Date_5
+  Election_Name_5: Election_Name_5
+  Vote_History_5: Vote_History_5
+  Vote_Decision_Party_5: Vote_Decision_Party_5
+  Ballot_Type_5: Ballot_Type_5
+  Election_Date_6: Election_Date_6
+  Election_Name_6: Election_Name_6
+  Vote_History_6: Vote_History_6
+  Vote_Decision_Party_6: Vote_Decision_Party_6
+  Ballot_Type_6: Ballot_Type_6
+  Election_Date_7: Election_Date_7
+  Election_Name_7: Election_Name_7
+  Vote_History_7: Vote_History_7
+  Vote_Decision_Party_7: Vote_Decision_Party_7
+  Ballot_Type_7: Ballot_Type_7
+  Election_Date_8: Election_Date_8
+  Election_Name_8: Election_Name_8
+  Vote_History_8: Vote_History_8
+  Vote_Decision_Party_8: Vote_Decision_Party_8
+  Ballot_Type_8: Ballot_Type_8
+
+status_codes:
+  Not_Provided: NP
+
+election_column_map:
+  VOTER_ID: Voter_ID
+  ELECTION_DATE: 
+    - Election_Date
+    - Election_Date_2
+    - Election_Date_3
+    - Election_Date_4
+    - Election_Date_5
+    - Election_Date_6
+    - Election_Date_7
+    - Election_Date_8
+  ELECTION_DESCRIPTION: 
+    - Election_Name
+    - Election_Name_2
+    - Election_Name_3
+    - Election_Name_4
+    - Election_Name_5
+    - Election_Name_6
+    - Election_Name_7
+    - Election_Date_8
+  ELECTION_TYPE: null
+  VOTING_METHOD: 
+    - Ballot_Type
+    - Ballot_Type_2
+    - Ballot_Type_3
+    - Ballot_Type_4
+    - Ballot_Type_5
+    - Ballot_Type_6
+    - Ballot_Type_7
+    - Ballot_Type_8
+
+gender_codes:
+  Male: M
+  Female: F
+  Unknown: U
+  Not_Provided: NP
+
+race_codes:
+  Not_Provided: NP
+
+party_codes:
+  Not_Provided: NP
+
+num_party_codes: 9

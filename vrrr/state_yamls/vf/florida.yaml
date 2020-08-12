@@ -1,0 +1,448 @@
+#Florida provides two .zip files: Voter Extract and Voter History. Depending on the vintage they will have different naming conventions (most recently the files are "Voter_Registration_20180510.zip" and "Voter_History_20180510.zip".
+#Both zips contain 67 separate .txt files, one for each county. "ALA_20061010.txt" would be for Alachua county from Oct 10 2006. These files DO NOT have headers.
+
+file_type: txt
+delimiter: '\t'
+state: florida
+source: boe
+file_class: voter_file
+voter_id: Voter_ID
+county_identifier: County_Code
+birthday_identifier: Birth_Date
+voter_status: Voter_Status
+party_identifier: Party_Affiliation
+date_format: '%m/%d/%Y'
+numeric_county: FALSE
+has_headers: FALSE
+fixed_width: FALSE
+separate_hispanic_origin: FALSE
+
+format:
+  separate_hist: TRUE
+  separate_counties_voter_file: TRUE
+  separate_counties_hist_file: TRUE
+  hist_election_rows: TRUE
+  columnar_elections: FALSE
+  separate_district_lookup_file: FALSE
+  vote_history_type: 'Serial'
+
+name_fields:
+  - Name_Last
+  - Name_Suffix
+  - Name_First
+  - Name_Middle
+
+address_fields:
+  - Residence_Address_Line_1
+  - Residence_Address_Line_2
+  - Residence_City
+  - Residence_State
+  - Residence_Zipcode
+  - Mailing_Address_Line_1
+  - Mailing_Address_Line_2
+  - Mailing_Address_Line_3
+  - Mailing_City
+  - Mailing_State
+  - Mailing_Zipcode
+  - Mailing_Country
+
+column_names:
+  - County_Code
+  - Voter_ID
+  - Name_Last
+  - Name_Suffix
+  - Name_First
+  - Name_Middle
+  - Requested_public_records_exemption
+  - Residence_Address_Line_1
+  - Residence_Address_Line_2
+  - Residence_City
+  - Residence_State
+  - Residence_Zipcode
+  - Mailing_Address_Line_1
+  - Mailing_Address_Line_2
+  - Mailing_Address_Line_3
+  - Mailing_City
+  - Mailing_State
+  - Mailing_Zipcode
+  - Mailing_Country
+  - Gender
+  - Race
+  - Birth_Date
+  - Registration_Date
+  - Party_Affiliation
+  - Precinct
+  - Precinct_Group
+  - Precinct_Split
+  - Precinct_Suffix
+  - Voter_Status
+  - Congressional_District
+  - House_District
+  - Senate_District
+  - County_Commission_District
+  - School_Board_District
+  - Daytime_Area_Code
+  - Daytime_Phone_Number
+  - Daytime_Phone_Extension
+  - Email_Address
+
+column_classes:
+  County_Code: character
+  Voter_ID: character
+  Name_Last: character
+  Name_Suffix: character
+  Name_First: character
+  Name_Middle: character
+  Requested_public_records_exemption: logical
+  Residence_Address_Line_1: character
+  Residence_Address_Line_2: character
+  Residence_City: character
+  Residence_State: character
+  Residence_Zipcode: character
+  Mailing_Address_Line_1: character
+  Mailing_Address_Line_2: character
+  Mailing_Address_Line_3: character
+  Mailing_City: character
+  Mailing_State: character
+  Mailing_Zipcode: character
+  Mailing_Country: character
+  Gender: character
+  Race: character
+  Birth_Date: date
+  Registration_Date: date
+  Party_Affiliation: character
+  Precinct: character
+  Precinct_Group: character
+  Precinct_Split: character
+  Precinct_Suffix: character
+  Voter_Status: character
+  Congressional_District: character
+  House_District: character
+  Senate_District: character
+  County_Commission_District: character
+  School_Board_District: character
+  Daytime_Area_Code: character
+  Daytime_Phone_Number: character
+  Daytime_Phone_Extension: character
+  Email_Address: character
+
+standard_colnames:
+  - County_Code
+  - Voter_ID
+  - Name_Last
+  - Name_Suffix
+  - Name_First
+  - Name_Middle
+  - Requested_public_records_exemption
+  - Residence_Address_Line_1
+  - Residence_Address_Line_2
+  - Residence_City
+  - Residence_State
+  - Residence_Zipcode
+  - Mailing_Address_Line_1
+  - Mailing_Address_Line_2
+  - Mailing_Address_Line_3
+  - Mailing_City
+  - Mailing_State
+  - Mailing_Zipcode
+  - Mailing_Country
+  - Gender
+  - Race
+  - Birth_Date
+  - Registration_Date
+  - Party_Affiliation
+  - Precinct
+  - Precinct_Group
+  - Precinct_Split
+  - Precinct_Suffix
+  - Voter_Status
+  - Congressional_District
+  - House_District
+  - Senate_District
+  - County_Commission_District
+  - School_Board_District
+  - Daytime_Area_Code
+  - Daytime_Phone_Number
+  - Daytime_Phone_Extension
+  - Email_Address
+
+standard_colpairs:
+  County_Code: County_Code
+  Voter_ID: Voter_ID
+  Name_Last: Name_Last
+  Name_Suffix: Name_Suffix
+  Name_First: Name_First
+  Name_Middle: Name_Middle
+  Requested_public_records_exemption: Requested_public_records_exemption
+  Residence_Address_Line_1: Residence_Address_Line_1
+  Residence_Address_Line_2: Residence_Address_Line_2
+  Residence_City: Residence_City
+  Residence_State: Residence_State
+  Residence_Zipcode: Residence_Zipcode
+  Mailing_Address_Line_1: Mailing_Address_Line_1
+  Mailing_Address_Line_2: Mailing_Address_Line_2
+  Mailing_Address_Line_3: Mailing_Address_Line_3
+  Mailing_City: Mailing_City
+  Mailing_State: Mailing_State
+  Mailing_Zipcode: Mailing_Zipcode
+  Mailing_Country: Mailing_Country
+  Gender: Gender
+  Race: Race
+  Birth_Date: Birth_Date
+  Registration_Date: Registration_Date
+  Party_Affiliation: Party_Affiliation
+  Precinct: Precinct
+  Precinct_Group: Precinct_Group
+  Precinct_Split: Precinct_Split
+  Precinct_Suffix: Precinct_Suffix
+  Voter_Status: Voter_Status
+  Congressional_District: Congressional_District
+  House_District: House_District
+  Senate_District: Senate_District
+  County_Commission_District: County_Commission_District
+  School_Board_District: School_Board_District
+  Daytime_Area_Code: Daytime_Area_Code
+  Daytime_Phone_Number: Daytime_Phone_Number
+  Daytime_Phone_Extension: Daytime_Phone_Extension
+  Email_Address: Email_Address
+
+voter_status_codes:
+  active: ACT
+  inactive: INA
+  preregistered: PRE
+
+party_codes:
+  democratic_party: DEM
+  republican_party: REP
+  no_party_affiliation: NPA
+  constitution_party: CPF
+  ecology_party: ECO
+  green_party: GRE
+  libertarian_party: LPF
+  socialism_and_liberation_party: PSL
+  reform_party: REF
+  independent_party: INT
+  independence_party: IDP
+  americas_independent_party: AIP
+
+num_party_codes: 12
+
+
+race_codes:
+  american_indian_or_alaskan_native: 1
+  asian_or_pacific_islander: 2
+  black: 3
+  hispanic: 4
+  white: 5
+  other: 6
+  multi_racial: 7
+  unknown: 8
+
+county_codes:
+  Alachua: ALA
+  Baker: BAK
+  Bay: BAY
+  Bradford: BRA
+  Brevard: BRE
+  Broward: BRO
+  Calhoun: CAL
+  Charlotte: CHA
+  Citrus: CIT
+  Clay: CLA
+  Collier: CLL
+  Columbia: CLM
+  Miami-Dade: DAD
+  Desoto: DES
+  Dixie: DIX
+  Duval: DUV
+  Escambia: ESC
+  Flagler: FLA
+  Franklin: FRA
+  Gadsden: GAD
+  Gilchrist: GIL
+  Glades: GLA
+  Gulf: GUL
+  Hamilton: HAM
+  Hardee: HAR
+  Hendry: HEN
+  Hernando: HER
+  Highlands: HIG
+  Hillsborough: HIL
+  Holmes: HOL
+  Indian_River: IND
+  Jackson: JAC
+  Jefferson: JEF
+  Lafayette: LAF
+  Lake: LAK
+  Lee: LEE
+  Leon: LEO
+  Levy: LEV
+  Liberty: LIB
+  Madison: MAD
+  Manatee: MAN
+  Marion: MRN
+  Martin: MRT
+  Monroe: MON
+  Nassau: NAS
+  Okaloosa: OKA
+  Okeechobee: OKE
+  Orange: ORA
+  Osceola: OSC
+  Palm_Beach: PAL
+  Pasco: PAS
+  Pinellas: PIN
+  Polk: POL
+  Putnam: PUT
+  Santa_Rosa: SAN
+  Sarasota: SAR
+  Seminole: SEM
+  St._Johns: STJ
+  St._Lucie: STL
+  Sumter: SUM
+  Suwannee: SUW
+  Taylor: TAY
+  Union: UNI
+  Volusia: VOL
+  Wakulla: WAK
+  Walton: WAL
+  Washington: WAS
+
+filename_counties:
+  Alachua: ALA_20190108.txt
+  Baker: BAK_20190108.txt
+  Bay: BAY_20190108.txt
+  Bradford: BRA_20190108.txt
+  Brevard: BRE_20190108.txt
+  Broward: BRO_20190108.txt
+  Calhoun: CAL_20190108.txt
+  Charlotte: CHA_20190108.txt
+  Citrus: CIT_20190108.txt
+  Clay: CLA_20190108.txt
+  Collier: CLL_20190108.txt
+  Columbia: CLM_20190108.txt
+  Miami-Dade: DAD_20190108.txt
+  Desoto: DES_20190108.txt
+  Dixie: DIX_20190108.txt
+  Duval: DUV_20190108.txt
+  Escambia: ESC_20190108.txt
+  Flagler: FLA_20190108.txt
+  Franklin: FRA_20190108.txt
+  Gadsden: GAD_20190108.txt
+  Gilchrist: GIL_20190108.txt
+  Glades: GLA_20190108.txt
+  Gulf: GUL_20190108.txt
+  Hamilton: HAM_20190108.txt
+  Hardee: HAR_20190108.txt
+  Hendry: HEN_20190108.txt
+  Hernando: HER_20190108.txt
+  Highlands: HIG_20190108.txt
+  Hillsborough: HIL_20190108.txt
+  Holmes: HOL_20190108.txt
+  Indian_River: IND_20190108.txt
+  Jackson: JAC_20190108.txt
+  Jefferson: JEF_20190108.txt
+  Lafayette: LAF_20190108.txt
+  Lake: LAK_20190108.txt
+  Lee: LEE_20190108.txt
+  Leon: LEO_20190108.txt
+  Levy: LEV_20190108.txt
+  Liberty: LIB_20190108.txt
+  Madison: MAD_20190108.txt
+  Manatee: MAN_20190108.txt
+  Marion: MRN_20190108.txt
+  Martin: MRT_20190108.txt
+  Monroe: MON_20190108.txt
+  Nassau: NAS_20190108.txt
+  Okaloosa: OKA_20190108.txt
+  Okeechobee: OKE_20190108.txt
+  Orange: ORA_20190108.txt
+  Osceola: OSC_20190108.txt
+  Palm_Beach: PAL_20190108.txt
+  Pasco: PAS_20190108.txt
+  Pinellas: PIN_20190108.txt
+  Polk: POL_20190108.txt
+  Putnam: PUT_20190108.txt
+  Santa_Rosa: SAN_20190108.txt
+  Sarasota: SAR_20190108.txt
+  Seminole: SEM_20190108.txt
+  St._Johns: STJ_20190108.txt
+  St._Lucie: STL_20190108.txt
+  Sumter: SUM_20190108.txt
+  Suwannee: SUW_20190108.txt
+  Taylor: TAY_20190108.txt
+  Union: UNI_20190108.txt
+  Volusia: VOL_20190108.txt
+  Wakulla: WAK_20190108.txt
+  Walton: WAL_20190108.txt
+  Washington: WAS_20190108.txt
+
+file_names:
+  - ALA_20190108.txt
+  - BAK_20190108.txt
+  - BAY_20190108.txt
+  - BRA_20190108.txt
+  - BRE_20190108.txt
+  - BRO_20190108.txt
+  - CAL_20190108.txt
+  - CHA_20190108.txt
+  - CIT_20190108.txt
+  - CLA_20190108.txt
+  - CLL_20190108.txt
+  - CLM_20190108.txt
+  - DAD_20190108.txt
+  - DES_20190108.txt
+  - DIX_20190108.txt
+  - DUV_20190108.txt
+  - ESC_20190108.txt
+  - FLA_20190108.txt
+  - FRA_20190108.txt
+  - GAD_20190108.txt
+  - GIL_20190108.txt
+  - GLA_20190108.txt
+  - GUL_20190108.txt
+  - HAM_20190108.txt
+  - HAR_20190108.txt
+  - HEN_20190108.txt
+  - HER_20190108.txt
+  - HIG_20190108.txt
+  - HIL_20190108.txt
+  - HOL_20190108.txt
+  - IND_20190108.txt
+  - JAC_20190108.txt
+  - JEF_20190108.txt
+  - LAF_20190108.txt
+  - LAK_20190108.txt
+  - LEE_20190108.txt
+  - LEO_20190108.txt
+  - LEV_20190108.txt
+  - LIB_20190108.txt
+  - MAD_20190108.txt
+  - MAN_20190108.txt
+  - MRN_20190108.txt
+  - MRT_20190108.txt
+  - MON_20190108.txt
+  - NAS_20190108.txt
+  - OKA_20190108.txt
+  - OKE_20190108.txt
+  - ORA_20190108.txt
+  - OSC_20190108.txt
+  - PAL_20190108.txt
+  - PAS_20190108.txt
+  - PIN_20190108.txt
+  - POL_20190108.txt
+  - PUT_20190108.txt
+  - SAN_20190108.txt
+  - SAR_20190108.txt
+  - SEM_20190108.txt
+  - STJ_20190108.txt
+  - STL_20190108.txt
+  - SUM_20190108.txt
+  - SUW_20190108.txt
+  - TAY_20190108.txt
+  - UNI_20190108.txt
+  - VOL_20190108.txt
+  - WAK_20190108.txt
+  - WAL_20190108.txt
+  - WAS_20190108.txt
+
+num_files: 67

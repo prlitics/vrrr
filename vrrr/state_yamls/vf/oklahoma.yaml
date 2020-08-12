@@ -1,0 +1,467 @@
+# Oklahoma has one zip file for voter files (name: CTYSW_VR_20190301085525.zip). 
+# There are 77 separate (per county) voter filee (ex name: CTY01_vr.csv)
+# Voter File has history data but Oklahoma also has separate Voter History files 
+
+file_type: csv
+delimiter: ','
+state: oklahoma
+source: boe
+file_class: voter_file
+voter_id: VoterID
+county_identifier: null
+birthday_identifier: DateOfBirth
+voter_status: Status
+party_identifier: PolitalAff
+date_format: '%m/%d/%Y'
+numeric_county: TRUE
+has_headers: TRUE
+fixed_width: FALSE
+separate_hispanic_origin: FALSE
+
+format:
+  separate_hist: TRUE
+  separate_counties_voter_file: TRUE
+  separate_counties_hist_file: TRUE
+  hist_election_rows: FALSE
+  columnar_elections: TRUE
+  separate_district_lookup_file: FALSE
+  vote_history_type: 'Sporadic'
+
+name_fields:
+  - LastName
+  - FirstName
+  - MiddleName
+  - Suffix
+
+address_fields:
+  - StreetNum
+  - StreetDir
+  - StreetName
+  - StreetType
+  - BldgNum
+  - City
+  - Zip
+  - MailStreet1
+  - MailStreet2
+  - MailCity
+  - MailState
+  - MailZip
+
+column_names:
+  - Precinct
+  - LastName
+  - FirstName
+  - MiddleName
+  - Suffix
+  - VoterID
+  - PolitalAff
+  - Status
+  - StreetNum
+  - StreetDir
+  - StreetName
+  - StreetType
+  - BldgNum
+  - City
+  - Zip
+  - DateOfBirth
+  - OriginalRegistration
+  - MailStreet1
+  - MailStreet2
+  - MailCity
+  - MailState
+  - MailZip
+  - Muni
+  - MuniSub
+  - School
+  - SchoolSub
+  - TechCenter
+  - TechCenterSub
+  - CountyComm
+  - VoterHist1
+  - HistMethod1
+  - VoterHist2
+  - HistMethod2
+  - VoterHist3
+  - HistMethod3
+  - VoterHist4
+  - HistMethod4
+  - VoterHist5
+  - HistMethod5
+  - VoterHist6
+  - HistMethod6
+  - VoterHist7
+  - HistMethod7
+  - VoterHist8
+  - HistMethod8
+  - VoterHist9
+  - HistMethod9
+  - VoterHist10
+  - HistMethod10
+
+column_classes:
+  Precinct: character
+  LastName: character
+  FirstName: character
+  MiddleName: character
+  Suffix: character
+  VoterID: character
+  PolitalAff: character
+  Status: character
+  StreetNum: character
+  StreetDir: character
+  StreetName: character
+  StreetType: character
+  BldgNum: character
+  City: character
+  Zip: character
+  DateOfBirth: date
+  OriginalRegistration: date
+  MailStreet1: character
+  MailStreet2: character
+  MailCity: character
+  MailState: character
+  MailZip: character
+  Muni: character
+  MuniSub: character
+  School: character
+  SchoolSub: character
+  TechCenter: character
+  TechCenterSub: character
+  CountyComm: character
+  VoterHist1: date
+  HistMethod1: character
+  VoterHist2: date
+  HistMethod2: character
+  VoterHist3: date
+  HistMethod3: character
+  VoterHist4: date
+  HistMethod4: character
+  VoterHist5: date
+  HistMethod5: character
+  VoterHist6: date
+  HistMethod6: character
+  VoterHist7: date
+  HistMethod7: character
+  VoterHist8: date
+  HistMethod8: character
+  VoterHist9: date
+  HistMethod9: character
+  VoterHist10: date
+  HistMethod10: character
+
+standard_colnames:
+  - Precinct_Code
+  - Name_Last
+  - Name_First
+  - Name_Middle
+  - Name_Suffix
+  - Voter_ID
+  - Party_Affiliation
+  - Voter_Status
+  - Street_Number
+  - Pre_Direction
+  - Street_Name
+  - Street_Type
+  - Unit_Number
+  - Residence_City
+  - Residence_Zipcode
+  - Birth_Date
+  - Registration_Date
+  - Mailing_Address_Line_1
+  - Mailing_Address_Line_2
+  - Mailing_City
+  - Mailing_State
+  - Mailing_Zipcode
+  - Municipality_City_Name
+  - Ward_Code
+  - School_District_Name
+  - School_Regional_District_Code
+  - Tech_Center_District_Name
+  - Tech_Center_Regional_District_Code
+  - County_Commissioner_District_Code
+  - Election_Date
+  - Ballot_Type
+  - Election_Date_2
+  - Ballot_Type_2
+  - Election_Date_3
+  - Ballot_Type_3
+  - Election_Date_4
+  - Ballot_Type_4
+  - Election_Date_5
+  - Ballot_Type_5
+  - Election_Date_6
+  - Ballot_Type_6
+  - Election_Date_7
+  - Ballot_Type_7
+  - Election_Date_8
+  - Ballot_Type_8
+  - Election_Date_9
+  - Ballot_Type_9
+  - Election_Date_10
+  - Ballot_Type_10
+
+standard_colpairs:
+  Precinct: Precinct_Code
+  LastName: Name_Last
+  FirstName: Name_First
+  MiddleName: Name_Middle
+  Suffix: Name_Suffix
+  VoterID: Voter_ID
+  PolitalAff: Party_Affiliation
+  Status: Voter_Status
+  StreetNum: Street_Number
+  StreetDir: Pre_Direction
+  StreetName: Street_Name
+  StreetType: Street_Type
+  BldgNum: Unit_Number
+  City: Residence_City
+  Zip: Residence_Zipcode
+  DateOfBirth: Birth_Date
+  OriginalRegistration: Registration_Date
+  MailStreet1: Mailing_Address_Line_1
+  MailStreet2: Mailing_Address_Line_2
+  MailCity: Mailing_City
+  MailState: Mailing_State
+  MailZip: Mailing_Zipcode
+  Muni: Municipality_City_Name
+  MuniSub: Ward_Code
+  School: School_District_Name
+  SchoolSub: School_Regional_District_Code
+  TechCenter: Tech_Center_District_Name
+  TechCenterSub: Tech_Center_Regional_District_Code
+  CountyComm: County_Commissioner_District_Code
+  VoterHist1: Election_Date
+  HistMethod1: Ballot_Type
+  VoterHist2: Election_Date_2
+  HistMethod2: Ballot_Type_2
+  VoterHist3: Election_Date_3
+  HistMethod3: Ballot_Type_3
+  VoterHist4: Election_Date_4
+  HistMethod4: Ballot_Type_4
+  VoterHist5: Election_Date_5
+  HistMethod5: Ballot_Type_5
+  VoterHist6: Election_Date_6
+  HistMethod6: Ballot_Type_6
+  VoterHist7: Election_Date_7
+  HistMethod7: Ballot_Type_7
+  VoterHist8: Election_Date_8
+  HistMethod8: Ballot_Type_8
+  VoterHist9: Election_Date_9
+  HistMethod9: Ballot_Type_9
+  VoterHist10: Election_Date_10
+  HistMethod10: Ballot_Type_10
+
+election_column_map:
+  VOTER_ID: VoterID
+  ELECTION_DATE: 
+    - VoterHist1
+    - VoterHist2
+    - VoterHist3
+    - VoterHist4
+    - VoterHist5
+    - VoterHist6
+    - VoterHist7
+    - VoterHist8
+    - VoterHist10
+  ELECTION_DESCRIPTION: null 
+  ELECTION_TYPE: null 
+  BALLOT_TYPE:  
+    - HistMethod1
+    - HistMethod2
+    - HistMethod3
+    - HistMethod4
+    - HistMethod5
+    - HistMethod6
+    - HistMethod7
+    - HistMethod8
+    - HistMethod9
+    - HistMethod10
+
+ballot_type_classes:
+  in_person: IP
+  absentee: AB
+  absentee_in_person: AI
+  physically_incap: PI
+  absentee_care_of_PI: CI
+  absentee_emergency_incap: EI
+  absentee_military: MI
+  absentee_overseas: OV
+  absentee_nursing_home: NH
+
+county_codes:
+  Adair: 01
+  Alfalfa: 02
+  Atoka: 03
+  Beaver: 04
+  Beckham: 05
+  Blaine: 06
+  Bryan: 07
+  Caddo: 08
+  Canadian: 09
+  Carter: 10
+  Cherokee: 11
+  Choctaw: 12
+  Cimarron: 13
+  Cleveland: 14
+  Coal: 15
+  Comanche: 16
+  Cotton: 17
+  Craig: 18
+  Creek: 19
+  Custer: 20
+  Delaware: 21
+  Dewey: 22
+  Ellis: 23
+  Garfield: 24
+  Garvin: 25
+  Grady: 26
+  Grant: 27
+  Greer: 28
+  Harmon: 29
+  Harper: 30
+  Haskell: 31
+  Hughes: 32
+  Jackson: 33
+  Jefferson: 34
+  Johnston: 35
+  Kay: 36
+  Kingfisher: 37
+  Kiowa: 38
+  Latimer: 39
+  Le Flore: 40
+  Lincoln: 41
+  Logan: 42
+  Love: 43
+  McClain: 44
+  McCurtain: 45
+  McIntosh: 46
+  Major: 47
+  Marshall: 48
+  Mayes: 49
+  Murray: 50
+  Muskogee: 51
+  Noble: 52
+  Nowata: 53
+  Okfuskee: 54
+  Oklahoma: 55
+  Okmulgee: 56
+  Osage: 57
+  Ottawa: 58
+  Pawnee: 59
+  Payne: 60
+  Pittsburg: 61
+  Pontotoc: 62
+  Pottawatomie: 63
+  Pushmataha: 64
+  Roger Mills: 65
+  Rogers: 66
+  Seminole: 67
+  Sequoyah: 68
+  Stephens: 69
+  Texas: 70
+  Tillman: 71
+  Tulsa: 72
+  Wagoner: 73
+  Washington: 74
+  Washita: 75
+  Woods: 76
+  Woodward: 77
+
+gender_codes:
+  Not_Provided: NP
+
+race_codes:
+  Not_Provided: NP
+
+status_codes:
+  Active: A
+  Inactive: I
+
+party_codes:
+  democratic_party: DEM
+  republican_party: REP
+  libertarian_party: LIB
+  no_party_affiliated: IND
+
+num_party_codes: 4
+
+file_names:
+  - CTY01_vr.csv
+  - CTY02_vr.csv
+  - CTY03_vr.csv
+  - CTY04_vr.csv
+  - CTY05_vr.csv
+  - CTY06_vr.csv
+  - CTY07_vr.csv
+  - CTY08_vr.csv
+  - CTY09_vr.csv
+  - CTY10_vr.csv
+  - CTY11_vr.csv
+  - CTY12_vr.csv
+  - CTY13_vr.csv
+  - CTY14_vr.csv
+  - CTY15_vr.csv
+  - CTY16_vr.csv
+  - CTY17_vr.csv
+  - CTY18_vr.csv
+  - CTY19_vr.csv
+  - CTY20_vr.csv
+  - CTY21_vr.csv
+  - CTY22_vr.csv
+  - CTY23_vr.csv
+  - CTY24_vr.csv
+  - CTY25_vr.csv
+  - CTY26_vr.csv
+  - CTY27_vr.csv
+  - CTY28_vr.csv
+  - CTY29_vr.csv
+  - CTY30_vr.csv
+  - CTY31_vr.csv
+  - CTY32_vr.csv
+  - CTY33_vr.csv
+  - CTY34_vr.csv
+  - CTY35_vr.csv
+  - CTY36_vr.csv
+  - CTY37_vr.csv
+  - CTY38_vr.csv
+  - CTY39_vr.csv
+  - CTY40_vr.csv
+  - CTY41_vr.csv
+  - CTY42_vr.csv
+  - CTY43_vr.csv
+  - CTY44_vr.csv
+  - CTY45_vr.csv
+  - CTY46_vr.csv
+  - CTY47_vr.csv
+  - CTY48_vr.csv
+  - CTY49_vr.csv
+  - CTY50_vr.csv
+  - CTY51_vr.csv
+  - CTY52_vr.csv
+  - CTY53_vr.csv
+  - CTY54_vr.csv
+  - CTY55_vr.csv
+  - CTY56_vr.csv
+  - CTY57_vr.csv
+  - CTY58_vr.csv
+  - CTY59_vr.csv
+  - CTY60_vr.csv
+  - CTY61_vr.csv
+  - CTY62_vr.csv
+  - CTY63_vr.csv
+  - CTY64_vr.csv
+  - CTY65_vr.csv
+  - CTY66_vr.csv
+  - CTY67_vr.csv
+  - CTY68_vr.csv
+  - CTY69_vr.csv
+  - CTY70_vr.csv
+  - CTY71_vr.csv
+  - CTY72_vr.csv
+  - CTY73_vr.csv
+  - CTY74_vr.csv
+  - CTY75_vr.csv
+  - CTY76_vr.csv
+  - CTY77_vr.csv
+
+num_files: 77

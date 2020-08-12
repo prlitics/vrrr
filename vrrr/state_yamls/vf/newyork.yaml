@@ -1,0 +1,349 @@
+# New York has two files in their export: 
+
+file_type: txt
+delimiter: ','
+state: new york
+source: boe
+file_class: voter_file
+voter_id: Voter_ID
+county_identifier: County_Code
+birthday_identifier: Birth_Date
+voter_status: Voter_Status
+party_identifier: Party_Affiliation
+date_format: '%Y%m%d'
+numeric_county: TRUE
+has_headers: FALSE 
+fixed_width: FALSE
+separate_hispanic_orign: FALSE
+
+format:
+  separate_hist: TRUE
+  separate_counties_voter_file: FALSE
+  separate_counties_hist_file: FALSE
+  hist_election_rows: FALSE
+  columnar_elections: FALSE
+  separate_district_lookup_file: FALSE
+  vote_history_type: 'Sporadic' # might need a fourth code: all history is in ONE column
+
+name_fields:
+  - Name_Last
+  - Name_Suffix
+  - Name_First
+  - Name_Middle
+  - Last_Registered_Name
+
+address_fields:
+  - House_Number
+  - Street_Frac
+  - Unit_Number
+  - Pre_Direction
+  - Street_Name
+  - Post_Direction
+  - Residence_City
+  - Residence_Zipcode
+  - Residence_Zipcode_Plus
+  - Last_Registered_Address
+
+column_names:
+  - Name_Last
+  - Name_First
+  - Name_Middle
+  - Name_Suffix
+  - House_Number
+  - Street_Frac
+  - Unit_Number
+  - Pre_Direction
+  - Street_Name
+  - Post_Direction
+  - Residence_City
+  - Residence_Zipcode
+  - Residence_Zipcode_Plus
+  - Mailing_Address_Line_1
+  - Mailing_Address_Line_2
+  - Mailing_Address_Line_3
+  - Mailing_Address_Line_4
+  - Birth_Date
+  - Gender 
+  - Party_Affiliation
+  - Other_Party_Affiliation
+  - County_Code
+  - Election_District
+  - Legislative_District
+  - Town_City
+  - Ward_Code 
+  - Congressional_District
+  - Senate_District
+  - Assembly_District
+  - Last_Vote_Date
+  - Last_Year_Voted
+  - Last_County_Voted
+  - Last_Registered_Address
+  - Last_Registered_Name
+  - County_Voter_ID
+  - Registration_Date
+  - Registration_Source # see registration_source_codes
+  - Flag_ID_Required
+  - Flag_ID_Verification
+  - Voter_Status
+  - Voter_Status_Reason_Code
+  - Inactive_Date
+  - Purge_Date
+  - Voter_ID
+  - Voter_History
+
+column_classes:
+  Name_Last: character
+  Name_First: character
+  Name_Middle: character
+  Name_Suffix: character
+  House_Number: character
+  Street_Frac: character
+  Unit_Number: character
+  Pre_Direction: character
+  Street_Name: character
+  Post_Direction: character
+  Residence_City: character
+  Residence_Zipcode: character
+  Residence_Zipcode_Plus: character
+  Mailing_Address_Line_1: character
+  Mailing_Address_Line_2: character
+  Mailing_Address_Line_3: character
+  Mailing_Address_Line_4: character
+  Birth_Date: date
+  Gender : character
+  Party_Affiliation: character
+  Other_Party_Affiliation: character
+  County_Code: character
+  Election_District: character
+  Legislative_District: character
+  Town_City: character
+  Ward_Code : character
+  Congressional_District: character
+  Senate_District: character
+  Assembly_District: character
+  Last_Vote_Date: date
+  Last_Year_Voted: character
+  Last_County_Voted: character
+  Last_Registered_Address: character
+  Last_Registered_Name: character
+  County_Voter_ID: character
+  Registration_Date: date
+  Registration_Source: character
+  Flag_ID_Required: character
+  Flag_ID_Verification: character
+  Voter_Status: character
+  Voter_Status_Reason_Code: character
+  Inactive_Date: date
+  Purge_Date: date
+  Voter_ID: character
+  Voter_History: character
+
+standard_colnames:
+  - Name_Last
+  - Name_First
+  - Name_Middle
+  - Name_Suffix
+  - House_Number
+  - Street_Frac
+  - Unit_Number
+  - Pre_Direction
+  - Street_Name
+  - Post_Direction
+  - Residence_City
+  - Residence_Zipcode
+  - Residence_Zipcode_Plus
+  - Mailing_Address_Line_1
+  - Mailing_Address_Line_2
+  - Mailing_Address_Line_3
+  - Mailing_Address_Line_4
+  - Birth_Date
+  - Gender 
+  - Party_Affiliation
+  - Other_Party_Affiliation
+  - County_Code
+  - Election_District
+  - Legislative_District
+  - Town_City
+  - Ward_Code 
+  - Congressional_District
+  - Senate_District
+  - Assembly_District
+  - Last_Vote_Date
+  - Last_Year_Voted
+  - Last_County_Voted
+  - Last_Registered_Address
+  - Last_Registered_Name
+  - County_Voter_ID
+  - Registration_Date
+  - Registration_Source
+  - Flag_ID_Required
+  - Flag_ID_Verification
+  - Voter_Status
+  - Voter_Status_Reason_Code
+  - Inactive_Date
+  - Purge_Date
+  - Voter_ID
+  - Voter_History
+
+standard_colpairs: 
+  Name_Last: Name_Last
+  Name_First: Name_First
+  Name_Middle: Name_Middle
+  Name_Suffix: Name_Suffix
+  House_Number: House_Number
+  Street_Frac: Street_Frac
+  Unit_Number: Unit_Number
+  Pre_Direction: Pre_Direction
+  Street_Name: Street_Name
+  Post_Direction: Post_Direction
+  Residence_City: Residence_City
+  Residence_Zipcode: Residence_Zipcode
+  Residence_Zipcode_Plus: Residence_Zipcode_Plus
+  Mailing_Address_Line_1: Mailing_Address_Line_1
+  Mailing_Address_Line_2: Mailing_Address_Line_2
+  Mailing_Address_Line_3: Mailing_Address_Line_3
+  Mailing_Address_Line_4: Mailing_Address_Line_4
+  Birth_Date: Birth_Date
+  Gender: Gender 
+  Party_Affiliation: Party_Affiliation
+  Other_Party_Affiliation: Other_Party_Affiliation
+  County_Code: County_Code
+  Election_District: Election_District
+  Legislative_District: Legislative_District
+  Town_City: Town_City
+  Ward_Code: Ward_Code 
+  Congressional_District: Congressional_District
+  Senate_District: Senate_District
+  Assembly_District: Assembly_District
+  Last_Vote_Date: Last_Vote_Date
+  Last_Year_Voted: Last_Year_Voted
+  Last_County_Voted: Last_County_Voted
+  Last_Registered_Address: Last_Registered_Address
+  Last_Registered_Name: Last_Registered_Name
+  County_Voter_ID: County_Voter_ID
+  Registration_Date: Registration_Date
+  Registration_Source: Registration_Source 
+  Flag_ID_Required: Flag_ID_Required
+  Flag_ID_Verification: Flag_ID_Verification
+  Voter_Status: Voter_Status
+  Voter_Status_Reason_Code: Voter_Status_Reason_Code
+  Inactive_Date: Inactive_Date
+  Purge_Date: Purge_Date
+  Voter_ID: Voter_ID
+  Voter_History: Voter_History
+
+county_codes:
+  Albany: 1 
+  Allegany: 2 
+  Bronx: 3 
+  Broome: 4 
+  Cattaraugus: 5 
+  Cayuga: 6
+  Chautauqua: 7 
+  Chemung: 8 
+  Chenango: 9 
+  Clinton: 10 
+  Columbia: 11 
+  Cortland: 12 
+  Delaware: 13 
+  Dutchess: 14 
+  Erie: 15 
+  Essex: 16 
+  Franklin: 17 
+  Fulton: 18 
+  Genesee: 19 
+  Greene: 20 
+  Hamilton: 21 
+  Herkimer: 22 
+  Jefferson: 23 
+  Kings: 24 
+  Lewis: 25 
+  Livingston: 26 
+  Madison: 27 
+  Monroe: 28 
+  Montgomery: 29 
+  Nassau: 30 
+  New York: 31 
+  Niagara: 32 
+  Oneida: 33 
+  Onondaga: 34  
+  Ontario: 35 
+  Orange: 36 
+  Orleans: 37 
+  Oswego: 38 
+  Otsego: 39 
+  Putnam: 40 
+  Queens: 41 
+  Rensselaer: 42 
+  Richmond: 43 
+  Rockland: 44 
+  Saratoga: 45 
+  Schenectady: 46 
+  Schoharie: 47 
+  Schuyler: 48 
+  Seneca: 49 
+  St.Lawrence: 50 
+  Steuben: 51 
+  Suffolk: 52 
+  Sullivan: 53 
+  Tioga: 54 
+  Tompkins: 55 
+  Ulster: 56 
+  Warren: 57 
+  Washington: 58 
+  Wayne: 59 
+  Westchester: 60 
+  Wyoming: 61 
+  Yates: 62 
+  
+registration_source_codes:
+  agency: AGCY
+  county_board_of_elections: CBOE
+  department_of_motor_vehicles: DMV
+  local_registrar: LOCALREG 
+  mail-in_through_USPS: MAIL
+  school: SCHOOL
+
+gender_codes:
+  Male: M
+  Female: F
+
+race_codes:
+  Not_Provided: NP
+
+status_codes:
+  Active: A
+  Inactive: I
+  Preregistered: '17'
+  Active_military: AM
+  Active_special_federal: AF
+  Active_special_presidential: AP
+  Active_UOCAVA: AU
+  Purged: P
+
+status_reason_codes:
+  adjusted_incompetent: ADJ-INCOMP
+  death: DEATH 
+  felon: FELON 
+  mail_check: MAIL-CHECK
+  moved_out_of_county: MOVED
+  NCOA: NCOA
+  NVRA: NVRA
+  returned_mail: RETURN-MAIL
+  voter_request: VOTER-REQ
+
+party_codes:
+  democratic_party: DEM
+  republican_party: REP
+  conservative: CON
+  green_party: GRE
+  working_families: WOR
+  independence_party: IND
+  womens_equality_party: WEP
+  reform_party: REF
+  other: OTH
+  no_party_affiliation: BLK
+  libertarian_party: LPF
+  sapient: SAP
+
+num_party_codes: 12

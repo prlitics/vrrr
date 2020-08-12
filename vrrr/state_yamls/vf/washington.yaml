@@ -1,0 +1,288 @@
+# Washington has three types of separate txt files. 
+# Registered Voter Files, separated by three Voter_Status codes (Active, Inactive, Cancelled) 
+# (name: #NOT PROVIDED VOTER FILE); 
+# Voting History (name: ex: 2015-2016_VotingHistoryExtract.txt); 
+# Districts and Precincts excel file codes (2018.10.02-Districts_Precincts.xlsx)
+
+file_type: txt
+delimiter: '\t'
+state: washington
+source: boe
+file_class: voter_file
+voter_id: StateVoterID
+county_identifier: CountyCode
+birthday_identifier: Birthdate
+voter_status: StatusCode
+party_identifier: null
+date_format: '%m/%d/%Y'
+numeric_county: FALSE
+has_headers: TRUE
+fixed_width: FALSE
+separate_hispanic_origin: FALSE
+
+format:
+  separate_hist: TRUE
+  separate_counties_voter_file: FALSE
+  separate_counties_hist_file: FALSE
+  hist_election_rows: TRUE
+  columnar_elections: FALSE
+  separate_district_lookup_file: TRUE
+  vote_history_type: null
+
+name_fields:
+  - Title
+  - FName
+  - MName
+  - LName
+  - NameSuffix
+
+address_fields:
+  - RegStNum
+  - RegStFrac
+  - RegStName
+  - RegStType
+  - RegUnitType
+  - RegStPreDirection
+  - RegStPostDirection
+  - RegUnitNum
+  - RegCity
+  - RegState
+  - RegZipCode
+  - CountyCode
+  - Mail1
+  - Mail2
+  - Mail3
+  - Mail4
+  - MailCity
+  - MailZip
+  - MailState
+  - MailCountry
+  
+column_names:
+  - StateVoterID
+  - CountyVoterID
+  - Title
+  - FName
+  - MName
+  - LName
+  - NameSuffix
+  - Birthdate
+  - Gender
+  - RegStNum
+  - RegStFrac
+  - RegStName
+  - RegStType
+  - RegUnitType
+  - RegStPreDirection
+  - RegStPostDirection
+  - RegUnitNum
+  - RegCity
+  - RegState
+  - RegZipCode
+  - CountyCode
+  - PrecinctCode
+  - PrecinctPart
+  - LegislativeDistrict
+  - CongressionalDistrict
+  - Mail1
+  - Mail2
+  - Mail3
+  - Mail4
+  - MailCity
+  - MailZip
+  - MailState
+  - MailCountry
+  - Registrationdate
+  - AbsenteeType
+  - LastVoted
+  - StatusCode
+
+column_classes:
+  StateVoterID: character
+  CountyVoterID: character
+  Title: character
+  FName: character
+  MName: character
+  LName: character
+  NameSuffix: character
+  Birthdate: date
+  Gender: character
+  RegStNum: character
+  RegStFrac: character
+  RegStName: character
+  RegStType: character
+  RegUnitType: character
+  RegStPreDirection: character
+  RegStPostDirection: character
+  RegUnitNum: character
+  RegCity: character
+  RegState: character
+  RegZipCode: character
+  CountyCode: character
+  PrecinctCode: character
+  PrecinctPart: character
+  LegislativeDistrict: character
+  CongressionalDistrict: character
+  Mail1: character
+  Mail2: character
+  Mail3: character
+  Mail4: character
+  MailCity: character
+  MailZip: character
+  MailState: character
+  MailCountry: character
+  Registrationdate: date
+  AbsenteeType: character
+  LastVoted: date
+  StatusCode: character
+
+standard_colnames:
+  - State_ID
+  - Voter_ID
+  - Name_Title
+  - Name_Prefix
+  - Name_First
+  - Name_Last
+  - Name_Suffix
+  - Birth_Date
+  - Gender
+  - Street_Number
+  - Street_Frac
+  - Street_Name
+  - Street_Type
+  - Unit_Type
+  - Pre_Direction
+  - Post_Direction
+  - Unit_Number
+  - Residence_City
+  - Residence_State
+  - Residence_Zipcode
+  - County_Name
+  - Precinct_Code
+  - Precinct_Name
+  - Legislative_District
+  - Congressional_District
+  - Mailing_Address_Line_1
+  - Mailing_Address_Line_2
+  - Mailing_Address_Line_3
+  - Mailing_Address_Line_4
+  - Mailing_City
+  - Mailing_Zipcode
+  - Mailing_State
+  - Mailing_Country
+  - Registration_Date
+  - Absentee
+  - Last_Vote_Date
+  - Voter_Status
+
+standard_colpairs:
+  StateVoterID: State_ID
+  CountyVoterID: Voter_ID
+  Title: Name_Title
+  FName: Name_Prefix
+  MName: Name_First
+  LName: Name_Last
+  NameSuffix: Name_Suffix
+  Birthdate: Birth_Date
+  Gender: Gender
+  RegStNum: Street_Number
+  RegStFrac: Street_Frac
+  RegStName: Street_Name
+  RegStType: Street_Type
+  RegUnitType: Unit_Type
+  RegStPreDirection: Pre_Direction
+  RegStPostDirection: Post_Direction
+  RegUnitNum: Unit_Number
+  RegCity: Residence_City
+  RegState: Residence_State
+  RegZipCode: Residence_Zipcode
+  CountyCode: County_Name
+  PrecinctCode: Precinct_Code
+  PrecinctPart: Precinct_Name
+  LegislativeDistrict: Legislative_District
+  CongressionalDistrict: Congressional_District
+  Mail1: Mailing_Address_Line_1
+  Mail2: Mailing_Address_Line_2
+  Mail3: Mailing_Address_Line_3
+  Mail4: Mailing_Address_Line_4
+  MailCity: Mailing_City
+  MailZip: Mailing_Zipcode
+  MailState: Mailing_State
+  MailCountry: Mailing_Country
+  Registrationdate: Registration_Date
+  AbsenteeType: Absentee
+  LastVoted: Last_Vote_Date
+  StatusCode: Voter_Status
+
+
+county_codes:
+  Adams: AD
+  Asotin: AS
+  Benton: BE
+  Chelan: CH
+  Clallam: CM
+  Clark: CR
+  Columbia: CU
+  Cowlitz: CZ
+  Douglas: DG
+  Ferry: FE
+  Franklin: FR
+  Garfield: GA
+  Grant: GR
+  Grays Harbor: GY
+  Island: IS
+  Jefferson: JE
+  King: KI
+  Kitsap: KP
+  Kittitas: KS
+  Klickitat: KT
+  Lewis: LE
+  Lincoln: LI
+  Mason: MA
+  Okanogan: OK
+  Pacific: PA
+  Pend Oreille: PE
+  Pierce: PI
+  San Juan: SJ
+  Skagit: SK
+  Skamania: SM
+  Snohomish: SN
+  Spokane: SP
+  Stevens: ST
+  Thurston: TH
+  Wahkiakum: WK
+  Walla Walla: WL
+  Whatcom: WM
+  Whitman: WT
+  Yakima: YA
+
+status_codes:
+  active: A
+  inactive: I
+  inactive_other: IM
+  cancel: C
+  cancelled_duplicate: CD
+  cancelled_felon: CF
+  cancelled_deceased: CS
+  cancelled_transferred: CT
+
+gender_codes:
+  Male: M
+  Female: F
+  Unknown: U
+
+race_codes:
+  Not_Provided: NP
+
+party_codes:
+  Not_Provided: NP
+
+num_party_codes:
+  Not_Provided: NP
+
+
+
+
+
+
+
