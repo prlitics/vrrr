@@ -1,4 +1,4 @@
-# Delaware has one .txt file entitled de_voter_reg.txt which has both registration and history records 
+# Delaware has one .txt file entitled de_voter_reg.txt which has both registration and history records
 # Data Documentation does not match data (phone number columns missing)
 
 file_type: txt
@@ -16,7 +16,7 @@ numeric_county: FALSE
 has_headers: TRUE
 fixed_width: FALSE
 separate_hispanic_orign: FALSE
-r_preamble: # r code that transforms into ideal case 
+r_preamble: # r code that transforms into ideal case
 
 format:
   separate_hist: FALSE
@@ -28,11 +28,11 @@ format:
   vote_history_type: 'Sporadic'
 
 name_fields:
-  - Title                                               
-  - Name-First                                          
-  - Name-Middle                                         
-  - Name-Last                                           
-  - Name-Suffix      
+  - Title
+  - Name-First
+  - Name-Middle
+  - Name-Last
+  - Name-Suffix
 
 address_fields:
   - Res-Addr-Development Name
@@ -120,10 +120,10 @@ column_names:
   - District-County Council (New Castle and Sussex Only)
   - District-Election
   - District-Levy Court (Kent Only)
-  - District-Municipality
+  - District-Municipality_1
   - District-Representative
   - District-School
-  - District-Senate 
+  - District-Senate
 
 
 column_classes:
@@ -184,12 +184,12 @@ column_classes:
   District-County Council (New Castle and Sussex Only): character
   District-Election: character
   District-Levy Court (Kent Only): character
-  District-Municipality: character
+  District-Municipality_1: character
   District-Representative: character
   District-School: character
   District-Senate : character
 
-standard_colnames: 
+standard_colnames:
   - County_Name
   - Voter_Status
   - Name_Title
@@ -241,7 +241,7 @@ standard_colnames:
   - Vote_History_9
   - Vote_History_10
   - Address_Non_Standard
-  - Last_Updated_Date 
+  - Last_Updated_Date
   - Congressional_District
   - City_Council_District
   - County_Council_District
@@ -304,20 +304,20 @@ standard_colpairs:
   Voting History 9: Vote_History_9
   Voting History 10: Vote_History_10
   Res Addr-Non-Standard: Address_Non_Standard
-  Last Registration Update Date: Last_Updated_Date 
+  Last Registration Update Date: Last_Updated_Date
   District-Congressional: Congressional_District
   District-City Council (Wilmington Only): City_Council_District
   District-County Council (New Castle and Sussex Only): County_Council_District
   District-Election: Election_District
   District-Levy Court (Kent Only): Court_District
-  District-Municipality: Municipality_District
+  District-Municipality_1: Municipality_District
   District-Representative: House_District
   District-School: School_District
   District-Senate : Senate_District
 
 election_column_map:
   VOTER_ID: Voter-ID
-  ELECTION_DATE: 
+  ELECTION_DATE:
     - substr(Voting History 1, 5, 6)
     - substr(Voting History 2, 5, 6)
     - substr(Voting History 3, 5, 6)
@@ -329,7 +329,7 @@ election_column_map:
     - substr(Voting History 9, 5, 6)
     - substr(Voting History 10, 5, 6)
   ELECTION_DESCRIPTION: null
-  ELECTION_TYPE: 
+  ELECTION_TYPE:
     - substr(Voting History 1, 1, 2)
     - substr(Voting History 2, 1, 2)
     - substr(Voting History 3, 1, 2)
@@ -343,20 +343,20 @@ election_column_map:
   VOTING_METHOD: null
 
 election_codes:
-  - presidential_primary: PP 
+  - presidential_primary: PP
   - primary: P
-  - general: GE 
-  - school_board: SC 
-  - school_referendum1: R1 
-  - school_referendum2: R2 
-  - school_referendum3: R3 
-  - school_referendum4: R4 
-  - school_referendum5: R5 
-  - school_referendum6: R6 
-  - school_referendum7: R7 
-  - school_referendum8: R8 
-  - school_referendum9: R9 
-  - school_referendum0: R0 
+  - general: GE
+  - school_board: SC
+  - school_referendum1: R1
+  - school_referendum2: R2
+  - school_referendum3: R3
+  - school_referendum4: R4
+  - school_referendum5: R5
+  - school_referendum6: R6
+  - school_referendum7: R7
+  - school_referendum8: R8
+  - school_referendum9: R9
+  - school_referendum0: R0
   - special_election_usRep: XA
   - special_election_stateRep: XB
   - special_election_stateSenate: XC
@@ -368,8 +368,8 @@ county_codes:
   Not_Provided: NP
 
 status_codes:
-  active: A 
-  inactive: I 
+  active: A
+  inactive: I
 
 gender_codes:
   Not_Provided: NP
@@ -378,23 +378,23 @@ race_codes:
   Not_Provided: NP
 
 party_codes:
-  - REPUBLICAN    
-  - DEMOCRATIC 
-  - NO PARTY     
+  - REPUBLICAN
+  - DEMOCRATIC
+  - NO PARTY
   - GREEN
-  - IND PTY OF DE 
-  - LIBERTARIAN  
-  - CONSTITUTION  
-  - NONPARTISAN   
-  - OTHER        
-  - CONSERVATIVE  
-  - LIBERAL       
-  - AMERICAN     
-  - BLUE ENIGMA   
-  - REFORM        
-  - WORKING FAM  
-  - AMER DELTA    
-  - NATURAL LAW   
-  - SOCIALST WR  
+  - IND PTY OF DE
+  - LIBERTARIAN
+  - CONSTITUTION
+  - NONPARTISAN
+  - OTHER
+  - CONSERVATIVE
+  - LIBERAL
+  - AMERICAN
+  - BLUE ENIGMA
+  - REFORM
+  - WORKING FAM
+  - AMER DELTA
+  - NATURAL LAW
+  - SOCIALST WR
 
 num_party_codes: 18

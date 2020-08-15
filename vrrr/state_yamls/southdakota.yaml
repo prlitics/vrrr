@@ -1,10 +1,10 @@
 # South Dakota has two .csv files - SWVoterHistory (14).csv and SearchExport-20181227-2023.csv
 
 file_type: csv
-delimiter: ',' 
+delimiter: ','
 state: South Dakota
 source: boe
-file_class: voter_history 
+file_class: voter_history
 voter_id: Id
 county_identifier: County
 birthday_identifier: DOB
@@ -26,70 +26,70 @@ format:
   vote_history_type: null
 
 name_fields:
-  - Last Name 
-  - First Name  
-  - Middle Name 
-  - Suffix  
+  - Last Name
+  - First Name
+  - Middle Name
+  - Suffix
 
 address_fields:
-  - Residential Address 
+  - Residential Address
   - Residential City
-  - Residential State 
-  - Residential Zip 
-  - Mailing Address 
-  - Mailing City  
-  - Mailing State 
-  - Mailing Zip 
-  - County  
-  - Mailing Country 
-  - House Number  
-  - Pre Street Dir  
-  - Street Name 
-  - Street Type 
-  - Post Street Dir
-  
-column_names:
-  - Id  
-  - Last Name 
-  - First Name  
-  - Middle Name 
-  - Suffix  
-  - DOB 
-  - Residential Address 
-  - Residential City
-  - Residential State 
-  - Residential Zip 
-  - Status  
-  - Party 
-  - Other Party 
-  - Phone Number
-  - Email 
-  - Precinct Name 
-  - City  
-  - Ward  
-  - School
-  - School Board Representation Area  
-  - Senate District 
-  - House District  
-  - Commissioner District 
-  - Fire District 
-  - Original Registration Date  
-  - Last Registration Date  
-  - Last Updated Date 
-  - Date Last Voted 
-  - Mailing Address 
-  - Mailing City  
-  - Mailing State 
-  - Mailing Zip 
-  - County  
-  - Mailing Country 
-  - House Number  
-  - Pre Street Dir  
-  - Street Name 
-  - Street Type 
+  - Residential State
+  - Residential Zip
+  - Mailing Address
+  - Mailing City
+  - Mailing State
+  - Mailing Zip
+  - County
+  - Mailing Country
+  - House Number
+  - Pre Street Dir
+  - Street Name
+  - Street Type
   - Post Street Dir
 
-column_classes: 
+column_names:
+  - Id
+  - Last Name
+  - First Name
+  - Middle Name
+  - Suffix
+  - DOB
+  - Residential Address
+  - Residential City
+  - Residential State
+  - Residential Zip
+  - Status
+  - Party
+  - Other Party
+  - Phone Number
+  - Email
+  - Precinct Name
+  - City
+  - Ward
+  - School
+  - School Board Representation Area
+  - Senate District
+  - House District
+  - Commissioner District
+  - Fire District
+  - Original Registration Date
+  - Last Registration Date
+  - Last Updated Date
+  - Date Last Voted
+  - Mailing Address
+  - Mailing City
+  - Mailing State
+  - Mailing Zip
+  - County
+  - Mailing Country
+  - House Number
+  - Pre Street Dir
+  - Street Name
+  - Street Type
+  - Post Street Dir
+
+column_classes:
   Id: character
   Last Name: character
   First Name: character
@@ -156,16 +156,16 @@ standard_colnames:
   - County_Commission_District_Code
   - Fire_District_Name
   - Registration_Date
-  - Last_Registration_Date  
+  - Last_Registration_Date
   - Last_Updated_Date
   - Last_Vote_Date
   - Mailing_Address
   - Mailing_City
   - Mailing_State
   - Mailing_Zipcode
-  - County_Name  
-  - Mailing_Country 
-  - House_Number  
+  - County_Name
+  - Mailing_Country
+  - House_Number
   - Pre_Direction
   - Street_Name
   - Street_Type
@@ -197,16 +197,16 @@ standard_colpairs:
   Commissioner District : County_Commission_District_Code
   Fire District: Fire_District_Name
   Original Registration Date: Registration_Date
-  Last Registration Date: Last_Registration_Date  
+  Last Registration Date: Last_Registration_Date
   Last Updated Date: Last_Updated_Date
   Date Last Voted: Last_Vote_Date
   Mailing Address: Mailing_Address
   Mailing City: Mailing_City
   Mailing State: Mailing_State
   Mailing Zip: Mailing_Zipcode
-  County: County_Name  
-  Mailing Country: Mailing_Country 
-  House Number: House_Number  
+  County: County_Name
+  Mailing Country: Mailing_Country
+  House Number: House_Number
   Pre Street Dir: Pre_Direction
   Street Name: Street_Name
   Street Type: Street_Type

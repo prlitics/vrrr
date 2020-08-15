@@ -1,11 +1,11 @@
-# Idaho has one zip file that includes the Variable Names in an .html 
-# as well as a .txt file with the voter file 
+# Idaho has one zip file that includes the Variable Names in an .html
+# as well as a .txt file with the voter file
 
 file_type: .txt
 delimiter: '|'
 state: idaho
 source: boe
-file_class: voter_file 
+file_class: voter_file
 voter_id: Voter_ID
 county_identifier: County_Name
 birthday_identifier: Age
@@ -20,7 +20,7 @@ separate_hispanic_origin: FALSE
 format:
   separate_hist: FALSE
   separate_counties_voter_file: FALSE
-  separate_counties_hist_file: FALSE 
+  separate_counties_hist_file: FALSE
   hist_election_rows: FALSE
   columnar_elections: TRUE
   separate_district_lookup_file: FALSE
@@ -89,12 +89,12 @@ column_names:
   - Party_Affiliation
   - Election_Date
   - Election_Name
-  - Vote_History 
+  - Vote_History
   - Vote_Decision_Party
   - Ballot_Type
   - Election_Date_2
   - Election_Name_2
-  - Vote_History_2 
+  - Vote_History_2
   - Vote_Decision_Party_2
   - Ballot_Type_2
   - Election_Date_3
@@ -114,7 +114,7 @@ column_names:
   - Ballot_Type_5
   - Election_Date_6
   - Election_Name_6
-  - Vote_History_6 
+  - Vote_History_6
   - Vote_Decision_Party_6
   - Ballot_Type_6
   - Election_Date_7
@@ -128,7 +128,7 @@ column_names:
   - Vote_Decision_Party_8
   - Ballot_Type_8
 
-column_classes: 
+column_classes:
   Voter_ID: character
   Name_Last: character
   Name_First: character
@@ -254,7 +254,7 @@ standard_colnames:
   - Ballot_Type_3
   - Election_Date_4
   - Election_Name_4
-  - Vote_History
+  - Vote_History_4
   - Vote_Decision_Party_4
   - Ballot_Type_4
   - Election_Date_5
@@ -330,7 +330,7 @@ standard_colpairs:
   Ballot_Type_3: Ballot_Type_3
   Election_Date_4: Election_Date_4
   Election_Name_4: Election_Name_4
-  Vote_History: Vote_History
+  Vote_History_4: Vote_History
   Vote_Decision_Party_4: Vote_Decision_Party_4
   Ballot_Type_4: Ballot_Type_4
   Election_Date_5: Election_Date_5
@@ -359,7 +359,7 @@ status_codes:
 
 election_column_map:
   VOTER_ID: Voter_ID
-  ELECTION_DATE: 
+  ELECTION_DATE:
     - Election_Date
     - Election_Date_2
     - Election_Date_3
@@ -368,7 +368,7 @@ election_column_map:
     - Election_Date_6
     - Election_Date_7
     - Election_Date_8
-  ELECTION_DESCRIPTION: 
+  ELECTION_DESCRIPTION:
     - Election_Name
     - Election_Name_2
     - Election_Name_3
@@ -378,7 +378,7 @@ election_column_map:
     - Election_Name_7
     - Election_Date_8
   ELECTION_TYPE: null
-  VOTING_METHOD: 
+  VOTING_METHOD:
     - Ballot_Type
     - Ballot_Type_2
     - Ballot_Type_3

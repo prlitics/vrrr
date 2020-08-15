@@ -24,7 +24,7 @@ format:
   hist_election_rows: TRUE
   columnar_elections: FALSE
   separate_district_lookup_file: FALSE
-  vote_history_type: null 
+  vote_history_type: null
 
 name_fields:
   - LAST_NAME
@@ -225,7 +225,7 @@ standard_colnames:
   - City_DistrictB_Name
   - City_DistrictB_Code
   - City_DistrictC_Name
-  - City_DistrictC_Code  
+  - City_DistrictC_Code
   - City_DistrictD_Name
   - City_DistrictD_Code
   - Last_Vote_Date
@@ -290,7 +290,7 @@ standard_colpairs:
   CITY_DISTB_NAME: City_DistrictB_Name
   CITY_DISTB_VALUE: City_DistrictB_Code
   CITY_DISTC_NAME: City_DistrictC_Name
-  CITY_DISTC_VALUE: City_DistrictC_Code  
+  CITY_DISTC_VALUE: City_DistrictC_Code
   CITY_DISTD_NAME: City_DistrictD_Name
   CITY_DISTD_VALUE: City_DistrictD_Code
   DATE_LAST_VOTED: Last_Vote_Date
@@ -319,8 +319,8 @@ party_codes:
   republican_party: R
   no_party_affiliation: NP
   green_party: G
-# NEED THESE CODES FROM GEORGIA 
-# call them and ask  
+# NEED THESE CODES FROM GEORGIA
+# call them and ask
 # N
 # P
 # X
@@ -342,7 +342,7 @@ gender_codes:
   female: 'F'
   other: 'O'
 
-county_codes: 
+county_codes:
   Appling: 1
   Atkinson:  2
   Bacon:  3
@@ -502,3 +502,4 @@ county_codes:
   Wilkes:  157
   Wilkinson:  158
   Worth:  159
+  
