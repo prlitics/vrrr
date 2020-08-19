@@ -1,11 +1,18 @@
-check_state<-function(states){
+#' Checks to see if user input a valid state.
+#'
+#' @param state A character input that is either a state name (e.g., "North Carolina" or "Florida)
+#' or a postal code ("FL" or "nc"). Can be capitalized or not.
+#'
+
+
+check_state<-function(state){
   # Check if given a character vector
-  if (typeof(states)=="character"){
+  if (typeof(state)=="character"){
 
 
-    if(length(states) == 1){
+    if(length(state) == 1){
       #Check if given a state that is in the list of available state YAMLs
-      if(tolower(states) %in% vrrr:::state_list){
+      if(tolower(state) %in% vrrr:::state_list){
         #If so, yay!
 
 
