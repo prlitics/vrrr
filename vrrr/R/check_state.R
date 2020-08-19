@@ -2,7 +2,7 @@
 #'
 #' @param state A character input that is either a state name (e.g., "North Carolina" or "Florida)
 #' or a postal code ("FL" or "nc"). Can be capitalized or not.
-#'
+#' @return An error if the was inputted incorrectly.
 
 
 check_state<-function(state){

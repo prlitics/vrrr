@@ -7,12 +7,12 @@
 retrieve_yaml <- function(state, history = FALSE){
 
   if(isFALSE(history)){
-    state_yaml <- paste0(vrrr:::state_list[tolower(state)],".yaml")}
+    state_yaml <- paste0(vrrr:::state_key[tolower(state)],".yaml")}
   else if(isTRUE(history)){
-    state_yaml <- paste0(vrrr:::state_list[tolower(state)],"_history.yaml")}
+    state_yaml <- paste0(vrrr:::state_key[tolower(state)],"_history.yaml")}
 
   if(exists(state_yaml)){
-    return(state_yaml)
+    eval(parse(text = state_yaml))
   }else{
     stop("Documentation on this state does not exist in your current instance of vrrr")
   }

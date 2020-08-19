@@ -7,7 +7,7 @@
 #' @return R script to be evaluated by load_state() that will read the columns as the correct classes.
 #'
 
-col_formatter<-function(cols, column_names, date_format,){
+col_formatter<-function(cols, column_names, date_format){
   x<-""
   z<-0
   for (i in cols) {
@@ -17,29 +17,29 @@ col_formatter<-function(cols, column_names, date_format,){
     if(i == "date"){
 
       if(z==1){
-        x<-(paste0('list(',shQuote(column_names[z])," = col_date( format = ",shQuote(date_format),'),'))
+        x<-(paste0('list(',shQuote(column_names[z])," = readr::col_date( format = ",shQuote(date_format),'),'))
       }else if (z < length(cols)){
-        x<-paste0(x,shQuote(column_names[z])," = col_date( format = ",shQuote(date_format),'),')}
+        x<-paste0(x,shQuote(column_names[z])," = readr::col_date( format = ",shQuote(date_format),'),')}
       else{
-        x <-paste0(x,shQuote(column_names[z])," = col_date( format = ",shQuote(date_format),')',')')
+        x <-paste0(x,shQuote(column_names[z])," = readr::col_date( format = ",shQuote(date_format),')',')')
       }
 
     } else {
 
       if(z==1){
-        x<-(paste0('list(',shQuote(column_names[z])," = col_",i[[1]],'(), '))
+        x<-(paste0('list(',shQuote(column_names[z])," = readr::col_",i[[1]],'(), '))
       }else if (z < length(cols)){
-        x<-paste0(x,shQuote(column_names[z])," = col_",i[[1]],'(), ')}
+        x<-paste0(x,shQuote(column_names[z])," = readr::col_",i[[1]],'(), ')}
       else{
-        x <-paste0(x,shQuote(column_names[z])," = col_",i[[1]],'() ',')')
+        x <-paste0(x,shQuote(column_names[z])," = readr::col_",i[[1]],'() ',')')
       }
     }
 
 
 
   }
-
-  return(parse(text = x))
+  z<-parse(text = x)
+  return(z)
 
 
 }

@@ -2,6 +2,7 @@
 
 load_state<-function(path, vtr_file, yaml){
 
+
   # Gather Date Format
   d_format<-yaml[["date_format"]]
 
@@ -11,11 +12,13 @@ load_state<-function(path, vtr_file, yaml){
   file_type<-yaml[["file_type"]]
 
   # Gather Column Types
-  col_classes<-yaml["column_classes"][[1]]
-  col_names<-names(cols)
+  col_classes<-unname(yaml["column_classes"][[1]])
+
+  col_names<-names(yaml["column_classes"][[1]])
+
 
   # Gather Delimiter
-  delim <- yaml[["delimiter"]]
+
 
 
 
@@ -23,13 +26,14 @@ load_state<-function(path, vtr_file, yaml){
 
 
 
-multiple_file_case(path = path, vtr_file = vtr_file, yaml = yaml, file_type = file_type,
+multiple_file_case(path = path, yaml = yaml, file_type = file_type,
                    col_classes = col_classes, col_names = col_names, d_format = d_format,
                    delim = delim)
 
   }else{
 
-    single_file_case(col_classes = col_classes, col_names = col_names, d_format = d_format)
+    single_file_case(col_classes = col_classes, col_names = col_names, d_format = d_format,
+                     yaml = yaml, vtr_file = vtr_file)
 
   }
 
