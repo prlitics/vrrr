@@ -1,3 +1,6 @@
+
+setwd("C:/Users/prlic/Documents/GitHub/vrrr/vrrr/")
+
 devtools::document()
 
 usethis::use_data(state_list, state_key, alaska.yaml, colorado.yaml,
@@ -14,17 +17,3 @@ for (i in yamls) {
   assign(i, yaml::yaml.load_file(i))
 
 }
-test<-append(test,substitute(i))
-
-?substitute
-eval(objects())
-ls()
-
-test<-c(substitute(georgia.yaml),substitute(kansas.yaml))
-expression()
-
-temp <- paste0("vrrr:::","florida",".yaml")
-eval(parse(text= temp))
-state_yaml<-eval(parse(text= temp))
-
-exists(paste0("alaska",".yaml"))

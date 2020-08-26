@@ -1,6 +1,6 @@
 #' Loads in state.
 
-load_state<-function(path, vtr_file, yaml, menu){
+load_state<-function(path, vtr_file, yaml, menu, vtr_names, vtr_addresses){
 
 
   # Gather Date Format
@@ -12,9 +12,14 @@ load_state<-function(path, vtr_file, yaml, menu){
   file_type<-yaml[["file_type"]]
 
   # Gather Column Types
-  col_classes<-unname(yaml["column_classes"][[1]])
+  name_class_pairs <- yaml["column_classes"][[1]]
 
-  col_names<-names(yaml["column_classes"][[1]])
+  # Remove names and addresses (optional)
+
+
+  col_classes<-unname(name_class_pairs)
+
+  col_names<-names(name_class_pairs)
 
 
   # Gather Delimiter

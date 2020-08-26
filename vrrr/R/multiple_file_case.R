@@ -74,12 +74,12 @@ sub_sub_menu<-function(){
 
 
 if(isTRUE(menu)){
-sub_menu()
+x<-sub_menu()
 } else {
-  single_case_repeated(col_classes = col_classes, col_names = col_names, d_format=d_format,
+  x<-single_case_repeated(col_classes = col_classes, col_names = col_names, d_format=d_format,
                        yaml = yaml)
 }
-
-
+setwd(wd)
+return(x)
 }
 
