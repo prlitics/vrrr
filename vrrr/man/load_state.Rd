@@ -4,7 +4,7 @@
 \alias{load_state}
 \title{Loads in state.}
 \usage{
-load_state(path, vtr_file, yaml)
+load_state(path, vtr_file, yaml, menu)
 }
 \description{
 Loads in state.

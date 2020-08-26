@@ -2,7 +2,7 @@
 
 
 multiple_file_case<-function(path, file_type, yaml,
-                  col_classes, col_names, d_format, delim){
+                  col_classes, col_names, d_format, delim, menu){
 
 
 single_case_repeated<-function(col_classes, col_names, d_format, yaml ){
@@ -45,6 +45,8 @@ if(num_in_dir!=num_counties_yaml){
   pause2()
 }
 
+
+
 sub_menu<- function(){
   menu1<-c(" List Files in Directory", " Compile State from Files Currently in the Directory",
            " Retry load_states()", " Quit")
@@ -71,8 +73,13 @@ sub_sub_menu<-function(){
                          yaml = yaml)} }
 
 
-
+if(isTRUE(menu)){
 sub_menu()
+} else {
+  single_case_repeated(col_classes = col_classes, col_names = col_names, d_format=d_format,
+                       yaml = yaml)
+}
+
 
 }
 

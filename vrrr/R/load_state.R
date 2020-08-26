@@ -1,6 +1,6 @@
 #' Loads in state.
 
-load_state<-function(path, vtr_file, yaml){
+load_state<-function(path, vtr_file, yaml, menu){
 
 
   # Gather Date Format
@@ -28,7 +28,7 @@ load_state<-function(path, vtr_file, yaml){
 
 multiple_file_case(path = path, yaml = yaml, file_type = file_type,
                    col_classes = col_classes, col_names = col_names, d_format = d_format,
-                   delim = delim)
+                   delim = delim, menu = menu)
 
   }else{
 

@@ -11,7 +11,8 @@ multiple_file_case(
   col_classes,
   col_names,
   d_format,
-  delim
+  delim,
+  menu
 )
 }
 \description{
