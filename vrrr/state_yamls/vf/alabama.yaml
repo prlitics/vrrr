@@ -1,0 +1,448 @@
+file_type: txt
+delimiter: "\t"
+state: alabama
+source: boe
+file_class: voter_file
+voter_id: Registrant ID
+county_identifier: County
+birthday_identifier: Date of Birth
+voter_status: Registrant Status
+party_identifier: null
+date_format: '%m/%d/%Y %T'
+numeric_county: FALSE
+has_headers: TRUE
+fixed_width: FALSE
+separate_hispanic_orign: FALSE
+
+format:
+  separate_hist: FALSE
+  separate_counties_voter_file: FALSE
+  separate_counties_hist_file: FALSE
+  hist_election_rows: FALSE
+  columnar_elections: TRUE
+  separate_district_lookup_file: TRUE
+  vote_history_type: 'Sporadic'
+
+name_fields:
+  - Last Name
+  - First Name
+  - Middle Name
+  - Name Suffix
+
+address_fields:
+  - Residential Address
+  - a1
+  - a2
+  - a3
+  - a4
+  - a5
+  - a6
+  - a7
+  - a8
+  - Residential City
+  - Residential State
+  - Residential ZIP
+  - rzip5
+  - rzip4
+  - Non-Standard Physical Address
+  - Mail Address
+  - m1
+  - m2
+  - m3
+  - m4
+  - Mail City
+  - Mail State
+  - Mail ZIP
+  - mzip5
+  - mzip4
+
+
+column_names:
+- County
+- Last Name
+- First Name
+- Middle Name
+- Name Suffix
+- Registrant Status
+- Date of Birth
+- Date of Registration
+- Race
+- Gender
+- Registrant ID
+- Residential Address
+- a1
+- a2
+- a3
+- a4
+- a5
+- a6
+- a7
+- a8
+- Residential City
+- Residential State
+- Residential ZIP
+- rzip5
+- rzip4
+- Non-Standard Physical Address
+- Mail Address
+- m1
+- m2
+- m3
+- m4
+- Mail City
+- Mail State
+- Mail ZIP
+- mzip5
+- mzip4
+- Phone
+- p1
+- p2
+- p3
+- Precinct Part Text Name
+- Precinct Part Text Designation
+- Precinct Text Name
+- Precinct Text Designation
+- Congressional
+- State School
+- State Senate
+- State House
+- County Commission
+- County School
+- Jefferson County Division
+- Fire District
+- City District
+- Municipality
+- Municipal Subdistrict
+- Municipal Ward
+- City Precinct
+- Local School District
+- Special Election District
+- Voting District
+- Zoning District
+- Last Election Voted
+- Last Election Party Code
+- Election 2
+- Party Code 2
+- Election 3
+- Party Code 3
+- Election 4
+- Party Code 4
+- Election 5
+- Party Code 5
+- Election 6
+- Party Code 6
+- Election 7
+- Party Code 7
+- Election 8
+- Party Code 8
+- Election 9
+- Party Code 9
+- Election 10
+- Party Code 10
+
+
+column_classes:
+  County: character
+  Last Name: character
+  First Name: character
+  Middle Name: character
+  Name Suffix: character
+  Registrant Status: character
+  Date of Birth: date
+  Date of Registration: date
+  Race: character
+  Gender: character
+  Registrant ID: character
+  Residential Address: character
+  a1: character
+  a2: character
+  a3: character
+  a4: character
+  a5: character
+  a6: character
+  a7: character
+  a8: character
+  Residential City: character
+  Residential State: character
+  Residential ZIP: character
+  rzip5: character
+  rzip4: character
+  Non-Standard Physical Address: character
+  Mail Address: character
+  m1: character
+  m2: character
+  m3: character
+  m4: character
+  Mail City: character
+  Mail State: character
+  Mail ZIP: character
+  mzip5: character
+  mzip4: character
+  Phone: character
+  p1: character
+  p2: character
+  p3: character
+  Precinct Part Text Name: character
+  Precinct Part Text Designation: character
+  Precinct Text Name: character
+  Precinct Text Designation: character
+  Congressional: character
+  State School: character
+  State Senate: character
+  State House: character
+  County Commission: character
+  County School: character
+  Jefferson County Division: character
+  Fire District: character
+  City District: character
+  Municipality: character
+  Municipal Subdistrict: character
+  Municipal Ward: character
+  City Precinct: character
+  Local School District: character
+  Special Election District: character
+  Voting District: character
+  Zoning District: character
+  Last Election Voted: character
+  Last Election Party Code: character
+  Election 2: character
+  Party Code 2: character
+  Election 3: character
+  Party Code 3: character
+  Election 4: character
+  Party Code 4: character
+  Election 5: character
+  Party Code 5: character
+  Election 6: character
+  Party Code 6: character
+  Election 7: character
+  Party Code 7: character
+  Election 8: character
+  Party Code 8: character
+  Election 9: character
+  Party Code 9: character
+  Election 10: character
+  Party Code 10: character
+
+
+standard_colnames:
+  - County_Name
+  - Name_Last
+  - Name_First
+  - Name_Middle
+  - Name_Suffix
+  - Voter_Status
+  - Birth_Date
+  - Registration_Date
+  - Race
+  - Gender
+  - Voter_ID
+  - Residence_Line1
+  - House_Number
+  - House_Suffix
+  - Pre_Direction
+  - Street_Name
+  - Street_Type
+  - Post_Direction
+  - Unit_Type
+  - Unit_Number
+  - Residence_City
+  - Residence_State
+  - Residence_Zipcode_Plus
+  - Residence_Zipcode
+  - Residence_Zipcode_4
+  - Address_Non_Standard
+  - Mailing_Address_Full
+  - Mailing_Address
+  - Mailing_Address_Line_2
+  - Mailing_Blank1
+  - Mailing_Blank2
+  - Mailing_City
+  - Mailing_State
+  - Mailing_Zipcode_Plus
+  - Mailing_Zipcode
+  - Mailing_Zipcode_4
+  - Phone_Number
+  - Area_Code
+  - Phone_Exchange
+  - Phone_Last_Four
+  - Full_Precinct_Info
+  - Precinct_Part_Designation
+  - Precinct_Name
+  - Precinct_Code
+  - Congressional_District
+  - Board_of_Education_District
+  - Senate_District_Name
+  - House_District
+  - County_Commission_District_Name
+  - School_District
+  - Largest_County_District
+  - Fire_District_Code
+  - City_District
+  - Municipality_Code
+  - Municipal_Subdistrict
+  - Ward_Code
+  - City_Ward_Precinct
+  - School_District_Code
+  - Special_Voter_District
+  - District_ID
+  - Zoning_District
+  - Last_Election_Voted
+  - Last_Election_Party_Code
+  - Election_Code_2
+  - Vote_Decision_Party_2
+  - Election_Code_3
+  - Vote_Decision_Party_3
+  - Election_Code_4
+  - Vote_Decision_Party_4
+  - Election_Code_5
+  - Vote_Decision_Party_5
+  - Election_Code_6
+  - Vote_Decision_Party_6
+  - Election_Code_7
+  - Vote_Decision_Party_7
+  - Election_Code_8
+  - Vote_Decision_Party_8
+  - Election_Code_9
+  - Vote_Decision_Party_9
+  - Election_Code_10
+  - Vote_Decision_Party_10
+
+
+standard_colpairs:
+  County: County_Name
+  Last Name: Name_Last
+  First Name: Name_First
+  Middle Name: Name_Middle
+  Name Suffix: Name_Suffix
+  Registrant Status: Voter_Status
+  Date of Birth: Birth_Date
+  Date of Registration: Registration_Date
+  Race: Race
+  Gender: Gender
+  Registrant ID: Voter_ID
+  Residential Address: Residence_Line1
+  a1: House_Number
+  a2: House_Suffix
+  a3: Pre_Direction
+  a4: Street_Name
+  a5: Street_Type
+  a6: Post_Direction
+  a7: Unit_Type
+  a8: Unit_Number
+  Residential City: Residence_City
+  Residential State: Residence_State
+  Residential ZIP: Residence_Zipcode_Plus
+  rzip5: Residence_Zipcode
+  rzip4: Residence_Zipcode_4
+  Non-Standard Physical Address: Address_Non_Standard
+  Mail Address: Mailing_Address_Full
+  m1: Mailing_Address
+  m2: Mailing_Address_Line_2
+  m3: Mailing_Blank1
+  m4: Mailing_Blank2
+  Mail City: Mailing_City
+  Mail State: Mailing_State
+  Mail ZIP: Mailing_Zipcode_Plus
+  mzip5: Mailing_Zipcode
+  mzip4: Mailing_Zipcode_4
+  Phone: Phone_Number
+  p1: Area_Code
+  p2: Phone_Exchange
+  p3: Phone_Last_Four
+  Precinct Part Text Name: Full_Precinct_Info
+  Precinct Part Text Designation: Precinct_Part_Designation
+  Precinct Text Name: Precinct_Name
+  Precinct Text Designation: Precinct_Code
+  Congressional: Congressional_District
+  State School: Board_of_Education_District
+  State Senate: Senate_District_Name
+  State House: House_District
+  County Commission: County_Commission_District_Name
+  County School: School_District
+  Jefferson County Division: Largest_County_District
+  Fire District: Fire_District_Code
+  City District: City_District
+  Municipality: Municipality_Code
+  Municipal Subdistrict: Municipal_Subdistrict
+  Municipal Ward: Ward_Code
+  City Precinct: City_Ward_Precinct
+  Local School District: School_District_Code
+  Special Election District: Special_Voter_District
+  Voting District: District_ID
+  Zoning District: Zoning_District
+  Last Election Voted: Last_Election_Voted
+  Last Election Party Code: Last_Election_Party_Code
+  Election 2: Election_Code_2
+  Party Code 2: Vote_Decision_Party_2
+  Election 3: Election_Code_3
+  Party Code 3: Vote_Decision_Party_3
+  Election 4: Election_Code_4
+  Party Code 4: Vote_Decision_Party_4
+  Election 5: Election_Code_5
+  Party Code 5: Vote_Decision_Party_5
+  Election 6: Election_Code_6
+  Party Code 6: Vote_Decision_Party_6
+  Election 7: Election_Code_7
+  Party Code 7: Vote_Decision_Party_7
+  Election 8: Election_Code_8
+  Party Code 8: Vote_Decision_Party_8
+  Election 9: Election_Code_9
+  Party Code 9: Vote_Decision_Party_9
+  Election 10: Election_Code_10
+  Party Code 10: Vote_Decision_Party_10
+
+
+election_column_map:
+  VOTER_ID: REGN_NUM
+  ELECTION_DATE: null
+  ELECTION_DESCRIPTION: null
+
+  ELECTION_TYPE: null
+  VOTING_METHOD:
+  - Last_Election_Voted
+  - Election_Code_2
+  - Election_Code_3
+  - Election_Code_4
+  - Election_Code_5
+  - Election_Code_6
+  - Election_Code_7
+  - Election_Code_8
+  - Election_Code_9
+  - Election_Code_10
+
+
+county_codes:
+  Not_Provided: NP
+
+status_codes:
+  Active: A
+  Inactive: I
+
+gender_codes:
+  Male: M
+  Female: F
+
+race_codes:
+  Asian: A
+  Black: B
+  Hispanic: H
+  White: W
+  Unknown: U
+  Not_Provided: F , O
+
+
+
+party_codes:
+  democratic_party: DEM
+  republican_party: REP
+  libertarian_party: LIB
+  no_party_affiliated: NP
+  other_party: OTH
+
+num_party_codes: 5
+
+file_names: null
+
+
+num_files: null

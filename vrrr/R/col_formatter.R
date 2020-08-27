@@ -17,7 +17,7 @@ col_formatter<-function(cols, column_names, date_format){
     if(i == "date"){
 
       if(z==1){
-        x<-(paste0('readr::cols_only(',shQuote(column_names[z])," = readr::col_date( format = ",shQuote(date_format),'),'))
+        x<-(paste0('list(',shQuote(column_names[z])," = readr::col_date( format = ",shQuote(date_format),'),'))
       }else if (z < length(cols)){
         x<-paste0(x,shQuote(column_names[z])," = readr::col_date( format = ",shQuote(date_format),'),')}
       else{
@@ -27,7 +27,7 @@ col_formatter<-function(cols, column_names, date_format){
     } else {
 
       if(z==1){
-        x<-(paste0('readr::cols_only(',shQuote(column_names[z])," = readr::col_",i[[1]],'(), '))
+        x<-(paste0('list(',shQuote(column_names[z])," = readr::col_",i[[1]],'(), '))
       }else if (z < length(cols)){
         x<-paste0(x,shQuote(column_names[z])," = readr::col_",i[[1]],'(), ')}
       else{
