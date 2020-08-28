@@ -16,7 +16,9 @@ ct<-vf_read(state = "ct", path = "D:/Data/VoterFile/CT/Data/", menu = F,
             keep_names = FALSE, keep_addresses = FALSE)
 
 alabama<-vf_read(state = "al", vtr_file = "D:/Data/VoterFile/AL-2019-1/2018 Political Party Lists.txt",
-                 standard_cols = FALSE)
+                 standard_cols = FALSE )
+
+alabama1<-vf_read(state = "al", vtr_file = "D:/Data/VoterFile/AL-2019-1/2018 Political Party Lists.txt")
 
 al<-readr::read_delim("D:/Data/VoterFile/AL-2019-1/2018 Political Party Lists.txt",
                       delim = yaml[["delimiter"]])
